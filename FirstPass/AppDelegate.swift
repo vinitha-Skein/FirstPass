@@ -9,7 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         // Override point for customization after application launch.
         Thread.sleep(forTimeInterval: 2)
         IQKeyboardManager.shared.enable = true
-        let mainStoryboard:UIStoryboard = UIStoryboard(name: "Modified", bundle: nil)
+        let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 //        if UserDefaults.standard.bool(forKey: "OnboardFinished")
 //        {
 //            if UserDefaults.standard.bool(forKey: "isLoggedIn")

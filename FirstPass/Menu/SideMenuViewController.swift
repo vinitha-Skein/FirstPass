@@ -92,7 +92,8 @@ extension SideMenuViewController:UITableViewDelegate,UITableViewDataSource{
             present(vc, animated: true)
         case 6:
             let storyboard = UIStoryboard(name: "Main", bundle: .main)
-            let vc = storyboard.instantiateViewController(withIdentifier: "IndoorMapViewController") as! IndoorMapViewController
+            let vc = storyboard.instantiateViewController(withIdentifier: "IndoorMapViewController")
+                //as! IndoorMapViewController
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true)
         case 7:

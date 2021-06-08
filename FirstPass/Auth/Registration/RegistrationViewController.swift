@@ -25,6 +25,13 @@ class RegistrationViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func signinClicked(_ sender: Any)
+    {
+        let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+    }
     @IBAction func agreeTerms(_ sender: Any) {
         checkBoxState = !checkBoxState
         checkBox.setImage(checkBoxState == true ? UIImage(named: "checkBoxSelected"):UIImage(named: "checkBox"), for: .normal)

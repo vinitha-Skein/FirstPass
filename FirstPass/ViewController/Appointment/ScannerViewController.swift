@@ -12,6 +12,7 @@ import AVFoundation
 class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate  {
     @IBOutlet weak var box: UIImageView!
     @IBOutlet weak var container: UIView!
+    @IBOutlet weak var bottomHiderView: UIView!
     
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var addButton: UIButton!
@@ -65,10 +66,11 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         }
     }
     func setupUI(){
-        box.createBorderForView(cornerRadius: 0, borderWidth: 1, borderColor: UIColor(hexString: "#777EDC"))
+        box.createBorderForView(cornerRadius: 0, borderWidth: 1, borderColor: UIColor(hexString: "#E98600"))
         container.createBorderForView(cornerRadius: 30, borderWidth: 0, borderColor: .clear)
         container.clipsToBounds = true
-        addButton.createBorderForButton(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
+        addButton.createBorderForButton(cornerRadius: 20, borderWidth: 0, borderColor: .clear)
+        appointmentID.layer.cornerRadius = 10
         
     }
     @IBAction func backAction(_ sender: Any) {
@@ -76,6 +78,11 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         
     }
     
+    @IBAction func popupClose(_ sender: Any)
+    {
+        container.isHidden = true
+        bottomHiderView.isHidden = true
+    }
     @IBAction func getDetailsAction(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
           let vc = storyboard.instantiateViewController(withIdentifier: "NewTokenViewController") as! NewTokenViewController

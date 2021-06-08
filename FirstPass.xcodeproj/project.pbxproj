@@ -37,6 +37,12 @@
 		A737D422265BB52E008B4D61 /* UpcommingAppointmentsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A737D421265BB52E008B4D61 /* UpcommingAppointmentsInterfaceController.swift */; };
 		A737D42E265BB624008B4D61 /* UpcommingappointmentsRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A737D42D265BB624008B4D61 /* UpcommingappointmentsRowController.swift */; };
 		A7462F8B2633EB7000ACD8E5 /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7462F8A2633EB7000ACD8E5 /* NewTableViewCell.swift */; };
+		A76401A1266F729C0050E41A /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76401A0266F729C0050E41A /* AccountViewController.swift */; };
+		A76401A6266F72BF0050E41A /* AccountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76401A5266F72BF0050E41A /* AccountCollectionViewCell.swift */; };
+		A76401D2266F923F0050E41A /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76401D1266F923F0050E41A /* ScannerViewController.swift */; };
+		A76401DA266F93550050E41A /* AlertNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76401D9266F93550050E41A /* AlertNotificationViewController.swift */; };
+		A76401E3266F94AD0050E41A /* AlertTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76401E1266F94AC0050E41A /* AlertTableCell.swift */; };
+		A76401E4266F94AD0050E41A /* AlertTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A76401E2266F94AD0050E41A /* AlertTableCell.xib */; };
 		A786518C26342062008C99FC /* SelectAppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A786518B26342062008C99FC /* SelectAppointmentViewController.swift */; };
 		A786518F2634493E008C99FC /* BookingConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A786518E2634493E008C99FC /* BookingConfirmationViewController.swift */; };
 		A7A49ECF265B7FD600AB1A57 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7A49ECD265B7FD600AB1A57 /* Interface.storyboard */; };
@@ -56,8 +62,6 @@
 		A8033920259EE8F400FE5FB5 /* TokenPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8033919259EE8F400FE5FB5 /* TokenPopup.swift */; };
 		A8033921259EE8F400FE5FB5 /* TokenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A803391A259EE8F400FE5FB5 /* TokenTableViewCell.swift */; };
 		A8033922259EE8F400FE5FB5 /* PreChekinPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A803391B259EE8F400FE5FB5 /* PreChekinPopup.swift */; };
-		A82590F825C3F2DE00220311 /* AlertTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82590F725C3F2DE00220311 /* AlertTableCell.swift */; };
-		A82590FA25C3F37C00220311 /* AlertTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A82590F925C3F37C00220311 /* AlertTableCell.xib */; };
 		A8768C28259F213300DFF6BF /* NewTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8768C27259F213300DFF6BF /* NewTokenViewController.swift */; };
 		A8768C2A259F74A400DFF6BF /* ProcessFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8768C29259F74A400DFF6BF /* ProcessFeedbackViewController.swift */; };
 		A894564525BED4A4002EFB28 /* PharmacyCollectionPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A894564425BED4A3002EFB28 /* PharmacyCollectionPopup.swift */; };
@@ -68,7 +72,6 @@
 		C0035747251619B600F76902 /* FamilyMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0035745251619B600F76902 /* FamilyMemberTableViewCell.swift */; };
 		C0035748251619B600F76902 /* FamilyMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0035746251619B600F76902 /* FamilyMemberTableViewCell.xib */; };
 		C003574A25184FC000F76902 /* FamilyMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C003574925184FC000F76902 /* FamilyMemberViewController.swift */; };
-		C003574C25187F2A00F76902 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C003574B25187F2A00F76902 /* ScannerViewController.swift */; };
 		C003574E2518882500F76902 /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C003574D2518882500F76902 /* ReportsViewController.swift */; };
 		C003575225188B3C00F76902 /* ReportsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C003575025188B3C00F76902 /* ReportsTableViewCell.swift */; };
 		C003575325188B3C00F76902 /* ReportsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C003575125188B3C00F76902 /* ReportsTableViewCell.xib */; };
@@ -160,7 +163,6 @@
 		C0CBF0EA25515E5B003BF9EC /* PasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CBF0E925515E5B003BF9EC /* PasswordModel.swift */; };
 		C0CBF0EC25515E70003BF9EC /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CBF0EB25515E70003BF9EC /* PasswordViewModel.swift */; };
 		C0DA40D825374B96003E1F77 /* IndoorMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DA40D725374B96003E1F77 /* IndoorMapViewController.swift */; };
-		C0DA40DA25374BAB003E1F77 /* AlertNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DA40D925374BAB003E1F77 /* AlertNotificationViewController.swift */; };
 		C0F496FF2570C8570066C865 /* AppointmentDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F496FE2570C8570066C865 /* AppointmentDetailsModel.swift */; };
 		C0F497012570C9340066C865 /* AppointmentDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F497002570C9340066C865 /* AppointmentDetailsViewModel.swift */; };
 		C0F95A0B2508A35100709E3D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F95A0A2508A35100709E3D /* Constants.swift */; };
@@ -249,6 +251,12 @@
 		A737D421265BB52E008B4D61 /* UpcommingAppointmentsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcommingAppointmentsInterfaceController.swift; sourceTree = "<group>"; };
 		A737D42D265BB624008B4D61 /* UpcommingappointmentsRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcommingappointmentsRowController.swift; sourceTree = "<group>"; };
 		A7462F8A2633EB7000ACD8E5 /* NewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
+		A76401A0266F729C0050E41A /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		A76401A5266F72BF0050E41A /* AccountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCollectionViewCell.swift; sourceTree = "<group>"; };
+		A76401D1266F923F0050E41A /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		A76401D9266F93550050E41A /* AlertNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertNotificationViewController.swift; sourceTree = "<group>"; };
+		A76401E1266F94AC0050E41A /* AlertTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertTableCell.swift; sourceTree = "<group>"; };
+		A76401E2266F94AD0050E41A /* AlertTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertTableCell.xib; sourceTree = "<group>"; };
 		A786518B26342062008C99FC /* SelectAppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAppointmentViewController.swift; sourceTree = "<group>"; };
 		A786518E2634493E008C99FC /* BookingConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingConfirmationViewController.swift; sourceTree = "<group>"; };
 		A7A49ECB265B7FD600AB1A57 /* Firstpass-watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Firstpass-watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -271,8 +279,6 @@
 		A8033919259EE8F400FE5FB5 /* TokenPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenPopup.swift; sourceTree = "<group>"; };
 		A803391A259EE8F400FE5FB5 /* TokenTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenTableViewCell.swift; sourceTree = "<group>"; };
 		A803391B259EE8F400FE5FB5 /* PreChekinPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreChekinPopup.swift; sourceTree = "<group>"; };
-		A82590F725C3F2DE00220311 /* AlertTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTableCell.swift; sourceTree = "<group>"; };
-		A82590F925C3F37C00220311 /* AlertTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertTableCell.xib; sourceTree = "<group>"; };
 		A8768C27259F213300DFF6BF /* NewTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTokenViewController.swift; sourceTree = "<group>"; };
 		A8768C29259F74A400DFF6BF /* ProcessFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessFeedbackViewController.swift; sourceTree = "<group>"; };
 		A894564425BED4A3002EFB28 /* PharmacyCollectionPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PharmacyCollectionPopup.swift; sourceTree = "<group>"; };
@@ -282,7 +288,6 @@
 		C0035745251619B600F76902 /* FamilyMemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberTableViewCell.swift; sourceTree = "<group>"; };
 		C0035746251619B600F76902 /* FamilyMemberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamilyMemberTableViewCell.xib; sourceTree = "<group>"; };
 		C003574925184FC000F76902 /* FamilyMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberViewController.swift; sourceTree = "<group>"; };
-		C003574B25187F2A00F76902 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		C003574D2518882500F76902 /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
 		C003575025188B3C00F76902 /* ReportsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsTableViewCell.swift; sourceTree = "<group>"; };
 		C003575125188B3C00F76902 /* ReportsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReportsTableViewCell.xib; sourceTree = "<group>"; };
@@ -376,7 +381,6 @@
 		C0CBF0E925515E5B003BF9EC /* PasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordModel.swift; sourceTree = "<group>"; };
 		C0CBF0EB25515E70003BF9EC /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
 		C0DA40D725374B96003E1F77 /* IndoorMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndoorMapViewController.swift; sourceTree = "<group>"; };
-		C0DA40D925374BAB003E1F77 /* AlertNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotificationViewController.swift; sourceTree = "<group>"; };
 		C0F496FE2570C8570066C865 /* AppointmentDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDetailsModel.swift; sourceTree = "<group>"; };
 		C0F497002570C9340066C865 /* AppointmentDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDetailsViewModel.swift; sourceTree = "<group>"; };
 		C0F95A0A2508A35100709E3D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -452,6 +456,7 @@
 		1B5AC2B4266E6419002E7C12 /* Phase 2 */ = {
 			isa = PBXGroup;
 			children = (
+				A764019F266F727E0050E41A /* Accounts */,
 				C094C3862513304F00F039E4 /* OnBoard */,
 				1BF222E3266F32A300759E13 /* phase2.storyboard */,
 			);
@@ -484,6 +489,15 @@
 				A786518E2634493E008C99FC /* BookingConfirmationViewController.swift */,
 			);
 			path = NewChanges;
+			sourceTree = "<group>";
+		};
+		A764019F266F727E0050E41A /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				A76401A0266F729C0050E41A /* AccountViewController.swift */,
+				A76401A5266F72BF0050E41A /* AccountCollectionViewCell.swift */,
+			);
+			path = Accounts;
 			sourceTree = "<group>";
 		};
 		A7A49ECC265B7FD600AB1A57 /* Firstpass-watchOS */ = {
@@ -529,14 +543,14 @@
 		A8033914259EE8AA00FE5FB5 /* Token */ = {
 			isa = PBXGroup;
 			children = (
+				A76401E1266F94AC0050E41A /* AlertTableCell.swift */,
+				A76401E2266F94AD0050E41A /* AlertTableCell.xib */,
 				A894564425BED4A3002EFB28 /* PharmacyCollectionPopup.swift */,
-				A82590F725C3F2DE00220311 /* AlertTableCell.swift */,
-				A82590F925C3F37C00220311 /* AlertTableCell.xib */,
 				A8D2902025BEA8D5003605D6 /* PharmacyPopup.swift */,
 				A8D2901E25BE9F6F003605D6 /* SwapPopup.swift */,
+				A803391B259EE8F400FE5FB5 /* PreChekinPopup.swift */,
 				A8033918259EE8F400FE5FB5 /* ArrivedPopup.swift */,
 				A8033916259EE8F400FE5FB5 /* ParkingMapPopup.swift */,
-				A803391B259EE8F400FE5FB5 /* PreChekinPopup.swift */,
 				A8033915259EE8F400FE5FB5 /* SwapTestPopup.swift */,
 				A8033919259EE8F400FE5FB5 /* TokenPopup.swift */,
 				A803391A259EE8F400FE5FB5 /* TokenTableViewCell.swift */,
@@ -663,13 +677,13 @@
 		C059809F2506282000C92021 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C0672AA4251500D30060FB08 /* Appointment */,
+				A76401D9266F93550050E41A /* AlertNotificationViewController.swift */,
 				C0B207F22519CEE900F048F2 /* TokenViewController.swift */,
 				C0088BD9251B5EFB00777786 /* FeedbackViewController.swift */,
 				C0B254BB254D5BDE002080D8 /* PaymentViewController.swift */,
+				C0672AA4251500D30060FB08 /* Appointment */,
 				C0DA40D725374B96003E1F77 /* IndoorMapViewController.swift */,
 				C0B254B9254D5A63002080D8 /* ChatViewController.swift */,
-				C0DA40D925374BAB003E1F77 /* AlertNotificationViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -677,7 +691,7 @@
 		C0672AA4251500D30060FB08 /* Appointment */ = {
 			isa = PBXGroup;
 			children = (
-				C003574B25187F2A00F76902 /* ScannerViewController.swift */,
+				A76401D1266F923F0050E41A /* ScannerViewController.swift */,
 				C0376A832518ECEE00A3933D /* MemberTableViewCell.swift */,
 				C0376A842518ECEF00A3933D /* MemberTableViewCell.xib */,
 				C0088BD3251AE74A00777786 /* FamilyCollectionViewCell.swift */,
@@ -1045,9 +1059,9 @@
 				C0088BDE251B5F1A00777786 /* FeedbackTableViewCell.xib in Resources */,
 				C0B2081D2519F1FF00F048F2 /* groupCopy2.png in Resources */,
 				C0672AAE251507170060FB08 /* AppointmentDetailsTableViewCell.xib in Resources */,
+				A76401E4266F94AD0050E41A /* AlertTableCell.xib in Resources */,
 				A803391E259EE8F400FE5FB5 /* TokenTableViewCell.xib in Resources */,
 				1B5AC294266E543C002E7C12 /* SF-Pro-Display-Bold.otf in Resources */,
-				A82590FA25C3F37C00220311 /* AlertTableCell.xib in Resources */,
 				C02B230A255AE509004ABBB3 /* FilterCategoryTableViewCell.xib in Resources */,
 				C0035759251891D100F76902 /* ReportHeader.xib in Resources */,
 				1B5AC298266E543F002E7C12 /* SF-Pro-Display-Medium.otf in Resources */,
@@ -1139,7 +1153,9 @@
 				C05980A7250628D400C92021 /* LoginViewController.swift in Sources */,
 				C0CBF0EA25515E5B003BF9EC /* PasswordModel.swift in Sources */,
 				C0560F2725715FFB0083CE50 /* AddInsuranceViewController.swift in Sources */,
+				A76401E3266F94AD0050E41A /* AlertTableCell.swift in Sources */,
 				C091239925559DC300CFBC89 /* MyAppointmentsModel.swift in Sources */,
+				A76401A6266F72BF0050E41A /* AccountCollectionViewCell.swift in Sources */,
 				C05980A12506286D00C92021 /* RegistrationViewController.swift in Sources */,
 				C0FA053C25527AEB0011EF48 /* Validation.swift in Sources */,
 				C054DDFF254C090A008ABD04 /* DatePickerViewController.swift in Sources */,
@@ -1168,12 +1184,12 @@
 				C0088BE1251B604B00777786 /* FeedbackCollectionViewCell.swift in Sources */,
 				C0F95A0B2508A35100709E3D /* Constants.swift in Sources */,
 				C01D45F3255C3EDE006A24D8 /* ImagePicker.swift in Sources */,
-				C0DA40DA25374BAB003E1F77 /* AlertNotificationViewController.swift in Sources */,
 				C094C3882513306B00F039E4 /* OnBoardViewController.swift in Sources */,
 				C012B2FA255A9C4F005B7E20 /* ReportModel.swift in Sources */,
 				C05980A5250628AB00C92021 /* OTPViewController.swift in Sources */,
 				C026C99825792EFC00249C91 /* FeedbackNotificationViewController.swift in Sources */,
 				C0FC47842515C0990093DC5E /* MyAppointmentsViewController.swift in Sources */,
+				A76401D2266F923F0050E41A /* ScannerViewController.swift in Sources */,
 				C023EA852552DB6000D6256C /* Realm.swift in Sources */,
 				1B5AC277266DDE7D002E7C12 /* Tabbar.swift in Sources */,
 				C091688B2518B0FA0025D5CE /* FilterTableViewCell.swift in Sources */,
@@ -1186,7 +1202,6 @@
 				C0B207F32519CEE900F048F2 /* TokenViewController.swift in Sources */,
 				1B5AC28F266E4AAD002E7C12 /* MyImageView+Extension.swift in Sources */,
 				C059809C2506275400C92021 /* APIClient.swift in Sources */,
-				C003574C25187F2A00F76902 /* ScannerViewController.swift in Sources */,
 				A803391C259EE8F400FE5FB5 /* SwapTestPopup.swift in Sources */,
 				C0FC4788251608430093DC5E /* BookAppointmentViewController.swift in Sources */,
 				C0560F2525715E5A0083CE50 /* InsuranceViewModel.swift in Sources */,
@@ -1200,6 +1215,7 @@
 				C091239B25559DDD00CFBC89 /* MyAppointmentsViewModel.swift in Sources */,
 				C09123912555980B00CFBC89 /* HomeModel.swift in Sources */,
 				C003574A25184FC000F76902 /* FamilyMemberViewController.swift in Sources */,
+				A76401DA266F93550050E41A /* AlertNotificationViewController.swift in Sources */,
 				1B95AD1326691CA800FE94C0 /* UIView+Extension.swift in Sources */,
 				C0560F1E25714FDD0083CE50 /* ImageCache.swift in Sources */,
 				C0672AA6251500E90060FB08 /* HomeViewController.swift in Sources */,
@@ -1211,8 +1227,8 @@
 				1B5AC28E266E4AAD002E7C12 /* UIColor+Extension.swift in Sources */,
 				A8768C2A259F74A400DFF6BF /* ProcessFeedbackViewController.swift in Sources */,
 				C0672AAD251507170060FB08 /* AppointmentDetailsTableViewCell.swift in Sources */,
+				A76401A1266F729C0050E41A /* AccountViewController.swift in Sources */,
 				C0560F2325715E420083CE50 /* InsuranceModel.swift in Sources */,
-				A82590F825C3F2DE00220311 /* AlertTableCell.swift in Sources */,
 				C01F2ED02537007000632278 /* TabViewController.swift in Sources */,
 				C068AAFB2571FB8E00253D81 /* InsuranceTableViewCell.swift in Sources */,
 				C0911B0E25505FC20052E52C /* LoginModel.swift in Sources */,
@@ -1302,12 +1318,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = SDX3Y5X346;
 				IBSC_MODULE = Firstpass_watchOS_Extension;
 				INFOPLIST_FILE = "Firstpass-watchOS/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skein.Firstpassmodified.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skein.Firstpassmodified;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = FirstpassModified;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1324,12 +1341,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = SDX3Y5X346;
 				IBSC_MODULE = Firstpass_watchOS_Extension;
 				INFOPLIST_FILE = "Firstpass-watchOS/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skein.Firstpassmodified.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skein.Firstpassmodified;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = FirstpassModified;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1343,16 +1361,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 66AXNRYMA4;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = SDX3Y5X346;
 				INFOPLIST_FILE = "Firstpass-watchOS Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.skein.Firstpassmodified.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skein.Firstpassmodified;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = FirstpassModified;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
@@ -1366,16 +1386,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 66AXNRYMA4;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = SDX3Y5X346;
 				INFOPLIST_FILE = "Firstpass-watchOS Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.skein.Firstpassmodified.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skein.Firstpassmodified;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE_SPECIFIER = FirstpassModified;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;

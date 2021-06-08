@@ -56,8 +56,10 @@
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "8"
       notificationPayloadFile = "Firstpass-watchOS Extension/PushNotificationPayload.apns">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/firstpass">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A7A49ECA265B7FD600AB1A57"
@@ -65,7 +67,7 @@
             BlueprintName = "Firstpass-watchOS"
             ReferencedContainer = "container:FirstPass.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -75,8 +77,10 @@
       debugDocumentVersioning = "YES"
       launchAutomaticallySubstyle = "8"
       notificationPayloadFile = "Firstpass-watchOS Extension/PushNotificationPayload.apns">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "2"
+         BundleIdentifier = "com.apple.Carousel"
+         RemotePath = "/firstpass">
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A7A49ECA265B7FD600AB1A57"
@@ -84,7 +88,16 @@
             BlueprintName = "Firstpass-watchOS"
             ReferencedContainer = "container:FirstPass.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A7A49ECA265B7FD600AB1A57"
+            BuildableName = "Firstpass-watchOS.app"
+            BlueprintName = "Firstpass-watchOS"
+            ReferencedContainer = "container:FirstPass.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
