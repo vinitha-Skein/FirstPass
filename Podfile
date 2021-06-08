@@ -10,5 +10,6 @@ pod 'Alamofire', '~> 5.2'
 pod 'IQKeyboardManagerSwift'
 pod 'RealmSwift'
 pod 'AlamofireImage', '~> 4.1'
+pod 'MapwizeUI', '~> 2.0'
 pod 'UICircularProgressRing'
 end

@@ -33,6 +33,7 @@
 		1BD710A126612CC800D2C607 /* launchScreenInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD7109D26612CC800D2C607 /* launchScreenInterfaceController.swift */; };
 		1BD710A626612E7700D2C607 /* JourneyRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD710A526612E7700D2C607 /* JourneyRowController.swift */; };
 		1BF222E4266F32A300759E13 /* phase2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF222E3266F32A300759E13 /* phase2.storyboard */; };
+		1BF2232E266FB69B00759E13 /* AppointmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2232D266FB69B00759E13 /* AppointmentCollectionViewCell.swift */; };
 		A7241D24265E0601009D9A7C /* CheckinInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7241D23265E0601009D9A7C /* CheckinInterfaceController.swift */; };
 		A737D422265BB52E008B4D61 /* UpcommingAppointmentsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A737D421265BB52E008B4D61 /* UpcommingAppointmentsInterfaceController.swift */; };
 		A737D42E265BB624008B4D61 /* UpcommingappointmentsRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A737D42D265BB624008B4D61 /* UpcommingappointmentsRowController.swift */; };
@@ -246,6 +247,7 @@
 		1BD7109D26612CC800D2C607 /* launchScreenInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = launchScreenInterfaceController.swift; sourceTree = "<group>"; };
 		1BD710A526612E7700D2C607 /* JourneyRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyRowController.swift; sourceTree = "<group>"; };
 		1BF222E3266F32A300759E13 /* phase2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = phase2.storyboard; sourceTree = "<group>"; };
+		1BF2232D266FB69B00759E13 /* AppointmentCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentCollectionViewCell.swift; sourceTree = "<group>"; };
 		83C05EB8E54AB32B13684667 /* Pods-FirstPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstPass.debug.xcconfig"; path = "Target Support Files/Pods-FirstPass/Pods-FirstPass.debug.xcconfig"; sourceTree = "<group>"; };
 		A7241D23265E0601009D9A7C /* CheckinInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinInterfaceController.swift; sourceTree = "<group>"; };
 		A737D421265BB52E008B4D61 /* UpcommingAppointmentsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcommingAppointmentsInterfaceController.swift; sourceTree = "<group>"; };
@@ -758,6 +760,7 @@
 				C09123902555980B00CFBC89 /* HomeModel.swift */,
 				C091238E255597FE00CFBC89 /* HomeViewModel.swift */,
 				C0672AA5251500E80060FB08 /* HomeViewController.swift */,
+				1BF2232D266FB69B00759E13 /* AppointmentCollectionViewCell.swift */,
 				C0672AA7251507010060FB08 /* AppointmentTableViewCell.swift */,
 				C0672AA8251507010060FB08 /* AppointmentTableViewCell.xib */,
 			);
@@ -1225,6 +1228,7 @@
 				C0911B1025505FDA0052E52C /* LoginViewModel.swift in Sources */,
 				C0AA760B2551AAF200C8F0F7 /* FeedbackVC.swift in Sources */,
 				1B5AC28E266E4AAD002E7C12 /* UIColor+Extension.swift in Sources */,
+				1BF2232E266FB69B00759E13 /* AppointmentCollectionViewCell.swift in Sources */,
 				A8768C2A259F74A400DFF6BF /* ProcessFeedbackViewController.swift in Sources */,
 				C0672AAD251507170060FB08 /* AppointmentDetailsTableViewCell.swift in Sources */,
 				A76401A1266F729C0050E41A /* AccountViewController.swift in Sources */,

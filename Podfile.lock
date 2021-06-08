@@ -2,18 +2,30 @@ PODS:
   - Alamofire (5.2.1)
   - AlamofireImage (4.1.0):
     - Alamofire (~> 5.1)
+  - IndoorLocation (1.0.4)
   - IQKeyboardManagerSwift (6.5.6)
+  - Mapbox-iOS-SDK (5.9.0):
+    - MapboxMobileEvents (= 0.10.2)
+  - MapboxMobileEvents (0.10.2)
+  - MapwizeSDK (3.3.2):
+    - IndoorLocation (= 1.0.4)
+    - Mapbox-iOS-SDK (~> 5.0)
+    - SSZipArchive (= 2.2.3)
+  - MapwizeUI (2.2.5):
+    - MapwizeSDK (= 3.3.2)
   - Realm (5.4.8):
     - Realm/Headers (= 5.4.8)
   - Realm/Headers (5.4.8)
   - RealmSwift (5.4.8):
     - Realm (= 5.4.8)
+  - SSZipArchive (2.2.3)
   - UICircularProgressRing (7.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - AlamofireImage (~> 4.1)
   - IQKeyboardManagerSwift
+  - MapwizeUI (~> 2.0)
   - RealmSwift
   - UICircularProgressRing
 
@@ -21,19 +33,31 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireImage
+    - IndoorLocation
     - IQKeyboardManagerSwift
+    - Mapbox-iOS-SDK
+    - MapboxMobileEvents
+    - MapwizeSDK
+    - MapwizeUI
     - Realm
     - RealmSwift
+    - SSZipArchive
     - UICircularProgressRing
 
 SPEC CHECKSUMS:
   Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
   AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
+  IndoorLocation: 9812c8c2d499ef25e6146ef90cf23f8d107213a8
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  Mapbox-iOS-SDK: a5915700ec84bc1a7f8b3e746d474789e35b7956
+  MapboxMobileEvents: 2bc0ca2eedb627b73cf403258dce2b2fa98074a6
+  MapwizeSDK: 0597280d97f88c5b6b139be16df61bb23ac0611c
+  MapwizeUI: 918344c9003c85ec03a17bbdf9616f05f0e7f6a3
   Realm: 042bbb59227a0159eda397b8a5a49fbd67495ce7
   RealmSwift: 15ddd6b3398ebfc99810811c44f095df1313adb3
+  SSZipArchive: 62d4947b08730e4cda640473b0066d209ff033c9
   UICircularProgressRing: 738b48db0ec1fbbd8482d727979392bb8c272e8d
 
-PODFILE CHECKSUM: e72d7b9f65a90da0ea4ee940f2f341c686b46c50
+PODFILE CHECKSUM: 1691b81df08bf8ea8b4ccb7ab898260aa8818ff9
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.8.4

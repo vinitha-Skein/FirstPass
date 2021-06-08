@@ -3260,7 +3260,7 @@
         <image name="account" width="24.5" height="24"/>
         <image name="background1" width="279" height="388"/>
         <image name="checkBox" width="17" height="17"/>
-        <image name="date" width="24" height="24"/>
+        <image name="date" width="12" height="12"/>
         <image name="doctors" width="24" height="24"/>
         <image name="iconly-light-arrow-left-square" width="24" height="24"/>
         <image name="iconlyCurvedCloseSquare" width="24" height="24"/>
@@ -3273,7 +3273,7 @@
         <image name="radioDeselected" width="24" height="24"/>
         <image name="radioSelected" width="24" height="24"/>
         <image name="specialAssistance" width="38" height="38"/>
-        <image name="time" width="24" height="24"/>
+        <image name="time" width="12" height="12"/>
         <image name="tokenBg-1" width="146" height="143.5"/>
         <image name="tokennew" width="183" height="172"/>
         <image name="view" width="512" height="512"/>
