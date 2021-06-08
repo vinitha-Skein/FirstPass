@@ -12,13 +12,6 @@ import Alamofire
 import AlamofireImage
 class HomeViewController: UIViewController,ScanFinishedDelegate {
     
-    @IBOutlet weak var myFamilyView: UIView!
-    @IBOutlet weak var upcomingView: UIView!
-    @IBOutlet weak var tableview: UITableView!
-    @IBOutlet weak var collectionview: UICollectionView!
-    @IBOutlet weak var familyActivityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var appointmentActivityIndicator: UIActivityIndicatorView!
-    
     @IBOutlet weak var notificationButton: UIButton!
     
     @IBOutlet weak var scannerViewButton: UIButton!
@@ -28,23 +21,26 @@ class HomeViewController: UIViewController,ScanFinishedDelegate {
     
     @IBOutlet weak var viewAllButton: UIButton!
     
-    @IBOutlet weak var upcommingView: MyUIView!
+    //    @IBOutlet weak var upcommingView: MyUIView!
     
-    @IBOutlet weak var prefilledLabel: UILabel!
+    //    @IBOutlet weak var prefilledLabel: UILabel!
     
-    @IBOutlet weak var preArrivalButton: Mybutton!
+    //    @IBOutlet weak var preArrivalButton: Mybutton!
     
     
-    @IBOutlet weak var checkinButton: Mybutton!
+    //    @IBOutlet weak var checkinButton: Mybutton!
     
-    @IBOutlet weak var headingLabel: UILabel!
+    //    @IBOutlet weak var headingLabel: UILabel!
     
-    @IBOutlet weak var indoormapButton: UIButton!
+    //    @IBOutlet weak var indoormapButton: UIButton!
     
-    @IBOutlet weak var noteLabel: UILabel!
+    //    @IBOutlet weak var noteLabel: UILabel!
+    
+    @IBOutlet weak var appointmentsCollectionView: UICollectionView!
+    
     
     var familyMemberData = [FamilyMembersList]()
-
+    
     var blurView = UIView()
     var checkInView = UIView()
     var userId = Int()
@@ -54,107 +50,106 @@ class HomeViewController: UIViewController,ScanFinishedDelegate {
     
     var dummyAppointments = [ActiveAppointmentData]()
     
+    var titleMenu = ["Medicine Collections","Cardiology","Cardiology"]
+    var checkinSelected = -1
+    var appointmentBooked = -1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableview.register(UINib(nibName: "AppointmentTableViewCell", bundle: .main), forCellReuseIdentifier: "AppointmentTableViewCell")
-        collectionview.register(UINib(nibName: "FamilyCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "FamilyCollectionViewCell")
-        tableview.dataSource = self
-        tableview.delegate = self
-        collectionview.dataSource = self
-        collectionview.delegate = self
-        setupUI()
-//        getUserDetailsFromLocal()
         
-
+        
+        appointmentsCollectionView.dataSource = self
+        appointmentsCollectionView.delegate = self
+        setupUI()
+        //        getUserDetailsFromLocal()
+        
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         getUserDetailsFromLocal()
         
-//        viewModel.getUserDetails()
+        //        viewModel.getUserDetails()
         viewModel.fetchFamilySuccess = {
             
             DispatchQueue.main.async {
-                self.collectionview.reloadData()
+                self.appointmentsCollectionView.reloadData()
             }
         }
         self.userId = self.viewModel.userId ?? 0
         
-//        self.fetchAppointments()
-//        self.fetchFamilyMembers()
+        //        self.fetchAppointments()
+        //        self.fetchFamilyMembers()
         
-        //remove this this is for demo
-        familyActivityIndicator.isHidden = true
-        appointmentActivityIndicator.isHidden = true
         
     }
     func getUserDetailsFromLocal(){
-
-    }
-    func fetchFamilyMembers(){
-        familyActivityIndicator.startAnimating()
-        familyActivityIndicator.isHidden = false
-        viewModel.fetchFamilyMember(userId: viewModel.userId ?? 0)
-        viewModel.fetchFamilySuccess = {
-            self.familyMemberData = self.viewModel.familyMemberData ?? []
-            self.familyMemberCount = self.viewModel.familyMemberData?.count ?? 0
-            DispatchQueue.main.async {
-                self.collectionview.reloadData()
-            }
-        }
-        viewModel.loadingStatus = {
-            if self.viewModel.isLoading{
-                self.familyActivityIndicator.startAnimating()
-                self.familyActivityIndicator.isHidden = false
-            }else{
-                self.familyActivityIndicator.stopAnimating()
-                self.familyActivityIndicator.isHidden = true
-            }
-        }
-        viewModel.errorMessageAlert = {
-            if self.viewModel.errorMessage == ""{
-                
-            }else{
-                self.showAlert(self.viewModel.errorMessage ?? "Error")
-            }
-        }
-    }
-    func fetchAppointments(){
-        appointmentActivityIndicator.startAnimating()
-        appointmentActivityIndicator.isHidden = false
-        viewModel.fetchUpcomingAppointments(userId: userId)
-        viewModel.fetchSuccess = {
-            self.appointmentActivityIndicator.stopAnimating()
-            self.appointmentActivityIndicator.isHidden = true
-            DispatchQueue.main.async {
-                self.tableview.reloadData()
-            }
-        }
         
-        viewModel.loadingStatus = {
-            if self.viewModel.isLoading{
-                self.appointmentActivityIndicator.startAnimating()
-                self.appointmentActivityIndicator.isHidden = false
-            }else{
-                self.appointmentActivityIndicator.stopAnimating()
-                self.appointmentActivityIndicator.isHidden = true
-            }
-        }
-        
-        viewModel.errorMessageAlert = {
-            if self.viewModel.errorMessage == ""{
-                
-            }else{
-                self.showAlert(self.viewModel.errorMessage ?? "Error")
-            }
-        }
     }
+    //    func fetchFamilyMembers(){
+    //        familyActivityIndicator.startAnimating()
+    //        familyActivityIndicator.isHidden = false
+    //        viewModel.fetchFamilyMember(userId: viewModel.userId ?? 0)
+    //        viewModel.fetchFamilySuccess = {
+    //            self.familyMemberData = self.viewModel.familyMemberData ?? []
+    //            self.familyMemberCount = self.viewModel.familyMemberData?.count ?? 0
+    //            DispatchQueue.main.async {
+    //                self.collectionview.reloadData()
+    //            }
+    //        }
+    //        viewModel.loadingStatus = {
+    //            if self.viewModel.isLoading{
+    //                self.familyActivityIndicator.startAnimating()
+    //                self.familyActivityIndicator.isHidden = false
+    //            }else{
+    //                self.familyActivityIndicator.stopAnimating()
+    //                self.familyActivityIndicator.isHidden = true
+    //            }
+    //        }
+    //        viewModel.errorMessageAlert = {
+    //            if self.viewModel.errorMessage == ""{
+    //
+    //            }else{
+    //                self.showAlert(self.viewModel.errorMessage ?? "Error")
+    //            }
+    //        }
+    //    }
+    //    func fetchAppointments(){
+    //        appointmentActivityIndicator.startAnimating()
+    //        appointmentActivityIndicator.isHidden = false
+    //        viewModel.fetchUpcomingAppointments(userId: userId)
+    //        viewModel.fetchSuccess = {
+    //            self.appointmentActivityIndicator.stopAnimating()
+    //            self.appointmentActivityIndicator.isHidden = true
+    //            DispatchQueue.main.async {
+    //                self.tableview.reloadData()
+    //            }
+    //        }
+    //
+    //        viewModel.loadingStatus = {
+    //            if self.viewModel.isLoading{
+    //                self.appointmentActivityIndicator.startAnimating()
+    //                self.appointmentActivityIndicator.isHidden = false
+    //            }else{
+    //                self.appointmentActivityIndicator.stopAnimating()
+    //                self.appointmentActivityIndicator.isHidden = true
+    //            }
+    //        }
+    //
+    //        viewModel.errorMessageAlert = {
+    //            if self.viewModel.errorMessage == ""{
+    //
+    //            }else{
+    //                self.showAlert(self.viewModel.errorMessage ?? "Error")
+    //            }
+    //        }
+    //    }
     func scanFinished() {
         dismiss(animated: true, completion: nil)
-//        let storyboard = UIStoryboard(name: "Main", bundle: .main)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "NewTokenViewController") as! NewTokenViewController
-//        vc.modalPresentationStyle = .fullScreen
-//        present(vc, animated: true)
-//        checkInAppointmentAction()
+        //        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        //        let vc = storyboard.instantiateViewController(withIdentifier: "NewTokenViewController") as! NewTokenViewController
+        //        vc.modalPresentationStyle = .fullScreen
+        //        present(vc, animated: true)
+        //        checkInAppointmentAction()
         createBlurView()
         createCheckIn(appointmentName: "Cardiology")
     }
@@ -166,13 +161,13 @@ class HomeViewController: UIViewController,ScanFinishedDelegate {
         present(vc, animated: true)
     }
     @IBAction func showNotifications(_ sender: UIButton) {
-           let storyboard = UIStoryboard(name: "Main", bundle: .main)
-                      let vc = storyboard.instantiateViewController(withIdentifier: "AlertNotificationViewController") as! AlertNotificationViewController
-                      vc.modalPresentationStyle = .fullScreen
-                      present(vc, animated: true)
-       }
+        let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AlertNotificationViewController") as! AlertNotificationViewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
     @IBAction func openScanner(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        let storyboard = UIStoryboard(name: "Modified", bundle: .main)
         let vc = storyboard.instantiateViewController(withIdentifier: "ScannerViewController") as! ScannerViewController
         vc.modalPresentationStyle = .fullScreen
         vc.delegate = self
@@ -205,29 +200,18 @@ class HomeViewController: UIViewController,ScanFinishedDelegate {
     }
     
     
-    @IBAction func indoorMapButtonPressed(_ sender: Any) {
-    }
     
     
-  
+    
     
     
     func setupUI(){
-        myFamilyView.clipsToBounds = true
-        myFamilyView.createBorderForView(cornerRadius: 30.0, borderWidth: 0, borderColor: .clear)
-        upcomingView.clipsToBounds = true
-        upcomingView.createBorderForView(cornerRadius: 30.0, borderWidth: 0, borderColor: .clear)
-        upcomingView.layer.masksToBounds = false
-        upcomingView.layer.shadowColor = UIColor.black.cgColor
-        upcomingView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
-        upcomingView.layer.shadowOpacity = 0.1
         
-
         //For demo purpose
         let appointment1 = ActiveAppointmentData(pId: 0, mrnNo: "", patientName: "Patient 1", doctorName: "Doctor 1", departmentName: "Cardiology", serviceName: "Cardiology", appointmentTime: "2021-01-06 15:00:00", serviceBookedId: 0, status: "")
         let appointment2 = ActiveAppointmentData(pId: 0, mrnNo: "", patientName: "Patient 1", doctorName: "Doctor 1", departmentName: "Laboratory", serviceName: "Laboratory", appointmentTime: "2021-01-06 16:00:00", serviceBookedId: 0, status: "")
         let appointment3 = ActiveAppointmentData(pId: 0, mrnNo: "", patientName: "Patient 1", doctorName: "Doctor 1", departmentName: "Internal Medicine", serviceName: "Internal Medicine", appointmentTime: "2021-01-06 16:30:00", serviceBookedId: 0, status: "")
-            dummyAppointments = [appointment1,appointment2,appointment3]
+        dummyAppointments = [appointment1,appointment2,appointment3]
         
     }
     
@@ -243,7 +227,7 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AppointmentTableViewCell", for: indexPath) as! AppointmentTableViewCell
         cell.delegate = self
-//        cell.updateAppointmentDataToUI(data: (viewModel.appointmentData?.appointmentDetails?[indexPath.row])!, indexpath: indexPath)
+        //        cell.updateAppointmentDataToUI(data: (viewModel.appointmentData?.appointmentDetails?[indexPath.row])!, indexpath: indexPath)
         cell.updateAppointmentDataToUI(data: dummyAppointments[indexPath.row], indexpath: indexPath)
         return cell
     }
@@ -251,9 +235,9 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
         let vc = storyboard.instantiateViewController(withIdentifier: "AppointmentDetailsViewController") as! AppointmentDetailsViewController
-//        vc.appointmentData = viewModel.appointmentData?.appointmentDetails?[indexPath.row]
+        //        vc.appointmentData = viewModel.appointmentData?.appointmentDetails?[indexPath.row]
         vc.appointmentData = dummyAppointments[indexPath.row]
-
+        
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
     }
@@ -264,96 +248,89 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource{
     
     
 }
-extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource{
+extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        if familyMemberCount > 5{
-//            familyMemberCount = 5
-//            return familyMemberCount
-//        }else{
-//            return familyMemberCount
-//        }
-        return 4
+        
+        return titleMenu.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FamilyCollectionViewCell", for: indexPath) as! FamilyCollectionViewCell
-//        let data = self.viewModel.familyMemberData?[indexPath.row]
-//        if (familyMemberCount - 1) == indexPath.row{
-//            cell.memberImage.image = UIImage(named: "addMember")
-//        }else{
-//            cell.memberImage.image = UIImage(named: "user1")
-//
-//            cell.imageUrl = data?.profile_pic
-//
-//            var isImageAvailable = false
-//            if let url = URL(string: data?.profile_pic ?? ""){
-//                if let cachedImage = ImageCache.shared.getImage(forKey: url.absoluteString) {
-//                    cell.memberImage.image = cachedImage
-//                    isImageAvailable = true
-//                }
-//                if !isImageAvailable{
-//                    AF.request(data?.profile_pic ?? "").responseImage { (response) in
-//                        if case .success(let image) = response.result {
-//                            print("image downloaded: \(image)")
-//
-//                            DispatchQueue.main.async(execute: {
-//                                ImageCache.shared.save(image: image, forKey: data?.profile_pic ?? "")
-//                                    cell.memberImage.image = image
-//                            })
-//                        }
-//                        switch response.result{
-//                        case .success(let image):
-//                            print("image downloaded: \(image)")
-//
-//                            DispatchQueue.main.async(execute: {
-//                                ImageCache.shared.save(image: image, forKey: data?.profile_pic ?? "")
-//                                    cell.memberImage.image = image
-//                            })
-//                        case .failure(let error):
-//                            print(error)
-//                            switch data?.releation {
-//                            case "Father","Brother","Son":
-//                                cell.memberImage.image = UIImage(named: "male")
-//                            default:
-//                                cell.memberImage.image = UIImage(named: "female")
-//                            }
-//                        }
-//                    }
-//                }
-//            }else{
-//                switch data?.releation {
-//                case "Father","Brother","Son":
-//                    cell.memberImage.image = UIImage(named: "male")
-//                default:
-//                    cell.memberImage.image = UIImage(named: "female")
-//                }
-//            }
-//        }
-
-        let users = ["user2","user1","user3"]
-        if indexPath.row == 3{
-            cell.memberImage.image = UIImage(named: "addMember")
-        }else{
-            cell.memberImage.image = UIImage(named:users[indexPath.row])
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AppointmentCollectionViewCell", for: indexPath) as! AppointmentCollectionViewCell
+        cell.titleLabel.text = titleMenu[indexPath.row]
+        if indexPath.row == 2{
+            cell.prearrivalButtonHeight.constant = 0
+            cell.prefilledLabel.isHidden = false
+        } else {
+            cell.prefilledLabel.isHidden = true
+            cell.prearrivalButtonHeight.constant = 50
         }
+        if checkinSelected == indexPath.row {
+            let attrStri = NSMutableAttributedString.init(string:"Cancel")
+            cell.prearrivalButton.setAttributedTitle(attrStri, for: .normal)
+            cell.checkinButton.setTitle("Yes, Check-in", for: .normal)
+            cell.noteLabel.text = "Are you sure you want to check in?"
+        } else {
+            cell.prearrivalButton.setTitle("Pre- arrival", for: .normal)
+            cell.checkinButton.setTitle("Check-in", for: .normal)
+            cell.noteLabel.text = "Note: Please arrive 15 mins early from the scheduled appointment time."
+        }
+        
+        if appointmentBooked == indexPath.row {
+            cell.DetailsView.isHidden = false
+        } else {
+            cell.DetailsView.isHidden = true
+        }
+        
+        cell.prearrivalButton.accessibilityHint = cell.prearrivalButton.titleLabel?.text!
+        cell.prearrivalButton.tag = indexPath.row
+        cell.checkinButton.tag = indexPath.row
+        cell.checkinButton.accessibilityHint = cell.checkinButton.titleLabel?.text!
+        
+        cell.checkinButton.addTarget(self, action: #selector(CheckinButtonPressed(sender:)), for: .touchUpInside)
+        cell.prearrivalButton.addTarget(self, action: #selector(prearrivalButtonPressed(sender:)), for: .touchUpInside)
+        cell.indoorMapButton.addTarget(self, action: #selector(indoorMapButtonPressed(sender:)), for: .touchUpInside)
+        cell.indoorMapDetails.addTarget(self, action: #selector(indoorMapButtonPressed(sender:)), for: .touchUpInside)
+        
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        if indexPath.row == (familyMemberCount - 1){
-//            let storyboard = UIStoryboard(name: "Main", bundle: .main)
-//            let vc = storyboard.instantiateViewController(withIdentifier: "AddNewMemberViewController") as! AddNewMemberViewController
-//            vc.modalPresentationStyle = .fullScreen
-//            vc.userId = userId
-//            present(vc, animated: true)
-//        }
-        
-                if indexPath.row == 3{
-                    let storyboard = UIStoryboard(name: "Main", bundle: .main)
-                    let vc = storyboard.instantiateViewController(withIdentifier: "AddNewMemberViewController") as! AddNewMemberViewController
-                    vc.modalPresentationStyle = .fullScreen
-                    present(vc, animated: true)
-                }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    }
+    
+    @objc func CheckinButtonPressed(sender : UIButton){
+        if sender.accessibilityHint! == "Check-in" {
+            self.checkinSelected = sender.tag
+            appointmentsCollectionView.reloadData()
+        } else {
+            self.appointmentBooked = sender.tag
+            appointmentsCollectionView.reloadData()
+        }
+    }
+    
+    @objc func prearrivalButtonPressed(sender : UIButton){
+        if sender.accessibilityHint! == "Pre- arrival" {
+            let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+            let vc = storyboard.instantiateViewController(withIdentifier: "PreChekinPopup") as! PreChekinPopup
+            vc.modalPresentationStyle = .fullScreen
+            self.view.window!.layer.add(self.rightToLeftTransition(), forKey: kCATransition)
+            self.present(vc, animated: true)
+        } else {
+            self.checkinSelected = -1
+            self.appointmentBooked = -1
+        }
+    }
+    
+    @objc func indoorMapButtonPressed(sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "IndoorMapViewController") as! IndoorMapViewController
+        vc.modalPresentationStyle = .fullScreen
+        self.view.window!.layer.add(self.rightToLeftTransition(), forKey: kCATransition)
+        self.present(vc, animated: true)
     }
     
     
@@ -481,7 +458,7 @@ extension HomeViewController:CheckInDelegate{
     
     func appointmentCheckIn(appointmentIndex: Int) {
         createBlurView()
-//        createCheckIn(appointmentName: viewModel.appointmentData?.appointmentDetails?[appointmentIndex].serviceName ?? "")
+        //        createCheckIn(appointmentName: viewModel.appointmentData?.appointmentDetails?[appointmentIndex].serviceName ?? "")
         NSLog("Tag------->%d", appointmentIndex)
         CurrentAppointment = dummyAppointments[appointmentIndex].serviceName ?? ""
         createCheckIn(appointmentName: dummyAppointments[appointmentIndex].serviceName ?? "")

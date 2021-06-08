@@ -523,7 +523,7 @@
         <image name="doctors" width="24" height="24"/>
         <image name="indoor" width="24" height="24"/>
         <image name="notification" width="24" height="24"/>
-        <image name="time" width="24" height="24"/>
+        <image name="time" width="12" height="12"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
