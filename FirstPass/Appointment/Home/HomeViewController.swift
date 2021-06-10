@@ -22,6 +22,7 @@ class HomeViewController: UIViewController,ScanFinishedDelegate {
     
     @IBOutlet weak var viewAllButton: UIButton!
     
+    @IBOutlet weak var bottomMenuView: Tabbar!
     //    @IBOutlet weak var upcommingView: MyUIView!
     
     //    @IBOutlet weak var prefilledLabel: UILabel!
@@ -63,7 +64,7 @@ class HomeViewController: UIViewController,ScanFinishedDelegate {
         appointmentsCollectionView.delegate = self
         setupUI()
         //        getUserDetailsFromLocal()
-        
+        bottomMenuView.delegate = self
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -469,7 +470,21 @@ extension HomeViewController:CheckInDelegate{
         
     }
 }
-
+extension HomeViewController:BottomViewDelegate
+{
+    func AccountsClicked()
+    {
+        let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AccountViewController") as! AccountViewController
+        //NSLog("corrent app %@---->", CurrentAppointment);
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
+    func AppointmentsClicked() {
+        
+    }
+    
+}
 protocol CheckInDelegate{
     func appointmentCheckIn(appointmentIndex:Int)
     func appointmentIndoorMap(appointmentIndex:Int)

@@ -10,16 +10,8 @@ import UIKit
 import RealmSwift
 class ProfileViewController: UIViewController,UITextFieldDelegate,ImagePickerDelegate {
     @IBOutlet weak var container: UIView!
-    @IBOutlet weak var firstName: UITextField!
-    @IBOutlet weak var lastName: UITextField!
-    @IBOutlet weak var email: UITextField!
-    @IBOutlet weak var mobileNumber: UITextField!
-    @IBOutlet weak var dob: UITextField!
-    @IBOutlet weak var stateCity: UITextField!
-    @IBOutlet weak var emiratesID: UITextField!
-    @IBOutlet weak var mrnID: UITextField!
-
-    @IBOutlet weak var saveButton: UIButton!
+    
+    @IBOutlet weak var changePicBgView: UIView!
     @IBOutlet weak var collectionview: UICollectionView!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var changePicButton: UIButton!
@@ -49,15 +41,9 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,ImagePickerDel
         viewModel.fetchUserProfileSuccess = {
             DispatchQueue.main.async {
 //                self.collectionview.reloadData()
-                self.firstName.text = self.viewModel.userProfileDetails.firstName
-                self.lastName.text = self.viewModel.userProfileDetails.lastName
-                self.email.text = self.viewModel.userProfileDetails.mailAddress
-                self.mobileNumber.text = self.viewModel.userProfileDetails.mobileNo
+                
                 self.userId = self.viewModel.userProfileDetails.userId
-                self.mrnID.text = self.viewModel.userProfileDetails.mrnNo
-                self.emiratesID.text = self.viewModel.userProfileDetails.emiratesId
-                self.stateCity.text = self.viewModel.userProfileDetails.state_city
-                self.dob.text = self.viewModel.userProfileDetails.dob
+               
             }
             self.fetchFamilyMembers()
             
@@ -65,14 +51,7 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,ImagePickerDel
         
         
         //dummy data
-        self.firstName.text = "Natasha"
-        self.lastName.text = "Johnsmith"
-        self.email.text = "natasha@gmail.com"
-        self.mobileNumber.text = "+9711675675"
-        self.mrnID.text = "456878563"
-        self.emiratesID.text = "784-2001-1234566-1"
-        self.stateCity.text = "Dubai Festival City"
-        self.dob.text = "04-03-1960"
+        
         
         let myself = FamilyMembersList(name: "Mrs. Natasha", dob: "04-03-1960", memberId: 0, pId: 0, releation: "Self", title: "Mrs", nationalId: "", id_proof: "", paymentmethod: "", insurancename: "", insuranceno: "", insurancevalidity: "", insurancecardimage: "", mrnNo: "456878563", profile_pic: "")
         let member1 = FamilyMembersList(name: "Mr. Mr. Johnsmith", dob: "18-08-1956", memberId: 0, pId: 0, releation: "Husband", title: "Mrs", nationalId: "", id_proof: "", paymentmethod: "", insurancename: "", insuranceno: "", insurancevalidity: "", insurancecardimage: "", mrnNo: "998878563", profile_pic: "")
@@ -107,11 +86,20 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,ImagePickerDel
     }
 
     @IBAction func editProfileAction(_ sender: Any) {
-        saveButton.isHidden = false
+        //saveButton.isHidden = false
         changePicButton.isHidden = false
+        let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "EditPersonalInformationViewController") as! EditPersonalInformationViewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
-    @IBAction func changePasswordAction(_ sender: Any) {
-        sendChangePasswordOTP()
+    @IBAction func changePasswordAction(_ sender: Any)
+    {
+        //sendChangePasswordOTP()
+        let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "OTPPopUpViewController") as! OTPPopUpViewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     @IBAction func editFamilyAction(_ sender: Any) {
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
@@ -123,66 +111,66 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,ImagePickerDel
     @IBAction func backAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    @IBAction func saveAction(_ sender: Any) {
-        guard let firstName = firstName.text,let lastName = lastName.text,let email = email.text,let emiratesId = emiratesID.text,let mrn = mrnID.text,let dob = dob.text,let state = stateCity.text else {
-             return
-         }
-         
-         if firstName == ""{
-             self.showAlert("Please enter first name")
-             return
-         }
-         if lastName == ""{
-             self.showAlert("Please enter last name")
-             return
-         }
-         if email == ""{
-             self.showAlert("Please enter email")
-             return
-         }
-        
-        if dob == ""{
-            self.showAlert("Please select dob")
-            return
-        }
-        
-        if state == ""{
-            self.showAlert("Please enter your state/city")
-            return
-        }
-//         if emiratesId == ""{
-//             self.showAlert("Please select doctor")
+//    @IBAction func saveAction(_ sender: Any) {
+//        guard let firstName = firstName.text,let lastName = lastName.text,let email = email.text,let emiratesId = emiratesID.text,let mrn = mrnID.text,let dob = dob.text,let state = stateCity.text else {
 //             return
 //         }
-         if mrn == ""{
-             self.showAlert("Please enter MRN ID")
-             return
-         }
-        
-        let params = [
-        "dob": dob,
-        "emiratesId": emiratesId,
-        "firstName": firstName,
-        "lastName": lastName,
-        "mailAddress": email,
-        "mrnNo": mrn,
-        "state_city": state,
-        "userId": userId
-            ] as [String : Any]
-         updateProfile(params: params)
-    }
-
-    @objc func changePassword(){
-        if confirmTextfield.text?.count ?? 0 > 7{
-            if confirmTextfield.text == newTextfield.text{
-                submitNewPassword()
-            }else{
-                self.showAlert("Password mis match")
-            }
-        }else{
-            self.showAlert("Password must have minimum 8 characters")
-        }
-    }
+//
+//         if firstName == ""{
+//             self.showAlert("Please enter first name")
+//             return
+//         }
+//         if lastName == ""{
+//             self.showAlert("Please enter last name")
+//             return
+//         }
+//         if email == ""{
+//             self.showAlert("Please enter email")
+//             return
+//         }
+//
+//        if dob == ""{
+//            self.showAlert("Please select dob")
+//            return
+//        }
+//
+//        if state == ""{
+//            self.showAlert("Please enter your state/city")
+//            return
+//        }
+////         if emiratesId == ""{
+////             self.showAlert("Please select doctor")
+////             return
+////         }
+//         if mrn == ""{
+//             self.showAlert("Please enter MRN ID")
+//             return
+//         }
+//
+//        let params = [
+//        "dob": dob,
+//        "emiratesId": emiratesId,
+//        "firstName": firstName,
+//        "lastName": lastName,
+//        "mailAddress": email,
+//        "mrnNo": mrn,
+//        "state_city": state,
+//        "userId": userId
+//            ] as [String : Any]
+//         updateProfile(params: params)
+//    }
+//
+//    @objc func changePassword(){
+//        if confirmTextfield.text?.count ?? 0 > 7{
+//            if confirmTextfield.text == newTextfield.text{
+//                submitNewPassword()
+//            }else{
+//                self.showAlert("Password mis match")
+//            }
+//        }else{
+//            self.showAlert("Password must have minimum 8 characters")
+//        }
+//    }
     @objc func doneAction(){
         blurView.removeFromSuperview()
         passwordSuccess.removeFromSuperview()
@@ -211,13 +199,13 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,ImagePickerDel
 //            if let profileDetails = userData.first {
                 try! realm.write {
 //                    realm.create(LoginUserDataRealm.self, value: ["mrnNo":self.mrnID.text], update: .all)
-                    profileDetails?.dob = self.dob.text
-                    profileDetails?.emiratesId = self.emiratesID.text
-                    profileDetails?.firstName = self.firstName.text ?? ""
-                    profileDetails?.lastName = self.lastName.text ?? ""
-                    profileDetails?.mrnNo = self.mrnID.text
-                    profileDetails?.state_city = self.stateCity.text
-                    profileDetails?.mailAddress = self.email.text ?? ""
+//                    profileDetails?.dob = self.dob.text
+//                    profileDetails?.emiratesId = self.emiratesID.text
+//                    profileDetails?.firstName = self.firstName.text ?? ""
+//                    profileDetails?.lastName = self.lastName.text ?? ""
+//                    profileDetails?.mrnNo = self.mrnID.text
+//                    profileDetails?.state_city = self.stateCity.text
+//                    profileDetails?.mailAddress = self.email.text ?? ""
                 }
 //            }
             self.showAlert("Profile updated successfully")
@@ -236,9 +224,10 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,ImagePickerDel
         }
     }
     
-    func sendChangePasswordOTP(){
+    func sendChangePasswordOTP()
+    {
         let params = [
-            "mobileNo": mobileNumber.text!,
+            "mobileNo": "987456212",
             "userId": userId] as [String : Any]
         self.activityIndicator(self.view, startAnimate: true)
         viewModel.sendOTP(params: params)
@@ -269,7 +258,7 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,ImagePickerDel
         self.activityIndicator(self.view, startAnimate: true)
         viewModel.verifyOTP(params: params)
         viewModel.otpVerifySuccess = {
-            self.createBlurView()
+            //self.createBlurView()
             self.createChangePasswordView()
         }
         viewModel.loadingStatus = {
@@ -323,7 +312,7 @@ extension ProfileViewController:DatePickerDelegate,OTPPopUpDelegate{
     }
     
     func selectedDate(date: String) {
-        dob.text = date
+       // dob.text = date
     }
     
     func cancelDateSelection() {
@@ -333,42 +322,45 @@ extension ProfileViewController:DatePickerDelegate,OTPPopUpDelegate{
     func setupUI(){
         container.createBorderForView(cornerRadius: 30, borderWidth: 0, borderColor: .clear)
         container.clipsToBounds = true
-        firstName.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
-        lastName.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
-        email.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
-        mobileNumber.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
-        emiratesID.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
-        mrnID.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
-        saveButton.createBorderForButton(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
-        dob.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
-        stateCity.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
-
-        dob.delegate = self
-        saveButton.isHidden = true
-        changePicButton.isHidden = true
-        profileImage.createCircle()
+//        firstName.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
+//        lastName.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
+//        email.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
+//        mobileNumber.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
+//        emiratesID.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
+//        mrnID.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
+//        saveButton.createBorderForButton(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
+//        dob.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
+//        stateCity.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
+//
+//        dob.delegate = self
+//        saveButton.isHidden = true
+        changePicButton.isHidden = false
+        profileImage.layer.cornerRadius = 20
+        container.layer.borderColor = UIColor.lightGray.cgColor
+        container.layer.borderWidth = 0.4
+        changePicBgView.layer.cornerRadius = 10
     }
     //Create Blur background
-    func createBlurView(){
-        blurView.translatesAutoresizingMaskIntoConstraints = false
-        blurView.backgroundColor = UIColor(red: 28.0/255.0, green: 29.0/255.0, blue: 48.0/255, alpha: 0.8)
-        //        blurView.alpha = 0.8
-        view.addSubview(blurView)
-        blurView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        blurView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        blurView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        blurView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.8).isActive = true
-        blurView.isUserInteractionEnabled = true
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(closePopUp))
-        blurView.addGestureRecognizer(gesture)
-    }
+//    func createBlurView(){
+//        blurView.translatesAutoresizingMaskIntoConstraints = false
+//        blurView.backgroundColor = UIColor(red: 28.0/255.0, green: 29.0/255.0, blue: 48.0/255, alpha: 0.8)
+//        //        blurView.alpha = 0.8
+//        view.addSubview(blurView)
+//        blurView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+//        blurView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+//        blurView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+//        blurView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.8).isActive = true
+//        blurView.isUserInteractionEnabled = true
+//        let gesture = UITapGestureRecognizer(target: self, action: #selector(closePopUp))
+//        blurView.addGestureRecognizer(gesture)
+//    }
     @objc func closePopUp(){
         
     }
     
     //Password change Success POPUP view
     func createSuccessView(){
-        createBlurView()
+        //createBlurView()
         passwordSuccess.layer.cornerRadius = 30
         passwordSuccess.backgroundColor = UIColor(hexString: "#fbfbfb")
         view.addSubview(passwordSuccess)
@@ -454,7 +446,7 @@ extension ProfileViewController:DatePickerDelegate,OTPPopUpDelegate{
     
     //Password change Success POPUP view
     func createChangePasswordView(){
-        createBlurView()
+        //createBlurView()
         changePasswordView.layer.cornerRadius = 30
         changePasswordView.backgroundColor = UIColor.white
         view.addSubview(changePasswordView)
@@ -467,7 +459,7 @@ extension ProfileViewController:DatePickerDelegate,OTPPopUpDelegate{
         doneButton.setTitle("Submit", for: .normal)
         doneButton.setTitleColor(.white, for: .normal)
         doneButton.backgroundColor = UIColor(hexString: "#777EDC")
-        doneButton.addTarget(self, action: #selector(changePassword), for: .touchUpInside)
+        //doneButton.addTarget(self, action: #selector(changePassword), for: .touchUpInside)
         doneButton.layer.cornerRadius = 10
         doneButton.translatesAutoresizingMaskIntoConstraints = false
         changePasswordView.addSubview(doneButton)
@@ -546,17 +538,17 @@ extension ProfileViewController:DatePickerDelegate,OTPPopUpDelegate{
         titleLabel.topAnchor.constraint(equalTo: changePasswordView.topAnchor,constant: 15).isActive = true
     }
     
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField == dob{
-            textField.resignFirstResponder()
-            let storyboard = UIStoryboard(name: "Main", bundle: .main)
-            let popup = storyboard.instantiateViewController(withIdentifier: "DatePickerViewController") as! DatePickerViewController
-            popup.isTimePicker = false
-            popup.modalPresentationStyle = .overCurrentContext
-            popup.delegate = self
-            present(popup, animated: true, completion: nil)
-        }
-    }
+//    func textFieldDidBeginEditing(_ textField: UITextField) {
+//        if textField == dob{
+//            textField.resignFirstResponder()
+//            let storyboard = UIStoryboard(name: "Main", bundle: .main)
+//            let popup = storyboard.instantiateViewController(withIdentifier: "DatePickerViewController") as! DatePickerViewController
+//            popup.isTimePicker = false
+//            popup.modalPresentationStyle = .overCurrentContext
+//            popup.delegate = self
+//            present(popup, animated: true, completion: nil)
+//        }
+//    }
     
     //Password change Success POPUP view
     
@@ -605,13 +597,21 @@ extension ProfileViewController:DatePickerDelegate,OTPPopUpDelegate{
 extension ProfileViewController:UICollectionViewDelegate,UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
        // return viewModel.familyMemberData?.count ?? 0
-        return familyMemberData.count
+        return familyMemberData.count+1
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FamilyCollectionViewCell", for: indexPath) as! FamilyCollectionViewCell
-        let users = ["user2","user1","user3"]
-        cell.memberImage.image = UIImage(named:users[indexPath.row])
+        let users = ["person1","person2","person3"]
+        if indexPath.row == 3
+        {
+            cell.memberImage.image = UIImage(named: "add")
+        }
+        else
+        {
+            cell.memberImage.image = UIImage(named:users[indexPath.row])
+            cell.memberImage.layer.cornerRadius = 10
+        }
         return cell
     }
     

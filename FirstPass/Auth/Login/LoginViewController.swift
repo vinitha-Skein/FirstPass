@@ -113,7 +113,7 @@ class LoginViewController: UIViewController {
         if phone.contains("natasha@gmail.com"){
             if password == "123456"{
                 UserDefaults.standard.set(true, forKey: "isLoggedIn")
-                let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+                let storyboard = UIStoryboard(name: "phase2", bundle: .main)
                 let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
                 vc.modalPresentationStyle = .fullScreen
                 self.view.window!.layer.add(self.rightToLeftTransition(), forKey: kCATransition)

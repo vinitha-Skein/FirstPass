@@ -9,6 +9,12 @@
 import Foundation
 import UIKit
 
+protocol BottomViewDelegate
+{
+    func AccountsClicked()
+    func AppointmentsClicked()
+}
+
 class Tabbar: UIView {
     private let nibName = "Tabbar"
     
@@ -22,7 +28,8 @@ class Tabbar: UIView {
     
     @IBOutlet var tabbartitleLabels: [UILabel]!
     
-    
+    var delegate: BottomViewDelegate?
+
     
     
     required init?(coder: NSCoder) {
@@ -42,12 +49,19 @@ class Tabbar: UIView {
             tabbarImages[1].image = UIImage(named: "account_select")
         }
         
-        
     }
     
     
-    @IBAction func tabbarButtonsPressed(_ sender: Any) {
-        
+    @IBAction func tabbarButtonsPressed(_ sender: UIButton)
+    {
+        if (sender.tag == 2)
+        {
+            self.delegate?.AccountsClicked()
+        }
+        else if (sender.tag == 0)
+        {
+            self.delegate?.AppointmentsClicked()
+        }
     }
     
 }

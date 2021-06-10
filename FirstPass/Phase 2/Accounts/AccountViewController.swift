@@ -10,13 +10,15 @@ import UIKit
 
 class AccountViewController: UIViewController {
 
+    @IBOutlet weak var bottomMenuView: Tabbar!
     @IBOutlet weak var collectionview: UICollectionView!
-    var categories = ["My Profile","My Appointments","Book Appointment","Payments","Reports","Indoor Map","Chat with Us","Logout"]
+    var categories = ["My Profile","My Appointment","Book Appointment","Payments","Reports","Indoor Map","Chat with Us","Logout"]
     var logoImages = ["accountpic","appointments","book","payments","reports","map","chat","logout"]
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionview.delegate = self
         collectionview.dataSource = self
+        bottomMenuView.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -61,5 +63,54 @@ extension AccountViewController:UICollectionViewDelegate,UICollectionViewDataSou
         
         return  CGSize(width: 156, height: 146)
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
+        if (indexPath.row == 3)
+        {
+            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "ProcessFeedbackViewController") as! ProcessFeedbackViewController
+            vc.modalPresentationStyle = .fullScreen
+
+            present(vc, animated: true, completion: nil)
+        }
+        if (indexPath.row == 7)
+        {
+            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            vc.modalPresentationStyle = .fullScreen
+
+            present(vc, animated: true, completion: nil)
+        }
+        if (indexPath.row == 6)
+        {
+            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "TokenViewController") as! TokenViewController
+            vc.modalPresentationStyle = .fullScreen
+
+            present(vc, animated: true, completion: nil)
+        }
+        if (indexPath.row == 0)
+        {
+            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
+        }
+
+        
+    }
+}
+extension AccountViewController:BottomViewDelegate
+{
+    func AccountsClicked() {
+        
+    }
+    
+    func AppointmentsClicked() {
+        let storyboard = UIStoryboard(name: "phase2", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        present(vc, animated: true, completion: nil)
+    }
+    
     
 }

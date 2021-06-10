@@ -52,12 +52,14 @@ enum APIRouter : URLRequestConvertible {
     // MARK: - HTTPMethod
     private var method : HTTPMethod{
         switch self{
-        case .registerUser,.loginUser,.verifyRegistrationOTP,.updateProfile,.setPassword,.sendOTP,.verifyOTP,.setNewPassword,.addFamilyMember,.createAppointment,.submitFeedback,.savePaymentDetails,.updateProfileImage,.addInsurance:
+        case .registerUser,.loginUser,.verifyRegistrationOTP,.updateProfile,.sendOTP,.verifyOTP,.setNewPassword,.addFamilyMember,.createAppointment,.submitFeedback,.savePaymentDetails,.updateProfileImage,.addInsurance:
             return .post
         case .editFamilyMember,.editInsurance:
             return .put
         case .deleteFamilyMember,.deleteInsurance:
             return .delete
+        case .setPassword:
+            return .patch
         default:
             return .get
         }
@@ -67,13 +69,13 @@ enum APIRouter : URLRequestConvertible {
     private var path: String {
         switch self {
         case .registerUser:
-            return "auth/register"
+            return "user"
         case .loginUser:
             return "auth/login"
         case .verifyRegistrationOTP:
             return "auth/otp/verify"
         case .setPassword:
-            return "auth/password/save"
+            return "user"
         case .getFamilyMembers(let userId):
             return "familymember/\(userId)/all"
         case .addFamilyMember(let userId,_):
@@ -89,7 +91,7 @@ enum APIRouter : URLRequestConvertible {
         case .verifyOTP:
             return "user/verify-otp"
         case .setNewPassword:
-            return "user/newpassword"
+            return "user"
         case .createAppointment:
             return "appointment/create"
         case .cancelAppointment(let appointmentId):

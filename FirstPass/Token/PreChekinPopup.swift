@@ -50,17 +50,17 @@ class PreChekinPopup: UIViewController {
     @IBAction func radioButtonYes(_ sender: UIButton) {
         switch sender.tag {
         case 1:
-            parkingYes.image = UIImage(named: "radio-on-button")
-            parkingNo.image = UIImage(named: "circle")
+            parkingYes.image = UIImage(named: "radioSelected")
+            parkingNo.image = UIImage(named: "radioDeselected")
             carPlate.isHidden=false;
-            caarparking.constant=150;
+            caarparking.constant=200;
             
         case 2:
-            specialAssistanceYes.image = UIImage(named: "radio-on-button")
-            specialAssistanceNo.image = UIImage(named: "circle")
+            specialAssistanceYes.image = UIImage(named: "radioSelected")
+            specialAssistanceNo.image = UIImage(named: "radioDeselected")
         default:
-            vipServiceYes.image = UIImage(named: "radio-on-button")
-            vipServiceNo.image = UIImage(named: "circle")
+            vipServiceYes.image = UIImage(named: "radioSelected")
+            vipServiceNo.image = UIImage(named: "radioDeselected")
             convergePreference.isHidden=false;
             convergeLanguage.isHidden=false;
             vipService.constant = 270;
@@ -73,16 +73,16 @@ class PreChekinPopup: UIViewController {
     @IBAction func radioButtonNo(_ sender: UIButton) {
         switch sender.tag {
         case 1:
-            parkingYes.image = UIImage(named: "circle")
-            parkingNo.image = UIImage(named: "radio-on-button")
+            parkingYes.image = UIImage(named: "radioDeselected")
+            parkingNo.image = UIImage(named: "radioSelected")
              carPlate.isHidden=true;
              caarparking.constant=110;
         case 2:
-            specialAssistanceYes.image = UIImage(named: "circle")
-            specialAssistanceNo.image = UIImage(named: "radio-on-button")
+            specialAssistanceYes.image = UIImage(named: "radioDeselected")
+            specialAssistanceNo.image = UIImage(named: "radioSelected")
         default:
-            vipServiceYes.image = UIImage(named: "circle")
-            vipServiceNo.image = UIImage(named: "radio-on-button")
+            vipServiceYes.image = UIImage(named: "radioDeselected")
+            vipServiceNo.image = UIImage(named: "radioSelected")
             convergePreference.isHidden=true;
             convergeLanguage.isHidden=true;
             vipService.constant = 110;

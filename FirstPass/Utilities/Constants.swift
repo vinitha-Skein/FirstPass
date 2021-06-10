@@ -1,11 +1,9 @@
 
 
 import Foundation
-import Security
-
 struct DataService {
     static let productionBaseURL = ""
-    static let developmentBaseURL = "http://202.65.159.118:8094/firstpass-app/"
+    static let developmentBaseURL = "https://demo.emeetify.com:81/first-pass/"
     static var authToken = ""
 }
 struct UserLoginData{
@@ -34,7 +32,7 @@ struct Colors{
 
 
 
-
+import Security
 
 class KeyChain {
 
@@ -87,9 +85,6 @@ extension Data {
         return self.withUnsafeBytes { $0.load(as: T.self) }
     }
 }
-
-
 struct Constants {
     static var selectedMenu = 0
 }
-

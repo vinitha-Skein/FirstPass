@@ -34,6 +34,20 @@
 		1BD710A626612E7700D2C607 /* JourneyRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD710A526612E7700D2C607 /* JourneyRowController.swift */; };
 		1BF222E4266F32A300759E13 /* phase2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF222E3266F32A300759E13 /* phase2.storyboard */; };
 		1BF2232E266FB69B00759E13 /* AppointmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2232D266FB69B00759E13 /* AppointmentCollectionViewCell.swift */; };
+		A70691C026706BB9000C4129 /* PreChekinPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70691BF26706BB9000C4129 /* PreChekinPopup.swift */; };
+		A71AB86F26709A3300D8F151 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB86D26709A3300D8F151 /* APIRouter.swift */; };
+		A71AB87026709A3300D8F151 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB86E26709A3300D8F151 /* APIClient.swift */; };
+		A71AB87826709A9300D8F151 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB87726709A9300D8F151 /* Constants.swift */; };
+		A71AB88226709BA400D8F151 /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB87F26709BA300D8F151 /* RegistrationModel.swift */; };
+		A71AB88326709BA400D8F151 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB88026709BA400D8F151 /* RegistrationViewController.swift */; };
+		A71AB88426709BA400D8F151 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB88126709BA400D8F151 /* RegistrationViewModel.swift */; };
+		A71AB88E26709BDF00D8F151 /* OTPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB88B26709BDE00D8F151 /* OTPModel.swift */; };
+		A71AB88F26709BDF00D8F151 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB88C26709BDE00D8F151 /* OTPViewController.swift */; };
+		A71AB89026709BDF00D8F151 /* OtpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB88D26709BDF00D8F151 /* OtpViewModel.swift */; };
+		A71AB89A26709C0A00D8F151 /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB89726709C0A00D8F151 /* PasswordViewModel.swift */; };
+		A71AB89B26709C0A00D8F151 /* PasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB89826709C0A00D8F151 /* PasswordModel.swift */; };
+		A71AB89C26709C0A00D8F151 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB89926709C0A00D8F151 /* PasswordViewController.swift */; };
+		A7209B8E2670F69E0084E2AB /* EditPersonalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7209B8D2670F69E0084E2AB /* EditPersonalInformationViewController.swift */; };
 		A7241D24265E0601009D9A7C /* CheckinInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7241D23265E0601009D9A7C /* CheckinInterfaceController.swift */; };
 		A737D422265BB52E008B4D61 /* UpcommingAppointmentsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A737D421265BB52E008B4D61 /* UpcommingAppointmentsInterfaceController.swift */; };
 		A737D42E265BB624008B4D61 /* UpcommingappointmentsRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A737D42D265BB624008B4D61 /* UpcommingappointmentsRowController.swift */; };
@@ -62,7 +76,6 @@
 		A803391F259EE8F400FE5FB5 /* ArrivedPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8033918259EE8F400FE5FB5 /* ArrivedPopup.swift */; };
 		A8033920259EE8F400FE5FB5 /* TokenPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8033919259EE8F400FE5FB5 /* TokenPopup.swift */; };
 		A8033921259EE8F400FE5FB5 /* TokenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A803391A259EE8F400FE5FB5 /* TokenTableViewCell.swift */; };
-		A8033922259EE8F400FE5FB5 /* PreChekinPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A803391B259EE8F400FE5FB5 /* PreChekinPopup.swift */; };
 		A8768C28259F213300DFF6BF /* NewTokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8768C27259F213300DFF6BF /* NewTokenViewController.swift */; };
 		A8768C2A259F74A400DFF6BF /* ProcessFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8768C29259F74A400DFF6BF /* ProcessFeedbackViewController.swift */; };
 		A894564525BED4A4002EFB28 /* PharmacyCollectionPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A894564425BED4A3002EFB28 /* PharmacyCollectionPopup.swift */; };
@@ -118,11 +131,6 @@
 		C059808C2506211800C92021 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C059808A2506211800C92021 /* Main.storyboard */; };
 		C059808E2506211900C92021 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C059808D2506211900C92021 /* Assets.xcassets */; };
 		C05980912506211900C92021 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C059808F2506211900C92021 /* LaunchScreen.storyboard */; };
-		C059809A2506273C00C92021 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05980992506273C00C92021 /* APIRouter.swift */; };
-		C059809C2506275400C92021 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C059809B2506275400C92021 /* APIClient.swift */; };
-		C05980A12506286D00C92021 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05980A02506286D00C92021 /* RegistrationViewController.swift */; };
-		C05980A32506288600C92021 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05980A22506288600C92021 /* PasswordViewController.swift */; };
-		C05980A5250628AB00C92021 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05980A4250628AB00C92021 /* OTPViewController.swift */; };
 		C05980A7250628D400C92021 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05980A6250628D400C92021 /* LoginViewController.swift */; };
 		C0672AA6251500E90060FB08 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0672AA5251500E80060FB08 /* HomeViewController.swift */; };
 		C0672AA9251507010060FB08 /* AppointmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0672AA7251507010060FB08 /* AppointmentTableViewCell.swift */; };
@@ -133,8 +141,6 @@
 		C068AAFC2571FB8E00253D81 /* InsuranceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C068AAFA2571FB8E00253D81 /* InsuranceTableViewCell.xib */; };
 		C0911AFF254FC6480052E52C /* FeedbackTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0911AFD254FC6480052E52C /* FeedbackTextTableViewCell.swift */; };
 		C0911B00254FC6480052E52C /* FeedbackTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0911AFE254FC6480052E52C /* FeedbackTextTableViewCell.xib */; };
-		C0911B0925503DD90052E52C /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0911B0825503DD90052E52C /* RegistrationModel.swift */; };
-		C0911B0B25503DF60052E52C /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0911B0A25503DF60052E52C /* RegistrationViewModel.swift */; };
 		C0911B0E25505FC20052E52C /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0911B0D25505FC20052E52C /* LoginModel.swift */; };
 		C0911B1025505FDA0052E52C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0911B0F25505FDA0052E52C /* LoginViewModel.swift */; };
 		C091238F255597FE00CFBC89 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C091238E255597FE00CFBC89 /* HomeViewModel.swift */; };
@@ -159,14 +165,9 @@
 		C0B2081D2519F1FF00F048F2 /* groupCopy2.png in Resources */ = {isa = PBXBuildFile; fileRef = C0B208172519F1FF00F048F2 /* groupCopy2.png */; };
 		C0B254BA254D5A63002080D8 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B254B9254D5A63002080D8 /* ChatViewController.swift */; };
 		C0B254BC254D5BDE002080D8 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B254BB254D5BDE002080D8 /* PaymentViewController.swift */; };
-		C0CBF0E625515E37003BF9EC /* OTPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CBF0E525515E37003BF9EC /* OTPModel.swift */; };
-		C0CBF0E825515E48003BF9EC /* OtpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CBF0E725515E48003BF9EC /* OtpViewModel.swift */; };
-		C0CBF0EA25515E5B003BF9EC /* PasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CBF0E925515E5B003BF9EC /* PasswordModel.swift */; };
-		C0CBF0EC25515E70003BF9EC /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CBF0EB25515E70003BF9EC /* PasswordViewModel.swift */; };
 		C0DA40D825374B96003E1F77 /* IndoorMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DA40D725374B96003E1F77 /* IndoorMapViewController.swift */; };
 		C0F496FF2570C8570066C865 /* AppointmentDetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F496FE2570C8570066C865 /* AppointmentDetailsModel.swift */; };
 		C0F497012570C9340066C865 /* AppointmentDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F497002570C9340066C865 /* AppointmentDetailsViewModel.swift */; };
-		C0F95A0B2508A35100709E3D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0F95A0A2508A35100709E3D /* Constants.swift */; };
 		C0FA053C25527AEB0011EF48 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FA053B25527AEB0011EF48 /* Validation.swift */; };
 		C0FA0541255284940011EF48 /* AddMemberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FA0540255284940011EF48 /* AddMemberModel.swift */; };
 		C0FA0543255284A40011EF48 /* AddMemberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FA0542255284A40011EF48 /* AddMemberViewModel.swift */; };
@@ -249,6 +250,20 @@
 		1BF222E3266F32A300759E13 /* phase2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = phase2.storyboard; sourceTree = "<group>"; };
 		1BF2232D266FB69B00759E13 /* AppointmentCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentCollectionViewCell.swift; sourceTree = "<group>"; };
 		83C05EB8E54AB32B13684667 /* Pods-FirstPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstPass.debug.xcconfig"; path = "Target Support Files/Pods-FirstPass/Pods-FirstPass.debug.xcconfig"; sourceTree = "<group>"; };
+		A70691BF26706BB9000C4129 /* PreChekinPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreChekinPopup.swift; sourceTree = "<group>"; };
+		A71AB86D26709A3300D8F151 /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		A71AB86E26709A3300D8F151 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		A71AB87726709A9300D8F151 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A71AB87F26709BA300D8F151 /* RegistrationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
+		A71AB88026709BA400D8F151 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		A71AB88126709BA400D8F151 /* RegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
+		A71AB88B26709BDE00D8F151 /* OTPModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPModel.swift; sourceTree = "<group>"; };
+		A71AB88C26709BDE00D8F151 /* OTPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		A71AB88D26709BDF00D8F151 /* OtpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtpViewModel.swift; sourceTree = "<group>"; };
+		A71AB89726709C0A00D8F151 /* PasswordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
+		A71AB89826709C0A00D8F151 /* PasswordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordModel.swift; sourceTree = "<group>"; };
+		A71AB89926709C0A00D8F151 /* PasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		A7209B8D2670F69E0084E2AB /* EditPersonalInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonalInformationViewController.swift; sourceTree = "<group>"; };
 		A7241D23265E0601009D9A7C /* CheckinInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinInterfaceController.swift; sourceTree = "<group>"; };
 		A737D421265BB52E008B4D61 /* UpcommingAppointmentsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcommingAppointmentsInterfaceController.swift; sourceTree = "<group>"; };
 		A737D42D265BB624008B4D61 /* UpcommingappointmentsRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcommingappointmentsRowController.swift; sourceTree = "<group>"; };
@@ -280,7 +295,6 @@
 		A8033918259EE8F400FE5FB5 /* ArrivedPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrivedPopup.swift; sourceTree = "<group>"; };
 		A8033919259EE8F400FE5FB5 /* TokenPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenPopup.swift; sourceTree = "<group>"; };
 		A803391A259EE8F400FE5FB5 /* TokenTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenTableViewCell.swift; sourceTree = "<group>"; };
-		A803391B259EE8F400FE5FB5 /* PreChekinPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreChekinPopup.swift; sourceTree = "<group>"; };
 		A8768C27259F213300DFF6BF /* NewTokenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTokenViewController.swift; sourceTree = "<group>"; };
 		A8768C29259F74A400DFF6BF /* ProcessFeedbackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessFeedbackViewController.swift; sourceTree = "<group>"; };
 		A894564425BED4A3002EFB28 /* PharmacyCollectionPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PharmacyCollectionPopup.swift; sourceTree = "<group>"; };
@@ -337,11 +351,6 @@
 		C059808D2506211900C92021 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C05980902506211900C92021 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C05980922506211900C92021 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C05980992506273C00C92021 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
-		C059809B2506275400C92021 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
-		C05980A02506286D00C92021 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		C05980A22506288600C92021 /* PasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
-		C05980A4250628AB00C92021 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
 		C05980A6250628D400C92021 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C0672AA5251500E80060FB08 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C0672AA7251507010060FB08 /* AppointmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentTableViewCell.swift; sourceTree = "<group>"; };
@@ -352,8 +361,6 @@
 		C068AAFA2571FB8E00253D81 /* InsuranceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InsuranceTableViewCell.xib; sourceTree = "<group>"; };
 		C0911AFD254FC6480052E52C /* FeedbackTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackTextTableViewCell.swift; sourceTree = "<group>"; };
 		C0911AFE254FC6480052E52C /* FeedbackTextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackTextTableViewCell.xib; sourceTree = "<group>"; };
-		C0911B0825503DD90052E52C /* RegistrationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
-		C0911B0A25503DF60052E52C /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		C0911B0D25505FC20052E52C /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		C0911B0F25505FDA0052E52C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		C091238E255597FE00CFBC89 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -378,14 +385,9 @@
 		C0B208172519F1FF00F048F2 /* groupCopy2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = groupCopy2.png; sourceTree = "<group>"; };
 		C0B254B9254D5A63002080D8 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		C0B254BB254D5BDE002080D8 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
-		C0CBF0E525515E37003BF9EC /* OTPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPModel.swift; sourceTree = "<group>"; };
-		C0CBF0E725515E48003BF9EC /* OtpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtpViewModel.swift; sourceTree = "<group>"; };
-		C0CBF0E925515E5B003BF9EC /* PasswordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordModel.swift; sourceTree = "<group>"; };
-		C0CBF0EB25515E70003BF9EC /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
 		C0DA40D725374B96003E1F77 /* IndoorMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndoorMapViewController.swift; sourceTree = "<group>"; };
 		C0F496FE2570C8570066C865 /* AppointmentDetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDetailsModel.swift; sourceTree = "<group>"; };
 		C0F497002570C9340066C865 /* AppointmentDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentDetailsViewModel.swift; sourceTree = "<group>"; };
-		C0F95A0A2508A35100709E3D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C0FA053B25527AEB0011EF48 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		C0FA0540255284940011EF48 /* AddMemberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberModel.swift; sourceTree = "<group>"; };
 		C0FA0542255284A40011EF48 /* AddMemberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberViewModel.swift; sourceTree = "<group>"; };
@@ -458,6 +460,7 @@
 		1B5AC2B4266E6419002E7C12 /* Phase 2 */ = {
 			isa = PBXGroup;
 			children = (
+				A7209B8C2670F6670084E2AB /* Edit Profile */,
 				A764019F266F727E0050E41A /* Accounts */,
 				C094C3862513304F00F039E4 /* OnBoard */,
 				1BF222E3266F32A300759E13 /* phase2.storyboard */,
@@ -480,6 +483,14 @@
 				EE34F176B87465CD0E373D99 /* Pods_FirstPass.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7209B8C2670F6670084E2AB /* Edit Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A7209B8D2670F69E0084E2AB /* EditPersonalInformationViewController.swift */,
+			);
+			path = "Edit Profile";
 			sourceTree = "<group>";
 		};
 		A7462F812633E76F00ACD8E5 /* NewChanges */ = {
@@ -546,11 +557,11 @@
 			isa = PBXGroup;
 			children = (
 				A76401E1266F94AC0050E41A /* AlertTableCell.swift */,
+				A70691BF26706BB9000C4129 /* PreChekinPopup.swift */,
 				A76401E2266F94AD0050E41A /* AlertTableCell.xib */,
 				A894564425BED4A3002EFB28 /* PharmacyCollectionPopup.swift */,
 				A8D2902025BEA8D5003605D6 /* PharmacyPopup.swift */,
 				A8D2901E25BE9F6F003605D6 /* SwapPopup.swift */,
-				A803391B259EE8F400FE5FB5 /* PreChekinPopup.swift */,
 				A8033918259EE8F400FE5FB5 /* ArrivedPopup.swift */,
 				A8033916259EE8F400FE5FB5 /* ParkingMapPopup.swift */,
 				A8033915259EE8F400FE5FB5 /* SwapTestPopup.swift */,
@@ -670,8 +681,8 @@
 		C05980982506270800C92021 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				C05980992506273C00C92021 /* APIRouter.swift */,
-				C059809B2506275400C92021 /* APIClient.swift */,
+				A71AB86E26709A3300D8F151 /* APIClient.swift */,
+				A71AB86D26709A3300D8F151 /* APIRouter.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -706,9 +717,9 @@
 		C0911B0725503D840052E52C /* Registration */ = {
 			isa = PBXGroup;
 			children = (
-				C0911B0825503DD90052E52C /* RegistrationModel.swift */,
-				C0911B0A25503DF60052E52C /* RegistrationViewModel.swift */,
-				C05980A02506286D00C92021 /* RegistrationViewController.swift */,
+				A71AB87F26709BA300D8F151 /* RegistrationModel.swift */,
+				A71AB88026709BA400D8F151 /* RegistrationViewController.swift */,
+				A71AB88126709BA400D8F151 /* RegistrationViewModel.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -726,9 +737,9 @@
 		C0911B11255064600052E52C /* OTP */ = {
 			isa = PBXGroup;
 			children = (
-				C0CBF0E525515E37003BF9EC /* OTPModel.swift */,
-				C0CBF0E725515E48003BF9EC /* OtpViewModel.swift */,
-				C05980A4250628AB00C92021 /* OTPViewController.swift */,
+				A71AB88B26709BDE00D8F151 /* OTPModel.swift */,
+				A71AB88C26709BDE00D8F151 /* OTPViewController.swift */,
+				A71AB88D26709BDF00D8F151 /* OtpViewModel.swift */,
 			);
 			path = OTP;
 			sourceTree = "<group>";
@@ -736,9 +747,9 @@
 		C0911B122550646C0052E52C /* Password */ = {
 			isa = PBXGroup;
 			children = (
-				C0CBF0E925515E5B003BF9EC /* PasswordModel.swift */,
-				C0CBF0EB25515E70003BF9EC /* PasswordViewModel.swift */,
-				C05980A22506288600C92021 /* PasswordViewController.swift */,
+				A71AB89826709C0A00D8F151 /* PasswordModel.swift */,
+				A71AB89926709C0A00D8F151 /* PasswordViewController.swift */,
+				A71AB89726709C0A00D8F151 /* PasswordViewModel.swift */,
 			);
 			path = Password;
 			sourceTree = "<group>";
@@ -842,9 +853,9 @@
 		C0F95A092508A33400709E3D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				A71AB87726709A9300D8F151 /* Constants.swift */,
 				C023EA842552DB6000D6256C /* Realm.swift */,
 				C054DDFE254C090A008ABD04 /* DatePickerViewController.swift */,
-				C0F95A0A2508A35100709E3D /* Constants.swift */,
 				C094C38425132EF500F039E4 /* Extension.swift */,
 				C01F2ECF2537007000632278 /* TabViewController.swift */,
 				C0FA053B25527AEB0011EF48 /* Validation.swift */,
@@ -1152,59 +1163,61 @@
 				C0FA0543255284A40011EF48 /* AddMemberViewModel.swift in Sources */,
 				C02B2309255AE509004ABBB3 /* FilterCategoryTableViewCell.swift in Sources */,
 				C091239625559D3100CFBC89 /* AddAppointmentViewModel.swift in Sources */,
-				C0911B0B25503DF60052E52C /* RegistrationViewModel.swift in Sources */,
 				C05980A7250628D400C92021 /* LoginViewController.swift in Sources */,
-				C0CBF0EA25515E5B003BF9EC /* PasswordModel.swift in Sources */,
 				C0560F2725715FFB0083CE50 /* AddInsuranceViewController.swift in Sources */,
 				A76401E3266F94AD0050E41A /* AlertTableCell.swift in Sources */,
 				C091239925559DC300CFBC89 /* MyAppointmentsModel.swift in Sources */,
 				A76401A6266F72BF0050E41A /* AccountCollectionViewCell.swift in Sources */,
-				C05980A12506286D00C92021 /* RegistrationViewController.swift in Sources */,
 				C0FA053C25527AEB0011EF48 /* Validation.swift in Sources */,
 				C054DDFF254C090A008ABD04 /* DatePickerViewController.swift in Sources */,
+				A71AB89B26709C0A00D8F151 /* PasswordModel.swift in Sources */,
 				C0035757251891C200F76902 /* ReportHeader.swift in Sources */,
+				A71AB88E26709BDF00D8F151 /* OTPModel.swift in Sources */,
 				C0088BDD251B5F1A00777786 /* FeedbackTableViewCell.swift in Sources */,
 				C0B207EF25199C2800F048F2 /* SideMenuViewController.swift in Sources */,
+				A71AB88326709BA400D8F151 /* RegistrationViewController.swift in Sources */,
 				C0FA0541255284940011EF48 /* AddMemberModel.swift in Sources */,
 				C0035747251619B600F76902 /* FamilyMemberTableViewCell.swift in Sources */,
 				A786518C26342062008C99FC /* SelectAppointmentViewController.swift in Sources */,
-				A8033922259EE8F400FE5FB5 /* PreChekinPopup.swift in Sources */,
 				A803391F259EE8F400FE5FB5 /* ArrivedPopup.swift in Sources */,
 				C0088BD8251B327300777786 /* AppointmentBookedViewController.swift in Sources */,
 				C012B2FC255A9C5D005B7E20 /* ReportViewModel.swift in Sources */,
 				A803391D259EE8F400FE5FB5 /* ParkingMapPopup.swift in Sources */,
 				C0088BDA251B5EFB00777786 /* FeedbackViewController.swift in Sources */,
 				C01ACBA52554065100CE7F59 /* ProfileModel.swift in Sources */,
-				C059809A2506273C00C92021 /* APIRouter.swift in Sources */,
 				C00357442516146C00F76902 /* AddNewMemberViewController.swift in Sources */,
+				A71AB88426709BA400D8F151 /* RegistrationViewModel.swift in Sources */,
 				C0F496FF2570C8570066C865 /* AppointmentDetailsModel.swift in Sources */,
 				A8033920259EE8F400FE5FB5 /* TokenPopup.swift in Sources */,
 				C01E2480255937D80096A5DB /* FeedbackViewModel.swift in Sources */,
 				C01ACBA72554066100CE7F59 /* ProfileViewModel.swift in Sources */,
-				C0CBF0E625515E37003BF9EC /* OTPModel.swift in Sources */,
 				C05980852506211800C92021 /* AppDelegate.swift in Sources */,
 				A7462F8B2633EB7000ACD8E5 /* NewTableViewCell.swift in Sources */,
 				C0088BE1251B604B00777786 /* FeedbackCollectionViewCell.swift in Sources */,
-				C0F95A0B2508A35100709E3D /* Constants.swift in Sources */,
 				C01D45F3255C3EDE006A24D8 /* ImagePicker.swift in Sources */,
+				A71AB87826709A9300D8F151 /* Constants.swift in Sources */,
 				C094C3882513306B00F039E4 /* OnBoardViewController.swift in Sources */,
 				C012B2FA255A9C4F005B7E20 /* ReportModel.swift in Sources */,
-				C05980A5250628AB00C92021 /* OTPViewController.swift in Sources */,
 				C026C99825792EFC00249C91 /* FeedbackNotificationViewController.swift in Sources */,
 				C0FC47842515C0990093DC5E /* MyAppointmentsViewController.swift in Sources */,
 				A76401D2266F923F0050E41A /* ScannerViewController.swift in Sources */,
 				C023EA852552DB6000D6256C /* Realm.swift in Sources */,
 				1B5AC277266DDE7D002E7C12 /* Tabbar.swift in Sources */,
 				C091688B2518B0FA0025D5CE /* FilterTableViewCell.swift in Sources */,
+				A71AB89C26709C0A00D8F151 /* PasswordViewController.swift in Sources */,
 				A786518F2634493E008C99FC /* BookingConfirmationViewController.swift in Sources */,
 				C0560F2125715E2E0083CE50 /* InsuranceViewController.swift in Sources */,
 				A894564525BED4A4002EFB28 /* PharmacyCollectionPopup.swift in Sources */,
 				C091238F255597FE00CFBC89 /* HomeViewModel.swift in Sources */,
 				C0F497012570C9340066C865 /* AppointmentDetailsViewModel.swift in Sources */,
 				C0FC47862515E9A60093DC5E /* AppointmentDetailsViewController.swift in Sources */,
+				A71AB88F26709BDF00D8F151 /* OTPViewController.swift in Sources */,
+				A71AB89026709BDF00D8F151 /* OtpViewModel.swift in Sources */,
+				A71AB89A26709C0A00D8F151 /* PasswordViewModel.swift in Sources */,
+				A71AB86F26709A3300D8F151 /* APIRouter.swift in Sources */,
 				C0B207F32519CEE900F048F2 /* TokenViewController.swift in Sources */,
 				1B5AC28F266E4AAD002E7C12 /* MyImageView+Extension.swift in Sources */,
-				C059809C2506275400C92021 /* APIClient.swift in Sources */,
+				A70691C026706BB9000C4129 /* PreChekinPopup.swift in Sources */,
 				A803391C259EE8F400FE5FB5 /* SwapTestPopup.swift in Sources */,
 				C0FC4788251608430093DC5E /* BookAppointmentViewController.swift in Sources */,
 				C0560F2525715E5A0083CE50 /* InsuranceViewModel.swift in Sources */,
@@ -1215,6 +1228,7 @@
 				C0B207F125199C3C00F048F2 /* SideMenuTableViewCell.swift in Sources */,
 				A8D2901F25BE9F6F003605D6 /* SwapPopup.swift in Sources */,
 				C094C38525132EF500F039E4 /* Extension.swift in Sources */,
+				A71AB87026709A3300D8F151 /* APIClient.swift in Sources */,
 				C091239B25559DDD00CFBC89 /* MyAppointmentsViewModel.swift in Sources */,
 				C09123912555980B00CFBC89 /* HomeModel.swift in Sources */,
 				C003574A25184FC000F76902 /* FamilyMemberViewController.swift in Sources */,
@@ -1224,7 +1238,6 @@
 				C0672AA6251500E90060FB08 /* HomeViewController.swift in Sources */,
 				C0911AFF254FC6480052E52C /* FeedbackTextTableViewCell.swift in Sources */,
 				1BB118F9265F5D3E00501E3E /* AppointmentViewController.swift in Sources */,
-				C0911B0925503DD90052E52C /* RegistrationModel.swift in Sources */,
 				C0911B1025505FDA0052E52C /* LoginViewModel.swift in Sources */,
 				C0AA760B2551AAF200C8F0F7 /* FeedbackVC.swift in Sources */,
 				1B5AC28E266E4AAD002E7C12 /* UIColor+Extension.swift in Sources */,
@@ -1240,21 +1253,20 @@
 				C0672AA9251507010060FB08 /* AppointmentTableViewCell.swift in Sources */,
 				C003574E2518882500F76902 /* ReportsViewController.swift in Sources */,
 				C01D1DDF2562CC7000F3FF16 /* ImageManager.swift in Sources */,
-				C0CBF0EC25515E70003BF9EC /* PasswordViewModel.swift in Sources */,
 				A8033921259EE8F400FE5FB5 /* TokenTableViewCell.swift in Sources */,
 				C012B2F6255A82E8005B7E20 /* MenuModel.swift in Sources */,
 				C012B2F8255A82FA005B7E20 /* MenuViewModel.swift in Sources */,
-				C0CBF0E825515E48003BF9EC /* OtpViewModel.swift in Sources */,
+				A71AB88226709BA400D8F151 /* RegistrationModel.swift in Sources */,
 				1B5AC290266E4AAD002E7C12 /* MyButton+Extension.swift in Sources */,
 				C0376A852518ECEF00A3933D /* MemberTableViewCell.swift in Sources */,
 				C0FA0546255284D10011EF48 /* FamilyMemberModel.swift in Sources */,
 				C01152AC2513CB4100BC57F1 /* ProfileViewController.swift in Sources */,
+				A7209B8E2670F69E0084E2AB /* EditPersonalInformationViewController.swift in Sources */,
 				C0088BD5251AE74A00777786 /* FamilyCollectionViewCell.swift in Sources */,
 				1B5AC28D266E4AAD002E7C12 /* Date+Extension.swift in Sources */,
 				C0B254BC254D5BDE002080D8 /* PaymentViewController.swift in Sources */,
 				C02B2306255ADC8D004ABBB3 /* FilterViewController.swift in Sources */,
 				C0B254BA254D5A63002080D8 /* ChatViewController.swift in Sources */,
-				C05980A32506288600C92021 /* PasswordViewController.swift in Sources */,
 				C091239425559CF600CFBC89 /* AddAppointmentModel.swift in Sources */,
 				C028CA22255BBAA500EA7E20 /* SelectPopupViewController.swift in Sources */,
 				C0560F1C25714FBD0083CE50 /* CustomImageView.swift in Sources */,

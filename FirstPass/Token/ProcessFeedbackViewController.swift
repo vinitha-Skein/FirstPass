@@ -24,7 +24,7 @@ class ProcessFeedbackViewController: UIViewController {
         view.isOpaque = false
         container.layer.cornerRadius = 25
         submitButton.layer.cornerRadius = 8
-        cancelButton.createBorderForButton(cornerRadius: 8, borderWidth: 1, borderColor: .black)
+        //cancelButton.createBorderForButton(cornerRadius: 8, borderWidth: 1, borderColor: .black)
         tableview.register(UINib(nibName: "FeedbackTableViewCell", bundle: .main), forCellReuseIdentifier: "FeedbackTableViewCell")
         tableview.register(UINib(nibName: "FeedbackTextTableViewCell", bundle: .main), forCellReuseIdentifier: "FeedbackTextTableViewCell")
         
@@ -69,7 +69,8 @@ class ProcessFeedbackViewController: UIViewController {
     }
     
     @IBAction func closeAction(_ sender: Any) {
-        delegate?.feedbackWindowClosed(index: index)
+        //delegate?.feedbackWindowClosed(index: index)
+        dismiss(animated: true, completion: nil)
     }
     @IBAction func submitAction(_ sender: Any) {
         delegate?.feedbackWindowClosed(index: index)

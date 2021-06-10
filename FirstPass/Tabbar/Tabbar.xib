@@ -29,7 +29,7 @@
                     <rect key="frame" x="0.0" y="40" width="632" height="70"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKT-ee-V0d">
-                            <rect key="frame" x="102" y="8" width="154" height="54"/>
+                            <rect key="frame" x="99.5" y="8" width="156.5" height="54"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appointment" translatesAutoresizingMaskIntoConstraints="NO" id="net-qn-8vt">
                                     <rect key="frame" x="20" y="12" width="30" height="30"/>
@@ -39,19 +39,19 @@
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6z-o1-5W3">
-                                    <rect key="frame" x="58" y="19" width="88" height="16.5"/>
+                                    <rect key="frame" x="58" y="18.5" width="90.5" height="17"/>
                                     <attributedString key="attributedText">
                                         <fragment content="Appointments">
                                             <attributes>
                                                 <color key="NSColor" red="0.20784313725490194" green="0.13725490196078433" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="14" name="SFProDisplay-Medium"/>
+                                                <font key="NSFont" metaFont="system" size="14"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMh-a0-dpB">
-                                    <rect key="frame" x="54" y="12" width="46" height="30"/>
+                                    <rect key="frame" x="55" y="12" width="46.5" height="30"/>
                                     <connections>
                                         <action selector="tabbarButtonsPressed:" destination="-1" eventType="touchUpInside" id="iJE-EU-8lI"/>
                                     </connections>
@@ -71,7 +71,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="krs-Kb-Ldr">
-                            <rect key="frame" x="370" y="8" width="118.5" height="54"/>
+                            <rect key="frame" x="370" y="8" width="119.5" height="54"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="account" translatesAutoresizingMaskIntoConstraints="NO" id="EnW-ta-MY7">
                                     <rect key="frame" x="20" y="12" width="30" height="30"/>
@@ -81,12 +81,12 @@
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ktg-JE-4FH">
-                                    <rect key="frame" x="58" y="19" width="52.5" height="16.5"/>
+                                    <rect key="frame" x="58" y="18.5" width="53.5" height="17"/>
                                     <attributedString key="attributedText">
                                         <fragment content="Account">
                                             <attributes>
                                                 <color key="NSColor" red="0.44705882352941173" green="0.46274509803921571" blue="0.48627450980392156" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="14" name="SFProDisplay-Regular"/>
+                                                <font key="NSFont" metaFont="system" size="14"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -94,7 +94,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZm-Ll-GzM">
-                                    <rect key="frame" x="36.5" y="12" width="46" height="30"/>
+                                    <rect key="frame" x="36.5" y="12" width="46.5" height="30"/>
                                     <connections>
                                         <action selector="tabbarButtonsPressed:" destination="-1" eventType="touchUpInside" id="bK2-J6-2yZ"/>
                                     </connections>
