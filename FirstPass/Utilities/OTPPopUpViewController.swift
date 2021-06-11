@@ -32,6 +32,11 @@ class OTPPopUpViewController: UIViewController
         let first3 = otp1.text! + otp3.text!
         let last3 = otp4.text! + otp5.text! + otp6.text!
         delegate?.getOTPtext(otp: first3 + last3)
+        
+        let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "SetPasswordViewController") as! SetPasswordViewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
     }
     @IBAction func back_Clicked(_ sender: Any)
     {
@@ -42,8 +47,6 @@ class OTPPopUpViewController: UIViewController
 
 extension OTPPopUpViewController:UITextFieldDelegate{
     func setupUI(){
-        view.backgroundColor = UIColor.clear
-        view.isOpaque = false
         container.layer.cornerRadius = 30
         container.clipsToBounds = true
         container.layer.borderColor = UIColor.lightGray.cgColor

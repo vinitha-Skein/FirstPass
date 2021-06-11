@@ -9,6 +9,9 @@
 import UIKit
 
 class AddNewMemberViewController: UIViewController {
+    @IBOutlet weak var containerforBorder: UIView!
+    @IBOutlet weak var selfpayButton: UIButton!
+    @IBOutlet weak var insuranceButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var mrButton: UIButton!
     @IBOutlet weak var mrsButton: UIButton!
@@ -16,16 +19,18 @@ class AddNewMemberViewController: UIViewController {
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var relationTextfield: UITextField!
     @IBOutlet weak var fullNameTextfield: UITextField!
+    @IBOutlet weak var changeimgButtonView: UIView!
+    @IBOutlet weak var maincontainer: UIView!
     @IBOutlet weak var dobTextfield: UITextField!
     @IBOutlet weak var mrnTextfield: UITextField!
     @IBOutlet weak var idProofTextfield: UITextField!
-    @IBOutlet weak var paymentMethodTextfield: UITextField!
-    @IBOutlet weak var insuranceProviderTextfield: UITextField!
-    @IBOutlet weak var insurancePolicyNumTextfield: UITextField!
+    //@IBOutlet weak var paymentMethodTextfield: UITextField!
+   // @IBOutlet weak var insuranceProviderTextfield: UITextField!
+   // @IBOutlet weak var insurancePolicyNumTextfield: UITextField!
     @IBOutlet weak var addButton: UIButton!
-    @IBOutlet weak var clearButton: UIButton!
-    @IBOutlet weak var insuranceProviderView: UIView!
-    @IBOutlet weak var insuranceNumberView: UIView!
+  //  @IBOutlet weak var clearButton: UIButton!
+  //  @IBOutlet weak var insuranceProviderView: UIView!
+  //  @IBOutlet weak var insuranceNumberView: UIView!
     @IBOutlet weak var memberImage: UIImageView!
 
     var selectedTextfield = UITextField()
@@ -47,18 +52,19 @@ class AddNewMemberViewController: UIViewController {
             relationTextfield.text = familyMember?.releation
             mrnTextfield.text = familyMember?.mrnNo
             idProofTextfield.text = familyMember?.id_proof
-            paymentMethodTextfield.text = familyMember?.paymentmethod
+            //paymentMethodTextfield.text = familyMember?.paymentmethod
             idProofTextfield.text = familyMember?.nationalId
-            if paymentMethodTextfield.text == "Insurance"{
-                insuranceProviderTextfield.text = familyMember?.insurancename
-                insurancePolicyNumTextfield.text = familyMember?.insuranceno
-            }
+//            if paymentMethodTextfield.text == "Insurance"
+//            {
+//                insuranceProviderTextfield.text = familyMember?.insurancename
+//                insurancePolicyNumTextfield.text = familyMember?.insuranceno
+//            }
             if familyMember?.profile_pic != ""{
                 base64String = familyMember?.profile_pic ?? ""
             }
             memberTitle(title: familyMember?.title ?? "")
             addButton.setTitle("Update Member", for: .normal)
-            clearButton.isHidden = true
+          //  clearButton.isHidden = true
         }
         memberTitle = "Mr"
         viewModel.getUserDetails()
@@ -83,10 +89,11 @@ class AddNewMemberViewController: UIViewController {
 //        memberTitle = "Mr"
         memberTitle(title: "Mr")
     }
-    func memberTitle(title:String){
+    func memberTitle(title:String)
+    {
         switch title {
         case "Mr":
-            mrButton.backgroundColor = UIColor(hexString: "#6B38C1")
+            mrButton.backgroundColor = UIColor(hexString: "#352364")
             mrsButton.backgroundColor = UIColor(hexString: "#E1E3E6")
             msButton.backgroundColor = UIColor(hexString: "#E1E3E6")
             mrButton.setTitleColor(.white, for: .normal)
@@ -94,7 +101,7 @@ class AddNewMemberViewController: UIViewController {
             msButton.setTitleColor(.black, for: .normal)
             memberTitle = "Mr"
         case "Mrs":
-            mrsButton.backgroundColor = UIColor(hexString: "#6B38C1")
+            mrsButton.backgroundColor = UIColor(hexString: "#352364")
             mrButton.backgroundColor = UIColor(hexString: "#E1E3E6")
             msButton.backgroundColor = UIColor(hexString: "#E1E3E6")
             mrsButton.setTitleColor(.white, for: .normal)
@@ -102,7 +109,7 @@ class AddNewMemberViewController: UIViewController {
             msButton.setTitleColor(.black, for: .normal)
             memberTitle = "Mrs"
         default:
-            msButton.backgroundColor = UIColor(hexString: "#6B38C1")
+            msButton.backgroundColor = UIColor(hexString: "#352364")
             mrButton.backgroundColor = UIColor(hexString: "#E1E3E6")
             mrsButton.backgroundColor = UIColor(hexString: "#E1E3E6")
             msButton.setTitleColor(.white, for: .normal)
@@ -133,6 +140,20 @@ class AddNewMemberViewController: UIViewController {
         memberTitle(title: "Ms")
 
     }
+    @IBAction func selfpay_clicked(_ sender: Any)
+    {
+        selfpayButton.backgroundColor = UIColor(hexString: "#352364")
+        insuranceButton.backgroundColor = UIColor(hexString: "#E1E3E6")
+        selfpayButton.setTitleColor(.white, for: .normal)
+        insuranceButton.setTitleColor(.black, for: .normal)
+    }
+    @IBAction func insurance_clicked(_ sender: Any)
+    {
+        selfpayButton.backgroundColor = UIColor(hexString: "#E1E3E6")
+        insuranceButton.backgroundColor = UIColor(hexString: "#352364")
+        selfpayButton.setTitleColor(.black, for: .normal)
+        insuranceButton.setTitleColor(.white, for: .normal)
+    }
     @IBAction func clearAction(_ sender: Any) {
         clearAllFields()
     }
@@ -142,15 +163,15 @@ class AddNewMemberViewController: UIViewController {
         relationTextfield.text = ""
         mrnTextfield.text = ""
         idProofTextfield.text = ""
-        paymentMethodTextfield.text = ""
-        insuranceProviderTextfield.text = ""
-        insurancePolicyNumTextfield.text = ""
-        insuranceProviderView.isHidden = true
-        insuranceNumberView.isHidden = true
+//        paymentMethodTextfield.text = ""
+//        insuranceProviderTextfield.text = ""
+//        insurancePolicyNumTextfield.text = ""
+//        insuranceProviderView.isHidden = true
+//        insuranceNumberView.isHidden = true
         base64String = ""
     }
     @IBAction func addMemberAction(_ sender: Any) {
-        guard let relation = relationTextfield.text,let name = fullNameTextfield.text,let dob = dobTextfield.text,let mrn = mrnTextfield.text,let emiratesId = idProofTextfield.text,let paymentMethod = paymentMethodTextfield.text, let insuranceName = insuranceProviderTextfield.text, let insuranceNumber = insuranceProviderTextfield.text else {
+        guard let relation = relationTextfield.text,let name = fullNameTextfield.text,let dob = dobTextfield.text,let mrn = mrnTextfield.text,let emiratesId = idProofTextfield.text/*,let paymentMethod = paymentMethodTextfield.text, let insuranceName = insuranceProviderTextfield.text, let insuranceNumber = insuranceProviderTextfield.text */else {
             return
         }
         
@@ -174,48 +195,48 @@ class AddNewMemberViewController: UIViewController {
             self.showAlert("Please enter Emirates ID")
             return
         }
-        if paymentMethod == ""{
-            self.showAlert("Please select payment method")
-            return
-        }
-        if paymentMethod == "Insurance"{
-            if insuranceName == ""{
-                self.showAlert("Please enter Insurance provider name")
-                return
-            }
-            if insuranceNumber == ""{
-                self.showAlert("Please enter Insurance provider number")
-                return
-            }
-        }
-        
-        var params = [
-            "dob": dob,
-            "id_proof": emiratesId,
-            "mrnNo": mrn,
-            "name": name,
-            "paymentmethod": paymentMethod,
-            "releation": relation,
-            "title": memberTitle,
-            ] as [String : Any]
+//        if paymentMethod == ""{
+//            self.showAlert("Please select payment method")
+//            return
+//        }
 //        if paymentMethod == "Insurance"{
-            params["insurancename"] = insuranceName
-            params["insuranceno"] = insuranceNumber
-            params["insurancevalidity"] = ""
-            params["insurancecardimage"] = ""
+//            if insuranceName == ""{
+//                self.showAlert("Please enter Insurance provider name")
+//                return
+//            }
+//            if insuranceNumber == ""{
+//                self.showAlert("Please enter Insurance provider number")
+//                return
+//            }
 //        }
         
-        if base64String != ""{
-            params["profilepic"] = base64String
-        }
+//        var params = [
+//            "dob": dob,
+//            "id_proof": emiratesId,
+//            "mrnNo": mrn,
+//            "name": name,
+//            "paymentmethod": paymentMethod,
+//            "releation": relation,
+//            "title": memberTitle,
+//            ] as [String : Any]
+////        if paymentMethod == "Insurance"{
+//            params["insurancename"] = insuranceName
+//            params["insuranceno"] = insuranceNumber
+//            params["insurancevalidity"] = ""
+//            params["insurancecardimage"] = ""
+////        }
         
-        if isEdit{
-            params["memberId"] = familyMember?.memberId
-            params["pId"] = familyMember?.pId
-            editFamilyMembers(params: params)
-        }else{
-            addFamilyMembers(params: params)
-        }
+//        if base64String != ""{
+//            params["profilepic"] = base64String
+//        }
+//
+//        if isEdit{
+//            params["memberId"] = familyMember?.memberId
+//            params["pId"] = familyMember?.pId
+//            editFamilyMembers(params: params)
+//        }else{
+//            addFamilyMembers(params: params)
+//        }
     }
     
     func addFamilyMembers(params:[String:Any]){
@@ -262,44 +283,53 @@ class AddNewMemberViewController: UIViewController {
 
     
     func setupUI(){
-        container.createBorderForView(cornerRadius: 30, borderWidth: 0, borderColor: .clear)
+        //container.createBorderForView(cornerRadius: 30, borderWidth: 0, borderColor: .clear)
+        memberImage.layer.cornerRadius = 30
+        changeimgButtonView.layer.cornerRadius = 12
+        containerforBorder.layer.cornerRadius = 30
+        containerforBorder.layer.borderWidth = 0.4
+        containerforBorder.layer.borderColor = UIColor.lightGray.cgColor
+        maincontainer.layer.cornerRadius = 30
         container.clipsToBounds = true
-        memberImage.createCircle()
+        //memberImage.createCircle()
         relationTextfield.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
         fullNameTextfield.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
         dobTextfield.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
         mrnTextfield.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
-        paymentMethodTextfield.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
-        insuranceProviderTextfield.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
-         insurancePolicyNumTextfield.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
+//        paymentMethodTextfield.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
+//        insuranceProviderTextfield.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
+//         insurancePolicyNumTextfield.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
         idProofTextfield.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
 
         addButton.createBorderForButton(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
-        clearButton.createBorderForButton(cornerRadius: 8, borderWidth: 0.5, borderColor: .black)
-        mrButton.createBorderForButton(cornerRadius: 4, borderWidth: 0, borderColor: .black)
-        mrsButton.createBorderForButton(cornerRadius: 4, borderWidth: 0, borderColor: .black)
-        msButton.createBorderForButton(cornerRadius: 4, borderWidth: 0, borderColor: .black)
-        clearButton.backgroundColor = .clear
+      //  clearButton.createBorderForButton(cornerRadius: 8, borderWidth: 0.5, borderColor: .black)
+        insuranceButton.createBorderForButton(cornerRadius: 10, borderWidth: 0, borderColor: .black)
+        selfpayButton.createBorderForButton(cornerRadius: 10, borderWidth: 0, borderColor: .black)
+        mrButton.createBorderForButton(cornerRadius: 10, borderWidth: 0, borderColor: .black)
+        mrsButton.createBorderForButton(cornerRadius: 10, borderWidth: 0, borderColor: .black)
+        msButton.createBorderForButton(cornerRadius: 10, borderWidth: 0, borderColor: .black)
+      //  clearButton.backgroundColor = .clear
         
         relationTextfield.addRightView(imageName: "rightView")
-        dobTextfield.addRightView(imageName: "rightView")
+        dobTextfield.addRightView(imageName: "calendar")
         idProofTextfield.addRightView(imageName: "rightView")
-        paymentMethodTextfield.addRightView(imageName: "rightView")
-        insuranceProviderTextfield.addRightView(imageName: "rightView")
+//        paymentMethodTextfield.addRightView(imageName: "rightView")
+//        insuranceProviderTextfield.addRightView(imageName: "rightView")
         relationTextfield.setPlaceholder(placeholderText: "Select relation")
         fullNameTextfield.setPlaceholder(placeholderText: "Enter full name")
         dobTextfield.setPlaceholder(placeholderText: "Select details")
         mrnTextfield.setPlaceholder(placeholderText: "Enter MRN ID")
         idProofTextfield.setPlaceholder(placeholderText: "Enter Emirates ID")
-        paymentMethodTextfield.setPlaceholder(placeholderText: "Payment Method")
-        insuranceProviderTextfield.setPlaceholder(placeholderText: "Enter the name of the insurance provider")
-        insurancePolicyNumTextfield.setPlaceholder(placeholderText: "Insurance number")
+//        paymentMethodTextfield.setPlaceholder(placeholderText: "Payment Method")
+//        insuranceProviderTextfield.setPlaceholder(placeholderText: "Enter the name of the insurance provider")
+//        insurancePolicyNumTextfield.setPlaceholder(placeholderText: "Insurance number")
         relationTextfield.delegate = self
         dobTextfield.delegate = self
-        paymentMethodTextfield.delegate = self
-        
-        insuranceProviderView.isHidden = true
-        insuranceNumberView.isHidden = true
+        idProofTextfield.delegate = self
+//        paymentMethodTextfield.delegate = self
+//
+//        insuranceProviderView.isHidden = true
+//        insuranceNumberView.isHidden = true
     }
 }
 extension AddNewMemberViewController:UITextFieldDelegate,DatePickerDelegate{
@@ -316,15 +346,16 @@ extension AddNewMemberViewController:UITextFieldDelegate,DatePickerDelegate{
         for item in data{
             alert.addAction(UIAlertAction(title: item, style: .default, handler: {action in
                 self.selectedTextfield.text = item
-                if self.selectedTextfield == self.paymentMethodTextfield{
-                    if self.selectedTextfield.text == "Insurance"{
-                        self.insuranceProviderView.isHidden = false
-                        self.insuranceNumberView.isHidden = false
-                    }else{
-                        self.insuranceProviderView.isHidden = true
-                        self.insuranceNumberView.isHidden = true
-                    }
-                }
+//                if self.selectedTextfield == self.paymentMethodTextfield
+//                {
+//                    if self.selectedTextfield.text == "Insurance"{
+//                        self.insuranceProviderView.isHidden = false
+//                        self.insuranceNumberView.isHidden = false
+//                    }else{
+//                        self.insuranceProviderView.isHidden = true
+//                        self.insuranceNumberView.isHidden = true
+//                    }
+//                }
             }))
         }
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
@@ -345,9 +376,9 @@ extension AddNewMemberViewController:UITextFieldDelegate,DatePickerDelegate{
             popup.modalPresentationStyle = .overCurrentContext
             popup.delegate = self
             present(popup, animated: true, completion: nil)
-        case paymentMethodTextfield:
-            selectedTextfield = paymentMethodTextfield
-            createDropDownAlert(title: "Payment Method", data: ["Self Pay","Insurance"])
+        case idProofTextfield:
+            selectedTextfield = idProofTextfield
+            createDropDownAlert(title: "ID Proof", data: ["Emirates ID","Passport"])
         default:
             break
         }

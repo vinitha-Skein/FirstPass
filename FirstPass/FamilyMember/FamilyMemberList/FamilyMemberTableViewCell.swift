@@ -14,7 +14,14 @@ class FamilyMemberTableViewCell: UITableViewCell {
     @IBOutlet weak var type: UILabel!
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var mrn: UILabel!
+    @IBOutlet weak var container: UIView!
     var delegate:EditFamilyMemberDelegate?
+    
+    
+    var editButtonPressed : (() -> ()) = {}
+    var deleteButtonPressed : (() -> ()) = {}
+
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -50,7 +57,7 @@ class FamilyMemberTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(false, animated: animated)
-        pic.createCircle()
+        //pic.createCircle()
         // Configure the view for the selected state
     }
     
@@ -65,14 +72,19 @@ class FamilyMemberTableViewCell: UITableViewCell {
     
     func updateData(data:FamilyMembersList){
         name.text = data.name ?? ""
-        mrn.text = data.mrnNo ?? ""
+        mrn.text = data.dob ?? ""
         type.text = data.releation ?? ""
     }
     
     @IBAction func editAction(_ sender: UIButton) {
-        delegate?.editFamilyMember(index: sender.tag)
+        //delegate?.editFamilyMember(index: sender.tag)
+        editButtonPressed()
     }
     
+    @IBAction func delete_Clicked(_ sender: Any)
+    {
+       deleteButtonPressed()
+    }
     var imageUrl: String? {
         didSet {
             if let imageUrl = imageUrl {

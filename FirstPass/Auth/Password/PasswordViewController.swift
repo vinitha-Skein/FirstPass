@@ -86,12 +86,12 @@ class PasswordViewController: UIViewController {
         self.activityIndicator(self.view, startAnimate: true)
         viewModel.setPassword(params: params)
         viewModel.passwordSetSuccess = {
-//            let storyboard = UIStoryboard(name: "Main", bundle: .main)
-//            let vc = storyboard.instantiateViewController(withIdentifier: "TabViewController") as! TabViewController
-//            vc.modalPresentationStyle = .fullScreen
-//            //        view.window!.layer.add(, forKey: kCATransition)
-//            self.present(vc, animated: true)
-            self.showAlert("Congratulations! Account Created Successfully.")
+            let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+            let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            vc.modalPresentationStyle = .fullScreen
+            //        view.window!.layer.add(, forKey: kCATransition)
+            self.present(vc, animated: true)
+            //self.showAlert("Congratulations! Account Created Successfully.")
             
         }
         

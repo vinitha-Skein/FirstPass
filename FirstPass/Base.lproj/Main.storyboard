@@ -3527,10 +3527,10 @@ Everyday.</string>
             </objects>
             <point key="canvasLocation" x="6678.2608695652179" y="1267.6339285714284"/>
         </scene>
-        <!--Add New Member View Controller-->
+        <!--View Controller-->
         <scene sceneID="SeH-0U-KAn">
             <objects>
-                <viewController storyboardIdentifier="AddNewMemberViewController" id="UFu-tf-0xK" customClass="AddNewMemberViewController" customModule="firstpass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UFu-tf-0xK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SLC-Ya-qbO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4129,10 +4129,10 @@ Everyday.</string>
             </objects>
             <point key="canvasLocation" x="8129" y="471"/>
         </scene>
-        <!--Family Member View Controller-->
+        <!--View Controller-->
         <scene sceneID="7El-ES-OTr">
             <objects>
-                <viewController storyboardIdentifier="FamilyMemberViewController" id="LEJ-4l-1MP" customClass="FamilyMemberViewController" customModule="firstpass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LEJ-4l-1MP" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zJ3-yK-I3V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

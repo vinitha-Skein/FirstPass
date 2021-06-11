@@ -47,8 +47,11 @@
 		A71AB89A26709C0A00D8F151 /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB89726709C0A00D8F151 /* PasswordViewModel.swift */; };
 		A71AB89B26709C0A00D8F151 /* PasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB89826709C0A00D8F151 /* PasswordModel.swift */; };
 		A71AB89C26709C0A00D8F151 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB89926709C0A00D8F151 /* PasswordViewController.swift */; };
-		A7209B8E2670F69E0084E2AB /* EditPersonalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7209B8D2670F69E0084E2AB /* EditPersonalInformationViewController.swift */; };
+		A721E33A267217190098E6A8 /* SetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721E339267217190098E6A8 /* SetPasswordViewController.swift */; };
+		A721E33F26721E420098E6A8 /* PasswordChangeSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721E33E26721E420098E6A8 /* PasswordChangeSuccessViewController.swift */; };
 		A7241D24265E0601009D9A7C /* CheckinInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7241D23265E0601009D9A7C /* CheckinInterfaceController.swift */; };
+		A7249FCE2671E67A0043D22C /* EditPersonalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7249FCD2671E67A0043D22C /* EditPersonalInformationViewController.swift */; };
+		A7304D6526738B3A00DA33B2 /* DeleteFamilyMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7304D6426738B3A00DA33B2 /* DeleteFamilyMemberViewController.swift */; };
 		A737D422265BB52E008B4D61 /* UpcommingAppointmentsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A737D421265BB52E008B4D61 /* UpcommingAppointmentsInterfaceController.swift */; };
 		A737D42E265BB624008B4D61 /* UpcommingappointmentsRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A737D42D265BB624008B4D61 /* UpcommingappointmentsRowController.swift */; };
 		A7462F8B2633EB7000ACD8E5 /* NewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7462F8A2633EB7000ACD8E5 /* NewTableViewCell.swift */; };
@@ -263,8 +266,11 @@
 		A71AB89726709C0A00D8F151 /* PasswordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
 		A71AB89826709C0A00D8F151 /* PasswordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordModel.swift; sourceTree = "<group>"; };
 		A71AB89926709C0A00D8F151 /* PasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
-		A7209B8D2670F69E0084E2AB /* EditPersonalInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonalInformationViewController.swift; sourceTree = "<group>"; };
+		A721E339267217190098E6A8 /* SetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewController.swift; sourceTree = "<group>"; };
+		A721E33E26721E420098E6A8 /* PasswordChangeSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeSuccessViewController.swift; sourceTree = "<group>"; };
 		A7241D23265E0601009D9A7C /* CheckinInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinInterfaceController.swift; sourceTree = "<group>"; };
+		A7249FCD2671E67A0043D22C /* EditPersonalInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPersonalInformationViewController.swift; sourceTree = "<group>"; };
+		A7304D6426738B3A00DA33B2 /* DeleteFamilyMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFamilyMemberViewController.swift; sourceTree = "<group>"; };
 		A737D421265BB52E008B4D61 /* UpcommingAppointmentsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcommingAppointmentsInterfaceController.swift; sourceTree = "<group>"; };
 		A737D42D265BB624008B4D61 /* UpcommingappointmentsRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcommingappointmentsRowController.swift; sourceTree = "<group>"; };
 		A7462F8A2633EB7000ACD8E5 /* NewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTableViewCell.swift; sourceTree = "<group>"; };
@@ -460,6 +466,7 @@
 		1B5AC2B4266E6419002E7C12 /* Phase 2 */ = {
 			isa = PBXGroup;
 			children = (
+				A7304D6326738AFE00DA33B2 /* Family Members */,
 				A7209B8C2670F6670084E2AB /* Edit Profile */,
 				A764019F266F727E0050E41A /* Accounts */,
 				C094C3862513304F00F039E4 /* OnBoard */,
@@ -488,9 +495,19 @@
 		A7209B8C2670F6670084E2AB /* Edit Profile */ = {
 			isa = PBXGroup;
 			children = (
-				A7209B8D2670F69E0084E2AB /* EditPersonalInformationViewController.swift */,
+				A7249FCD2671E67A0043D22C /* EditPersonalInformationViewController.swift */,
+				A721E339267217190098E6A8 /* SetPasswordViewController.swift */,
+				A721E33E26721E420098E6A8 /* PasswordChangeSuccessViewController.swift */,
 			);
 			path = "Edit Profile";
+			sourceTree = "<group>";
+		};
+		A7304D6326738AFE00DA33B2 /* Family Members */ = {
+			isa = PBXGroup;
+			children = (
+				A7304D6426738B3A00DA33B2 /* DeleteFamilyMemberViewController.swift */,
+			);
+			path = "Family Members";
 			sourceTree = "<group>";
 		};
 		A7462F812633E76F00ACD8E5 /* NewChanges */ = {
@@ -1235,6 +1252,7 @@
 				A76401DA266F93550050E41A /* AlertNotificationViewController.swift in Sources */,
 				1B95AD1326691CA800FE94C0 /* UIView+Extension.swift in Sources */,
 				C0560F1E25714FDD0083CE50 /* ImageCache.swift in Sources */,
+				A7304D6526738B3A00DA33B2 /* DeleteFamilyMemberViewController.swift in Sources */,
 				C0672AA6251500E90060FB08 /* HomeViewController.swift in Sources */,
 				C0911AFF254FC6480052E52C /* FeedbackTextTableViewCell.swift in Sources */,
 				1BB118F9265F5D3E00501E3E /* AppointmentViewController.swift in Sources */,
@@ -1247,6 +1265,7 @@
 				A76401A1266F729C0050E41A /* AccountViewController.swift in Sources */,
 				C0560F2325715E420083CE50 /* InsuranceModel.swift in Sources */,
 				C01F2ED02537007000632278 /* TabViewController.swift in Sources */,
+				A721E33A267217190098E6A8 /* SetPasswordViewController.swift in Sources */,
 				C068AAFB2571FB8E00253D81 /* InsuranceTableViewCell.swift in Sources */,
 				C0911B0E25505FC20052E52C /* LoginModel.swift in Sources */,
 				A8D2902125BEA8D5003605D6 /* PharmacyPopup.swift in Sources */,
@@ -1258,10 +1277,11 @@
 				C012B2F8255A82FA005B7E20 /* MenuViewModel.swift in Sources */,
 				A71AB88226709BA400D8F151 /* RegistrationModel.swift in Sources */,
 				1B5AC290266E4AAD002E7C12 /* MyButton+Extension.swift in Sources */,
+				A721E33F26721E420098E6A8 /* PasswordChangeSuccessViewController.swift in Sources */,
 				C0376A852518ECEF00A3933D /* MemberTableViewCell.swift in Sources */,
 				C0FA0546255284D10011EF48 /* FamilyMemberModel.swift in Sources */,
 				C01152AC2513CB4100BC57F1 /* ProfileViewController.swift in Sources */,
-				A7209B8E2670F69E0084E2AB /* EditPersonalInformationViewController.swift in Sources */,
+				A7249FCE2671E67A0043D22C /* EditPersonalInformationViewController.swift in Sources */,
 				C0088BD5251AE74A00777786 /* FamilyCollectionViewCell.swift in Sources */,
 				1B5AC28D266E4AAD002E7C12 /* Date+Extension.swift in Sources */,
 				C0B254BC254D5BDE002080D8 /* PaymentViewController.swift in Sources */,

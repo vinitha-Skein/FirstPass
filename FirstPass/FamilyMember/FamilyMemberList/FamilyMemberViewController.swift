@@ -26,9 +26,9 @@ class FamilyMemberViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
 //        fetchFamilyMembers()
-        let myself = FamilyMembersList(name: "Mrs. Natasha", dob: "04-03-1960", memberId: 0, pId: 0, releation: "Self", title: "Mrs", nationalId: "", id_proof: "", paymentmethod: "", insurancename: "", insuranceno: "", insurancevalidity: "", insurancecardimage: "", mrnNo: "456878563", profile_pic: "")
-        let member1 = FamilyMembersList(name: "Mr. Mr. Johnsmith", dob: "18-08-1956", memberId: 0, pId: 0, releation: "Husband", title: "Mrs", nationalId: "", id_proof: "", paymentmethod: "", insurancename: "", insuranceno: "", insurancevalidity: "", insurancecardimage: "", mrnNo: "998878563", profile_pic: "")
-        let member2 = FamilyMembersList(name: "Mr. Johnathan", dob: "07-11-1985", memberId: 0, pId: 0, releation: "Son", title: "Mr", nationalId: "", id_proof: "", paymentmethod: "", insurancename: "", insuranceno: "", insurancevalidity: "", insurancecardimage: "", mrnNo: "678878563", profile_pic: "")
+        let myself = FamilyMembersList(name: "Mrs. Kiara Parker", dob: "Mar 03,1972", memberId: 0, pId: 0, releation: "Mother", title: "Mrs", nationalId: "", id_proof: "", paymentmethod: "", insurancename: "", insuranceno: "", insurancevalidity: "", insurancecardimage: "", mrnNo: "456878563", profile_pic: "")
+        let member1 = FamilyMembersList(name: "Ms. Julie Parker", dob: "Aug 29,1996", memberId: 0, pId: 0, releation: "Sister", title: "Mrs", nationalId: "", id_proof: "", paymentmethod: "", insurancename: "", insuranceno: "", insurancevalidity: "", insurancecardimage: "", mrnNo: "998878563", profile_pic: "")
+        let member2 = FamilyMembersList(name: "Mr. John Parker", dob: "Jun 29, 1993", memberId: 0, pId: 0, releation: "Brother", title: "Mr", nationalId: "", id_proof: "", paymentmethod: "", insurancename: "", insuranceno: "", insurancevalidity: "", insurancecardimage: "", mrnNo: "678878563", profile_pic: "")
         familyMemberData = [myself,member1,member2]
     }
 
@@ -42,7 +42,7 @@ class FamilyMemberViewController: UIViewController {
     }
     
     @IBAction func addMemberAction(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        let storyboard = UIStoryboard(name: "Modified", bundle: .main)
         let vc = storyboard.instantiateViewController(withIdentifier: "AddNewMemberViewController") as! AddNewMemberViewController
         vc.modalPresentationStyle = .fullScreen
         vc.userId = userId
@@ -53,8 +53,8 @@ class FamilyMemberViewController: UIViewController {
     func setupUI(){
         container.createBorderForView(cornerRadius: 30, borderWidth: 0, borderColor: .clear)
         container.clipsToBounds = true
+        container.layer.borderColor = UIColor.lightGray.cgColor
         addButton.createBorderForButton(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
-        
     }
     
     func fetchFamilyMembers(){
@@ -100,16 +100,29 @@ extension FamilyMemberViewController:UITableViewDelegate,UITableViewDataSource,E
         let cell = tableView.dequeueReusableCell(withIdentifier: "FamilyMemberTableViewCell", for: indexPath) as! FamilyMemberTableViewCell
 //        cell.updateData(data: viewModel.familyMemberData![indexPath.row])
         cell.updateData(data: familyMemberData[indexPath.row])
-        cell.editButton.tag = indexPath.row
+        //cell.editButton.tag = indexPath.row
         cell.delegate = self
 //        cell.imageUrl = viewModel.familyMemberData![indexPath.row].profile_pic
-        let users = ["user2","user1","user3"]
+        let users = ["person","person1","person2"]
         cell.pic.image = UIImage(named: users[indexPath.row])
+        cell.pic.layer.cornerRadius = 20
+        cell.deleteButtonPressed =
+        {
+            let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+            let vc = storyboard.instantiateViewController(withIdentifier: "DeleteFamilyMemberViewController") as! DeleteFamilyMemberViewController
+            vc.modalPresentationStyle = .fullScreen
+            //vc.isEdit = true
+    //        vc.familyMember = viewModel.familyMemberData![index]
+            //vc.userId = userId
+            self.present(vc, animated: true)
+        }
+        //cell.container.layer.cornerRadius = 30
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+        return 103
+        
     }
 }
 
