@@ -7,12 +7,21 @@ PODS:
   - Mapbox-iOS-SDK (5.9.0):
     - MapboxMobileEvents (= 0.10.2)
   - MapboxMobileEvents (0.10.2)
+<<<<<<< HEAD
   - MapwizeSDK (3.5.2):
     - IndoorLocation (= 1.0.4)
     - Mapbox-iOS-SDK (~> 5.0)
     - SSZipArchive (= 2.2.3)
   - MapwizeUI (2.4.3):
     - MapwizeSDK (= 3.5.2)
+=======
+  - MapwizeSDK (3.3.2):
+    - IndoorLocation (= 1.0.4)
+    - Mapbox-iOS-SDK (~> 5.0)
+    - SSZipArchive (= 2.2.3)
+  - MapwizeUI (2.2.5):
+    - MapwizeSDK (= 3.3.2)
+>>>>>>> appoinment screen
   - Realm (5.4.8):
     - Realm/Headers (= 5.4.8)
   - Realm/Headers (5.4.8)
@@ -51,8 +60,13 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   Mapbox-iOS-SDK: a5915700ec84bc1a7f8b3e746d474789e35b7956
   MapboxMobileEvents: 2bc0ca2eedb627b73cf403258dce2b2fa98074a6
+<<<<<<< HEAD
   MapwizeSDK: 6f05fc97bbd77834e5cac8f2e3372abc9c662cb5
   MapwizeUI: 69a79b919bea1b4b366703817ef38e02ec219845
+=======
+  MapwizeSDK: 0597280d97f88c5b6b139be16df61bb23ac0611c
+  MapwizeUI: 918344c9003c85ec03a17bbdf9616f05f0e7f6a3
+>>>>>>> appoinment screen
   Realm: 042bbb59227a0159eda397b8a5a49fbd67495ce7
   RealmSwift: 15ddd6b3398ebfc99810811c44f095df1313adb3
   SSZipArchive: 62d4947b08730e4cda640473b0066d209ff033c9
@@ -60,4 +74,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 1691b81df08bf8ea8b4ccb7ab898260aa8818ff9
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.8.4

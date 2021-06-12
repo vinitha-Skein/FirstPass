@@ -10,38 +10,29 @@ import UIKit
 
 class AppointmentDetailsViewController: UIViewController {
 
-    @IBOutlet weak var appointmentName: UILabel!
-    @IBOutlet weak var date: UILabel!
-    @IBOutlet weak var time: UILabel!
-    @IBOutlet weak var patientName: UILabel!
-    @IBOutlet weak var relationType: UILabel!
-    @IBOutlet weak var tableview: UITableView!
-    @IBOutlet weak var container: UIView!
-    @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var patientDetailView: UIView!
-    @IBOutlet weak var cancelButton: UIButton!
-    @IBOutlet weak var ageLabel: UILabel!
+//    @IBOutlet weak var appointmentName: UILabel!
+//    @IBOutlet weak var date: UILabel!
+//    @IBOutlet weak var time: UILabel!
+//    @IBOutlet weak var patientName: UILabel!
+//    @IBOutlet weak var relationType: UILabel!
+//    @IBOutlet weak var tableview: UITableView!
+//    @IBOutlet weak var container: UIView!
+//    @IBOutlet weak var backButton: UIButton!
+//    @IBOutlet weak var patientDetailView: UIView!
+//    @IBOutlet weak var cancelButton: UIButton!
+//    @IBOutlet weak var ageLabel: UILabel!
     let viewModel = AppointmentDetailsViewModel()
     var appointmentData:ActiveAppointmentData?
+    
+    @IBOutlet weak var appointmentCollectionView: UICollectionView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
-        tableview.register(UINib(nibName: "AppointmentDetailsTableViewCell", bundle: .main), forCellReuseIdentifier: "AppointmentDetailsTableViewCell")
-        tableview.dataSource = self
-        tableview.delegate = self
         // Do any additional setup after loading the view.
         viewModel.getUserDetails()
-        appointmentName.text = appointmentData?.serviceName
-        let convertedDate = self.getAppointmentDateTime(date: appointmentData?.appointmentTime ?? "", format: "yyyy-MM-dd HH:mm:ss", requiredFormat: "yyyy-MM-dd")
-        let convertedTime = self.getAppointmentDateTime(date: appointmentData?.appointmentTime ?? "", format:"yyyy-MM-dd HH:mm:ss" , requiredFormat: "h:mm:a")
-        date.text = convertedDate
-        time.text = convertedTime
-        if appointmentData?.pId == viewModel.pId{
-            patientDetailView.isHidden = true
-        }
-        if appointmentData?.status == "CANCELLED"{
-            cancelButton.isHidden = true
-        }
+        
+       
     }
 
     @IBAction func backAction(_ sender: Any) {
@@ -64,7 +55,6 @@ class AppointmentDetailsViewController: UIViewController {
 //        viewModel.cancelAppointment(appointmentId: appointmentData?.serviceBookedId ?? 0)
         viewModel.cancelSuccess = {
             self.showAlert("Appointment Cancelled")
-            self.cancelButton.isHidden = true
         }
         viewModel.errorMessageAlert = {
             self.showAlert(self.viewModel.errorMessage ?? "Error")
@@ -79,21 +69,7 @@ class AppointmentDetailsViewController: UIViewController {
         }
     }
     
-   func setupUI(){
-            cancelButton.createBorderForButton(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
-            container.clipsToBounds = true
-            container.createBorderForView(cornerRadius: 30, borderWidth: 0, borderColor: .clear)
-    let attributedString = NSMutableAttributedString(string: "Age: 65 years", attributes: [
-      .font: UIFont.systemFont(ofSize: 14.0, weight: .regular),
-      .foregroundColor: UIColor(red: 154.0 / 255.0, green: 155.0 / 255.0, blue: 171.0 / 255.0, alpha: 1.0),
-      .kern: 0.0
-    ])
-    attributedString.addAttributes([
-      .font: UIFont.systemFont(ofSize: 14.0, weight: .bold),
-      .foregroundColor: UIColor(red: 53.0 / 255.0, green: 54.0 / 255.0, blue: 91.0 / 255.0, alpha: 1.0)
-    ], range: NSRange(location: 0, length: 4))
-    ageLabel.attributedText = attributedString
-        }
+   
     }
 
     extension AppointmentDetailsViewController:UITableViewDelegate,UITableViewDataSource{

@@ -10,13 +10,13 @@ import UIKit
 
 class AppointmentTableViewCell: UITableViewCell {
     @IBOutlet weak var appointmentName: UILabel!
-    @IBOutlet weak var colorView: UIView!
+//    @IBOutlet weak var colorView: UIView!
     @IBOutlet weak var container: UIView!
-    @IBOutlet weak var noteText: UILabel!
+//    @IBOutlet weak var noteText: UILabel!
     @IBOutlet weak var checkinButton: UIButton!
     @IBOutlet weak var precheckinButton: UIButton!
     //@IBOutlet weak var arrivedButton: UIButton!
-    @IBOutlet weak var parkingButton: UIButton!
+//    @IBOutlet weak var parkingButton: UIButton!
 
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var date: UILabel!
@@ -55,7 +55,7 @@ class AppointmentTableViewCell: UITableViewCell {
             .kern: 0.0
         ])
         attributedString.addAttribute(.foregroundColor, value: UIColor(red: 53.0 / 255.0, green: 54.0 / 255.0, blue: 91.0 / 255.0, alpha: 1.0), range: NSRange(location: 0, length: 6))
-        noteText.attributedText = attributedString
+//        noteText.attributedText = attributedString
     }
     
     func updateBackgroundColorForIndexPath(_ indexpath: IndexPath) {
@@ -64,7 +64,7 @@ class AppointmentTableViewCell: UITableViewCell {
         //Applies color to Initial Label
         let colorArray = [orange,pink]
         let randomValue = (indexpath.row + indexpath.section) % colorArray.count
-        colorView.backgroundColor = colorArray[randomValue]
+//        colorView.backgroundColor = colorArray[randomValue]
     }
     
     

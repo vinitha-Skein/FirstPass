@@ -1358,7 +1358,7 @@
 				DEVELOPMENT_TEAM = SDX3Y5X346;
 				IBSC_MODULE = Firstpass_watchOS_Extension;
 				INFOPLIST_FILE = "Firstpass-watchOS/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skein.Firstpassmodified;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skein.Firstpassmodified.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = FirstpassModified;
 				SDKROOT = watchos;
@@ -1381,7 +1381,7 @@
 				DEVELOPMENT_TEAM = SDX3Y5X346;
 				IBSC_MODULE = Firstpass_watchOS_Extension;
 				INFOPLIST_FILE = "Firstpass-watchOS/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.skein.Firstpassmodified;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skein.Firstpassmodified.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = FirstpassModified;
 				SDKROOT = watchos;
@@ -1406,7 +1406,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.skein.Firstpassmodified;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skein.Firstpassmodified.watchkitapp.watchkitExtension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = FirstpassModified;
 				SDKROOT = watchos;
@@ -1431,7 +1431,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.skein.Firstpassmodified;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skein.Firstpassmodified.watchkitapp.watchkitExtension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = FirstpassModified;
 				SDKROOT = watchos;
