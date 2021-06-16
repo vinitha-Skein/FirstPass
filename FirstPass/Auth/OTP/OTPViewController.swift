@@ -15,12 +15,12 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var otp3: UITextField!
     @IBOutlet weak var otp4: UITextField!
     @IBOutlet weak var otp5: UITextField!
-    @IBOutlet weak var border1: UIView!
-    @IBOutlet weak var border2: UIView!
-    @IBOutlet weak var border3: UIView!
-    @IBOutlet weak var border4: UIView!
-    @IBOutlet weak var border5: UIView!
-    @IBOutlet weak var border6: UIView!
+//    @IBOutlet weak var border1: UIView!
+//    @IBOutlet weak var border2: UIView!
+//    @IBOutlet weak var border3: UIView!
+//    @IBOutlet weak var border4: UIView!
+//    @IBOutlet weak var border5: UIView!
+//    @IBOutlet weak var border6: UIView!
 
     @IBOutlet weak var verifyButton: UIButton!
     let viewModel = OTPViewModel()
@@ -34,8 +34,10 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
     }
     
     func setupUI(){
-        container.createBorderForView(cornerRadius: 30, borderWidth: 0, borderColor: .clear)
+        container.createBorderForView(cornerRadius: 25, borderWidth: 0, borderColor: .clear)
         container.clipsToBounds = true
+        container.layer.borderWidth = 0.4
+        container.layer.borderColor = UIColor.gray.cgColor
         verifyButton.createBorderForButton(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
         
         otp1.delegate = self

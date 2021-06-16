@@ -81,7 +81,8 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,ImagePickerDel
     override func viewWillAppear(_ animated: Bool) {
     }
 
-    @IBAction func changeImageAction(_ sender: UIButton) {
+    @IBAction func changeImageAction(_ sender: UIButton)
+    {
         self.imagePicker.present(from: sender)
     }
 
@@ -102,7 +103,7 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,ImagePickerDel
         present(vc, animated: true)
     }
     @IBAction func editFamilyAction(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        let storyboard = UIStoryboard(name: "Modified", bundle: .main)
         let vc = storyboard.instantiateViewController(withIdentifier: "FamilyMemberViewController") as! FamilyMemberViewController
         vc.userId = userId
         vc.modalPresentationStyle = .fullScreen
@@ -335,7 +336,7 @@ extension ProfileViewController:DatePickerDelegate,OTPPopUpDelegate{
 //        dob.delegate = self
 //        saveButton.isHidden = true
         changePicButton.isHidden = false
-        profileImage.layer.cornerRadius = 20
+        profileImage.layer.cornerRadius = 29
         container.layer.borderColor = UIColor.lightGray.cgColor
         container.layer.borderWidth = 0.4
         changePicBgView.layer.cornerRadius = 10
@@ -597,20 +598,22 @@ extension ProfileViewController:DatePickerDelegate,OTPPopUpDelegate{
 extension ProfileViewController:UICollectionViewDelegate,UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
        // return viewModel.familyMemberData?.count ?? 0
-        return familyMemberData.count+1
+        return familyMemberData.count+2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FamilyCollectionViewCell", for: indexPath) as! FamilyCollectionViewCell
-        let users = ["person1","person2","person3"]
-        if indexPath.row == 3
+        let users = ["person1","person2","person3","person"]
+        if indexPath.row == 4
         {
             cell.memberImage.image = UIImage(named: "add")
+            cell.height.constant = 20
+            cell.width.constant = 20
         }
         else
         {
             cell.memberImage.image = UIImage(named:users[indexPath.row])
-            cell.memberImage.layer.cornerRadius = 10
+            cell.memberImage.layer.cornerRadius = 15
         }
         return cell
     }

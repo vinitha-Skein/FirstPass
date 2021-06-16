@@ -12,5 +12,6 @@ class AccountCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var logoImage: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var container: UIView!
+    @IBOutlet weak var bgView: UIView!
     
 }

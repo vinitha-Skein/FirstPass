@@ -14,6 +14,9 @@ class ProcessFeedbackViewController: UIViewController {
     
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
+    
+    var  fblist = ["How was Welcome/Help desk service ?","How was Welcome/Help desk service ?","How was Welcome/Help desk service ?","How was Welcome/Help desk service ?"]
+
     var feedbackList = [ProcessFeedback]()
     var delegate:FeedbackClosedDelegate?
     var index = Int()
@@ -40,17 +43,17 @@ class ProcessFeedbackViewController: UIViewController {
                let feedback2 = ProcessFeedback(question: "Ambience and general cleanliness of the facility", rating: 0, message: "")
                let feedback3 = ProcessFeedback(question: "Nurse’s courteousness and her interaction with you", rating: 0, message: "")
                let feedback4 = ProcessFeedback(question: "Waiting experience till you were attended by Nurse", rating: 0, message: "")
-               let feedback5 = ProcessFeedback(question: "Doctor’s effort in listening to you and understanding your concerns", rating: 0, message: "")
-         let feedback6 = ProcessFeedback(question: "Doctor’s ability to explain your condition and treatment", rating: 0, message: "")
-         let feedback7 = ProcessFeedback(question: "Doctor’s courteousness and ability in making you feel at ease", rating: 0, message: "")
+               let feedback5 = ProcessFeedback(question: "How was Welcome/Help desk service ?", rating: 0, message: "")
+         let feedback6 = ProcessFeedback(question: "How was Welcome/Help desk service ?", rating: 0, message: "")
+         let feedback7 = ProcessFeedback(question: "How was Welcome/Help desk service ?", rating: 0, message: "")
          let feedback8 = ProcessFeedback(question: "Wait time that was experienced during your lab visit", rating: 0, message: "")
          let feedback9 = ProcessFeedback(question: "Staff’s courteousness and efficiency in completing the lab visit", rating: 0, message: "")
          let feedback10 = ProcessFeedback(question: "The overall care provided throughout your visit today?", rating: 0, message: "")
              let feedback11 = ProcessFeedback(question: "The ease of navigation throughout our facility during your visit?", rating: 0, message: "")
              let feedback12 = ProcessFeedback(question: "The wait times that were experienced during your visit?", rating: 0, message: "")
              let feedback13 = ProcessFeedback(question: "The ability of our staff to address both your medical and non-medical concerns?", rating: 0, message: "")
-             let feedbackfinal = ProcessFeedback(question: "A text box to capture additional comments", rating: 0, message: "")
-
+             let feedbackfinal = ProcessFeedback(question: "How was Welcome/Help desk service ?", rating: 0, message: "")
+        index = 2
         if(self.index == 0){
         feedbackList = [feedback1,feedback2,feedbackfinal]
         }

@@ -10,6 +10,8 @@ import UIKit
 
 class FamilyCollectionViewCell: UICollectionViewCell {
 
+    @IBOutlet weak var height: NSLayoutConstraint!
+    @IBOutlet weak var width: NSLayoutConstraint!
     @IBOutlet weak var memberImage: CustomImageView!
     
     private let customImageView: CustomImageView = {

@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "private.png",
+      "filename" : "iconlyCurvedProfile.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "iconlyCurvedProfile@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "iconlyCurvedProfile@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

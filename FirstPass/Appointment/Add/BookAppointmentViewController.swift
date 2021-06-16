@@ -9,11 +9,9 @@
 import UIKit
 
 class BookAppointmentViewController: UIViewController {
-    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var myselfButton: UIButton!
     @IBOutlet weak var familyMemberButton: UIButton!
     @IBOutlet weak var container: UIView!
-    @IBOutlet weak var memberTextfield: UITextField!
     @IBOutlet weak var locationTextfield: UITextField!
     @IBOutlet weak var departmentTextfield: UITextField!
     @IBOutlet weak var serviceTextfield: UITextField!
@@ -21,7 +19,7 @@ class BookAppointmentViewController: UIViewController {
     @IBOutlet weak var dateTextfield: UITextField!
     @IBOutlet weak var timeTextfield: UITextField!
     @IBOutlet weak var bookButton: UIButton!
-    @IBOutlet weak var clearButton: UIButton!
+  
     @IBOutlet weak var memberView: UIView!
     @IBOutlet weak var locationView: UIView!
     @IBOutlet weak var departmentView: UIView!
@@ -30,6 +28,7 @@ class BookAppointmentViewController: UIViewController {
     @IBOutlet weak var timeView: UIView!
     @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var deptView: UIView!
+    @IBOutlet weak var collectionView: UICollectionView!
     var selectedField:PopUpFor?
     let viewModel = AddAppointmentViewModel()
     var selectedTextfield = UITextField()
@@ -40,6 +39,7 @@ class BookAppointmentViewController: UIViewController {
     var memberPId = Int()
     var dataSource = [String]()
     var isNeedBackButton = false
+    let buttontextColor = UIColor(red: 74/255, green: 79/255, blue: 87/255, alpha: 1)
     var timeList = ["9:30 AM","10:30 AM","11:00 AM","12:00 PM","3:00 PM","4:00 PM"]
 //    var locationList = ["Riyadh","Dubai Health Street"]
 //    var familyMember = ["Father","Mother","Brother","Sister","Wife","Son","Daughter"]
@@ -60,17 +60,20 @@ class BookAppointmentViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         // Do any additional setup after loading the view.
-        myselfButton.backgroundColor = UIColor(hexString: "#6B38C1")
+        myselfButton.backgroundColor = UIColor(hexString: "#352364")
         myselfButton.setTitleColor(.white, for: .normal)
         familyMemberButton.backgroundColor = UIColor(hexString: "#E1E3E6")
-        familyMemberButton.setTitleColor(.black, for: .normal)
+        familyMemberButton.setTitleColor(buttontextColor, for: .normal)
         memberView.isHidden = true
+        collectionView.register(UINib(nibName: "FamilyCollectionViewCell", bundle: .main), forCellWithReuseIdentifier: "FamilyCollectionViewCell")
+        collectionView.dataSource = self
+        collectionView.delegate = self
         
-        if isNeedBackButton{
-            backButton.isHidden = false
-        }else{
-            backButton.isHidden = true
-        }
+//        if isNeedBackButton{
+//            backButton.isHidden = false
+//        }else{
+//            backButton.isHidden = true
+//        }
         
         
         //dummy data
@@ -126,29 +129,29 @@ class BookAppointmentViewController: UIViewController {
     }
     
     @IBAction func backAction(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
-        let vc = storyboard.instantiateViewController(withIdentifier: "MyAppointmentsViewController") as! MyAppointmentsViewController
-        vc.modalPresentationStyle = .fullScreen
-        view.window!.layer.add(leftToRightTransition(), forKey: kCATransition)
-        //        present(vc, animated: true)
+//        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "MyAppointmentsViewController") as! MyAppointmentsViewController
+//        vc.modalPresentationStyle = .fullScreen
+//        view.window!.layer.add(leftToRightTransition(), forKey: kCATransition)
+//        //        present(vc, animated: true)
         dismiss(animated: true, completion: nil)
         
     }
     @IBAction func mySelfAction(_ sender: Any) {
         memberView.isHidden = true
-        myselfButton.backgroundColor = UIColor(hexString: "#6B38C1")
+        myselfButton.backgroundColor = UIColor(hexString: "#352364")
         familyMemberButton.backgroundColor = UIColor(hexString: "#E1E3E6")
         familyMemberButton.backgroundColor = UIColor(hexString: "#E1E3E6")
         myselfButton.setTitleColor(.white, for: .normal)
-        familyMemberButton.setTitleColor(.black, for: .normal)
+        familyMemberButton.setTitleColor(buttontextColor, for: .normal)
         
     }
     @IBAction func famlyMemberAction(_ sender: Any) {
         memberView.isHidden = false
         myselfButton.backgroundColor = UIColor(hexString: "#E1E3E6")
-        familyMemberButton.backgroundColor = UIColor(hexString: "#6B38C1")
+        familyMemberButton.backgroundColor = UIColor(hexString: "#352364")
         familyMemberButton.setTitleColor(.white, for: .normal)
-        myselfButton.setTitleColor(.black, for: .normal)
+        myselfButton.setTitleColor(buttontextColor, for: .normal)
     }
     @IBAction func clearAction(_ sender: Any) {
         locationTextfield.text = ""
@@ -157,19 +160,18 @@ class BookAppointmentViewController: UIViewController {
         doctorLabTextfield.text = ""
         dateTextfield.text = ""
         timeTextfield.text = ""
-        memberTextfield.text = ""
     }
     @IBAction func bookAppointments(_ sender: Any) {
-        guard let location = locationTextfield.text,let department = departmentTextfield.text,let service = serviceTextfield.text,let doctor = doctorLabTextfield.text,let member = memberTextfield.text,let date = dateTextfield.text, let time = timeTextfield.text else {
+        guard let location = locationTextfield.text,let department = departmentTextfield.text,let service = serviceTextfield.text,let doctor = doctorLabTextfield.text,let date = dateTextfield.text, let time = timeTextfield.text else {
             return
         }
         
-        if !memberView.isHidden{
-            if member == ""{
-                self.showAlert("Please Select family member")
-                return
-            }
-        }
+//        if !memberView.isHidden{
+//            if member == ""{
+//                self.showAlert("Please Select family member")
+//                return
+//            }
+//        }
         if location == ""{
             self.showAlert("Please select location")
             return
@@ -209,9 +211,10 @@ class BookAppointmentViewController: UIViewController {
         if memberView.isHidden{
             params["appointfor"] = viewModel.userName
             params["pId"] = viewModel.userPId
-        }else{
-            params["appointfor"] = member
-            params["pId"] = memberPId
+        }else
+        {
+//            params["appointfor"] = member
+//            params["pId"] = memberPId
         }
         bookAppointment(params: params)
     }
@@ -490,7 +493,7 @@ class BookAppointmentViewController: UIViewController {
     func setupUI(){
         container.createBorderForView(cornerRadius: 30, borderWidth: 0, borderColor: .clear)
         container.clipsToBounds = true
-        memberTextfield.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
+        //memberTextfield.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
         locationTextfield.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
         departmentTextfield.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
         serviceTextfield.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
@@ -498,20 +501,20 @@ class BookAppointmentViewController: UIViewController {
         dateTextfield.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
         timeTextfield.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
         bookButton.createBorderForButton(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
-        clearButton.createBorderForButton(cornerRadius: 8, borderWidth: 0.5, borderColor: .black)
+//        clearButton.createBorderForButton(cornerRadius: 8, borderWidth: 0.5, borderColor: .black)
         familyMemberButton.createBorderForButton(cornerRadius: 4, borderWidth: 0, borderColor: .clear)
         myselfButton.createBorderForButton(cornerRadius: 4, borderWidth: 0, borderColor: .black)
-        clearButton.backgroundColor = .clear
+        //clearButton.backgroundColor = .clear
         
-        memberTextfield.addRightView(imageName: "rightView")
-        locationTextfield.addRightView(imageName: "rightView")
-        departmentTextfield.addRightView(imageName: "rightView")
-        serviceTextfield.addRightView(imageName: "rightView")
+       // memberTextfield.addRightView(imageName: "rightView")
+        locationTextfield.addRightView(imageName: "dropdown")
+        departmentTextfield.addRightView(imageName: "dropdown")
+        serviceTextfield.addRightView(imageName: "dropdown")
         
-        doctorLabTextfield.addRightView(imageName: "rightView")
-        dateTextfield.addRightView(imageName: "rightView")
-        timeTextfield.addRightView(imageName: "rightView")
-        memberTextfield.setPlaceholder(placeholderText: "Select member")
+        doctorLabTextfield.addRightView(imageName: "dropdown")
+        dateTextfield.addRightView(imageName: "calendar")
+        timeTextfield.addRightView(imageName: "TimeSquare")
+        //memberTextfield.setPlaceholder(placeholderText: "Select member")
         locationTextfield.setPlaceholder(placeholderText: "Select location")
         departmentTextfield.setPlaceholder(placeholderText: "Select department")
         serviceTextfield.setPlaceholder(placeholderText: "Select service")
@@ -519,7 +522,7 @@ class BookAppointmentViewController: UIViewController {
         dateTextfield.setPlaceholder(placeholderText: "Select date")
         timeTextfield.setPlaceholder(placeholderText: "Select time")
         
-        memberTextfield.delegate = self
+        //memberTextfield.delegate = self
         locationTextfield.delegate = self
         departmentTextfield.delegate = self
         serviceTextfield.delegate = self
@@ -549,7 +552,7 @@ extension BookAppointmentViewController:UITextFieldDelegate,DatePickerDelegate,S
         case .FamilyMember:
 //            let data = viewModel.familyMemberData?[index]
             let data = familyMemberData[index]
-            memberTextfield.text = data.name
+           // memberTextfield.text = data.name
         case .Location:
 //            let data = viewModel.locationData?.locations?[index]
             //dummy
@@ -637,8 +640,8 @@ extension BookAppointmentViewController:UITextFieldDelegate,DatePickerDelegate,S
             }else{
                 fetchDoctors()
             }
-        case memberTextfield:
-            fetchFamilyMembers()
+//        case memberTextfield:
+//            fetchFamilyMembers()
         case dateTextfield:
             selectedTextfield = dateTextfield
             let storyboard = UIStoryboard(name: "Main", bundle: .main)
@@ -671,5 +674,29 @@ extension BookAppointmentViewController{
 }
 
 class CellClass: UITableViewCell {
+    
+}
+extension BookAppointmentViewController:UICollectionViewDelegate,UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+       // return viewModel.familyMemberData?.count ?? 0
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FamilyCollectionViewCell", for: indexPath) as! FamilyCollectionViewCell
+        let users = ["person1","person2","person3","person"]
+        if indexPath.row == 4
+        {
+            cell.memberImage.image = UIImage(named: "add")
+            cell.height.constant = 20
+            cell.width.constant = 20
+        }
+        else
+        {
+            cell.memberImage.image = UIImage(named:users[indexPath.row])
+            cell.memberImage.layer.cornerRadius = 15
+        }
+        return cell
+    }
     
 }

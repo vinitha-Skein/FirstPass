@@ -15,9 +15,11 @@ class DeleteFamilyMemberViewController: UIViewController {
     @IBOutlet weak var container: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        deleteButton.layer.cornerRadius = 10
-        popup_container.layer.cornerRadius = 10
-        container.layer.cornerRadius = 30
+        view.backgroundColor = UIColor.clear
+        view.isOpaque = false
+//        deleteButton.layer.cornerRadius = 8
+//        popup_container.layer.cornerRadius = 10
+//        container.layer.cornerRadius = 30
         // Do any additional setup after loading the view.
     }
     

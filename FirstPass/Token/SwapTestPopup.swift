@@ -17,9 +17,9 @@ class SwapTestPopup: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.clear
         view.isOpaque = false
-        container.layer.cornerRadius = 25
-        yesButton.layer.cornerRadius = 8
-        noButton.createBorderForButton(cornerRadius: 8, borderWidth: 1, borderColor: .black)
+//        container.layer.cornerRadius = 25
+//        yesButton.layer.cornerRadius = 8
+//        noButton.createBorderForButton(cornerRadius: 8, borderWidth: 1, borderColor: .black)
 
 
         // Do any additional setup after loading the view.

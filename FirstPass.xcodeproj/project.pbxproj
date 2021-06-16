@@ -34,6 +34,7 @@
 		1BD710A626612E7700D2C607 /* JourneyRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD710A526612E7700D2C607 /* JourneyRowController.swift */; };
 		1BF222E4266F32A300759E13 /* phase2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF222E3266F32A300759E13 /* phase2.storyboard */; };
 		1BF2232E266FB69B00759E13 /* AppointmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2232D266FB69B00759E13 /* AppointmentCollectionViewCell.swift */; };
+		A704C78E2674CEA80056C2A3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A704C78D2674CEA80056C2A3 /* Colors.xcassets */; };
 		A70691C026706BB9000C4129 /* PreChekinPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70691BF26706BB9000C4129 /* PreChekinPopup.swift */; };
 		A71AB86F26709A3300D8F151 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB86D26709A3300D8F151 /* APIRouter.swift */; };
 		A71AB87026709A3300D8F151 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB86E26709A3300D8F151 /* APIClient.swift */; };
@@ -51,6 +52,7 @@
 		A721E33F26721E420098E6A8 /* PasswordChangeSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721E33E26721E420098E6A8 /* PasswordChangeSuccessViewController.swift */; };
 		A7241D24265E0601009D9A7C /* CheckinInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7241D23265E0601009D9A7C /* CheckinInterfaceController.swift */; };
 		A7249FCE2671E67A0043D22C /* EditPersonalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7249FCD2671E67A0043D22C /* EditPersonalInformationViewController.swift */; };
+		A726873126783E6800BF0109 /* AddNewMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A726873026783E6600BF0109 /* AddNewMemberViewController.swift */; };
 		A7304D6526738B3A00DA33B2 /* DeleteFamilyMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7304D6426738B3A00DA33B2 /* DeleteFamilyMemberViewController.swift */; };
 		A737D422265BB52E008B4D61 /* UpcommingAppointmentsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A737D421265BB52E008B4D61 /* UpcommingAppointmentsInterfaceController.swift */; };
 		A737D42E265BB624008B4D61 /* UpcommingappointmentsRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A737D42D265BB624008B4D61 /* UpcommingappointmentsRowController.swift */; };
@@ -85,7 +87,6 @@
 		A8D2901F25BE9F6F003605D6 /* SwapPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D2901E25BE9F6F003605D6 /* SwapPopup.swift */; };
 		A8D2902125BEA8D5003605D6 /* PharmacyPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D2902025BEA8D5003605D6 /* PharmacyPopup.swift */; };
 		AE9C34474DBFAEDC1BC6803A /* Pods_FirstPass.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE34F176B87465CD0E373D99 /* Pods_FirstPass.framework */; };
-		C00357442516146C00F76902 /* AddNewMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00357432516146C00F76902 /* AddNewMemberViewController.swift */; };
 		C0035747251619B600F76902 /* FamilyMemberTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0035745251619B600F76902 /* FamilyMemberTableViewCell.swift */; };
 		C0035748251619B600F76902 /* FamilyMemberTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0035746251619B600F76902 /* FamilyMemberTableViewCell.xib */; };
 		C003574A25184FC000F76902 /* FamilyMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C003574925184FC000F76902 /* FamilyMemberViewController.swift */; };
@@ -253,6 +254,7 @@
 		1BF222E3266F32A300759E13 /* phase2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = phase2.storyboard; sourceTree = "<group>"; };
 		1BF2232D266FB69B00759E13 /* AppointmentCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentCollectionViewCell.swift; sourceTree = "<group>"; };
 		83C05EB8E54AB32B13684667 /* Pods-FirstPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstPass.debug.xcconfig"; path = "Target Support Files/Pods-FirstPass/Pods-FirstPass.debug.xcconfig"; sourceTree = "<group>"; };
+		A704C78D2674CEA80056C2A3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		A70691BF26706BB9000C4129 /* PreChekinPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreChekinPopup.swift; sourceTree = "<group>"; };
 		A71AB86D26709A3300D8F151 /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		A71AB86E26709A3300D8F151 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 		A721E33E26721E420098E6A8 /* PasswordChangeSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeSuccessViewController.swift; sourceTree = "<group>"; };
 		A7241D23265E0601009D9A7C /* CheckinInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinInterfaceController.swift; sourceTree = "<group>"; };
 		A7249FCD2671E67A0043D22C /* EditPersonalInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPersonalInformationViewController.swift; sourceTree = "<group>"; };
+		A726873026783E6600BF0109 /* AddNewMemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewMemberViewController.swift; sourceTree = "<group>"; };
 		A7304D6426738B3A00DA33B2 /* DeleteFamilyMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFamilyMemberViewController.swift; sourceTree = "<group>"; };
 		A737D421265BB52E008B4D61 /* UpcommingAppointmentsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcommingAppointmentsInterfaceController.swift; sourceTree = "<group>"; };
 		A737D42D265BB624008B4D61 /* UpcommingappointmentsRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcommingappointmentsRowController.swift; sourceTree = "<group>"; };
@@ -306,7 +309,6 @@
 		A894564425BED4A3002EFB28 /* PharmacyCollectionPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PharmacyCollectionPopup.swift; sourceTree = "<group>"; };
 		A8D2901E25BE9F6F003605D6 /* SwapPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwapPopup.swift; sourceTree = "<group>"; };
 		A8D2902025BEA8D5003605D6 /* PharmacyPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PharmacyPopup.swift; sourceTree = "<group>"; };
-		C00357432516146C00F76902 /* AddNewMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMemberViewController.swift; sourceTree = "<group>"; };
 		C0035745251619B600F76902 /* FamilyMemberTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberTableViewCell.swift; sourceTree = "<group>"; };
 		C0035746251619B600F76902 /* FamilyMemberTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamilyMemberTableViewCell.xib; sourceTree = "<group>"; };
 		C003574925184FC000F76902 /* FamilyMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberViewController.swift; sourceTree = "<group>"; };
@@ -505,6 +507,7 @@
 		A7304D6326738AFE00DA33B2 /* Family Members */ = {
 			isa = PBXGroup;
 			children = (
+				A726873026783E6600BF0109 /* AddNewMemberViewController.swift */,
 				A7304D6426738B3A00DA33B2 /* DeleteFamilyMemberViewController.swift */,
 			);
 			path = "Family Members";
@@ -690,6 +693,7 @@
 				C059808D2506211900C92021 /* Assets.xcassets */,
 				C059808F2506211900C92021 /* LaunchScreen.storyboard */,
 				C05980922506211900C92021 /* Info.plist */,
+				A704C78D2674CEA80056C2A3 /* Colors.xcassets */,
 				1B5AC288266E4A8C002E7C12 /* Extension */,
 			);
 			path = FirstPass;
@@ -912,7 +916,6 @@
 			children = (
 				C0FA0540255284940011EF48 /* AddMemberModel.swift */,
 				C0FA0542255284A40011EF48 /* AddMemberViewModel.swift */,
-				C00357432516146C00F76902 /* AddNewMemberViewController.swift */,
 			);
 			path = AddMember;
 			sourceTree = "<group>";
@@ -1097,6 +1100,7 @@
 				C0035759251891D100F76902 /* ReportHeader.xib in Resources */,
 				1B5AC298266E543F002E7C12 /* SF-Pro-Display-Medium.otf in Resources */,
 				C0035748251619B600F76902 /* FamilyMemberTableViewCell.xib in Resources */,
+				A704C78E2674CEA80056C2A3 /* Colors.xcassets in Resources */,
 				1B5AC29C266E5441002E7C12 /* SF-Pro-Display-Regular.otf in Resources */,
 				C0376A862518ECEF00A3933D /* MemberTableViewCell.xib in Resources */,
 			);
@@ -1202,11 +1206,11 @@
 				A803391D259EE8F400FE5FB5 /* ParkingMapPopup.swift in Sources */,
 				C0088BDA251B5EFB00777786 /* FeedbackViewController.swift in Sources */,
 				C01ACBA52554065100CE7F59 /* ProfileModel.swift in Sources */,
-				C00357442516146C00F76902 /* AddNewMemberViewController.swift in Sources */,
 				A71AB88426709BA400D8F151 /* RegistrationViewModel.swift in Sources */,
 				C0F496FF2570C8570066C865 /* AppointmentDetailsModel.swift in Sources */,
 				A8033920259EE8F400FE5FB5 /* TokenPopup.swift in Sources */,
 				C01E2480255937D80096A5DB /* FeedbackViewModel.swift in Sources */,
+				A726873126783E6800BF0109 /* AddNewMemberViewController.swift in Sources */,
 				C01ACBA72554066100CE7F59 /* ProfileViewModel.swift in Sources */,
 				C05980852506211800C92021 /* AppDelegate.swift in Sources */,
 				A7462F8B2633EB7000ACD8E5 /* NewTableViewCell.swift in Sources */,
@@ -1406,7 +1410,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.skein.Firstpassmodified.watchkitapp.watchkitExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skein.Firstpassmodified.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = FirstpassModified;
 				SDKROOT = watchos;
@@ -1431,7 +1435,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.skein.Firstpassmodified.watchkitapp.watchkitExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skein.Firstpassmodified.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				PROVISIONING_PROFILE_SPECIFIER = FirstpassModified;
 				SDKROOT = watchos;

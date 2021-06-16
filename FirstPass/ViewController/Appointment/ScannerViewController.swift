@@ -69,7 +69,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         box.createBorderForView(cornerRadius: 0, borderWidth: 1, borderColor: UIColor(hexString: "#E98600"))
         container.createBorderForView(cornerRadius: 30, borderWidth: 0, borderColor: .clear)
         container.clipsToBounds = true
-        addButton.createBorderForButton(cornerRadius: 20, borderWidth: 0, borderColor: .clear)
+        addButton.createBorderForButton(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
         appointmentID.layer.cornerRadius = 10
         
     }

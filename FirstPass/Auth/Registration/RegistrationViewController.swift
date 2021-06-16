@@ -98,8 +98,8 @@ class RegistrationViewController: UIViewController {
         }
     }
     
-    @IBAction func cancelAction(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+    @IBAction func LoginAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Modified", bundle: .main)
         let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)
@@ -109,6 +109,12 @@ class RegistrationViewController: UIViewController {
     func setupUI(){
         container.createBorderForView(cornerRadius: 30, borderWidth: 0, borderColor: .clear)
         container.clipsToBounds = true
+        container.layer.borderColor = UIColor.gray.cgColor
+        container.layer.borderWidth = 0.4
+        container.layer.shadowColor = UIColor.black.cgColor
+        container.layer.shadowOpacity = 1
+        container.layer.shadowOffset = .zero
+        container.layer.shadowRadius = 2
 //        container.layer.masksToBounds = false
 //        container.layer.shadowColor = UIColor.black.cgColor
 //        container.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
@@ -124,10 +130,10 @@ class RegistrationViewController: UIViewController {
             .kern: 0.0
         ])
         attributedString.addAttribute(.foregroundColor, value: UIColor(red: 53.0 / 255.0, green: 54.0 / 255.0, blue: 91.0 / 255.0, alpha: 1.0), range: NSRange(location: 0, length: 14))
-        firstName.setPlaceholder(placeholderText: "First Name*")
-        mobileNumber.setPlaceholder(placeholderText: "Mobile Number*")
-        email.setPlaceholder(placeholderText: "Email address*")
-        emiratesID.setPlaceholder(placeholderText: "Emirates ID (Optional)")
+//        firstName.setPlaceholder(placeholderText: "First Name*")
+//        mobileNumber.setPlaceholder(placeholderText: "Mobile Number*")
+//        email.setPlaceholder(placeholderText: "Email address*")
+//        emiratesID.setPlaceholder(placeholderText: "Emirates ID (Optional)")
         
         firstName.layer.cornerRadius = 5
         email.layer.cornerRadius = 5

@@ -43,11 +43,11 @@ class PasswordViewController: UIViewController {
         if(confirmpasswordiconclick == true)
         {
             confirmPassword.isSecureTextEntry = false
-            confirmPasswordiconButton.setImage(UIImage(named: "view"), for: .normal)
+            confirmPasswordiconButton.setImage(UIImage(named: "private"), for: .normal)
         } else
         {
             confirmPassword.isSecureTextEntry = true
-            confirmPasswordiconButton.setImage(UIImage(named: "private"), for: .normal)
+            confirmPasswordiconButton.setImage(UIImage(named: "view"), for: .normal)
         }
         confirmpasswordiconclick = !confirmpasswordiconclick
     }
@@ -56,20 +56,22 @@ class PasswordViewController: UIViewController {
         if(passwordiconclick == true)
         {
             password.isSecureTextEntry = false
-            passwordiconButton.setImage(UIImage(named: "view"), for: .normal)
+            passwordiconButton.setImage(UIImage(named: "private"), for: .normal)
 
         } else
         {
             password.isSecureTextEntry = true
-            passwordiconButton.setImage(UIImage(named: "private"), for: .normal)
+            passwordiconButton.setImage(UIImage(named: "view"), for: .normal)
         }
         passwordiconclick = !passwordiconclick
         
     }
     
     func setupUI(){
-        container.createBorderForView(cornerRadius: 30, borderWidth: 0, borderColor: .clear)
+        container.createBorderForView(cornerRadius: 25, borderWidth: 0, borderColor: .clear)
         container.clipsToBounds = true
+        container.layer.borderWidth = 0.4
+        container.layer.borderColor = UIColor.gray.cgColor
         signinButton.createBorderForButton(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
         passwordView.layer.cornerRadius = 10
         confirmPasswordView.layer.cornerRadius = 10

@@ -32,12 +32,12 @@ class LoginViewController: UIViewController {
         if(passwordiconclick == true)
         {
             passwordTextfield.isSecureTextEntry = false
-            passwordiconButton.setImage(UIImage(named: "view"), for: .normal)
+            passwordiconButton.setImage(UIImage(named: "private"), for: .normal)
 
         } else
         {
             passwordTextfield.isSecureTextEntry = true
-            passwordiconButton.setImage(UIImage(named: "private"), for: .normal)
+            passwordiconButton.setImage(UIImage(named: "view"), for: .normal)
         }
         passwordiconclick = !passwordiconclick
         
@@ -138,6 +138,8 @@ extension LoginViewController{
            signinButton.createBorderForButton(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
             containerScrollview.layer.cornerRadius = 20
         fieldContainer.layer.cornerRadius = 20
+        fieldContainer.layer.borderColor = UIColor.gray.cgColor
+        fieldContainer.layer.borderWidth = 0.4
         passwordView.layer.cornerRadius = 10
         usernameView.layer.cornerRadius = 10
 //           let attributedString = NSMutableAttributedString(string: "Don’t have an account? Sign up", attributes: [

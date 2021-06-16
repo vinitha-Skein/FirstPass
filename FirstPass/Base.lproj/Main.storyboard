@@ -3085,10 +3085,10 @@ Everyday.</string>
             </objects>
             <point key="canvasLocation" x="5781.1594202898559" y="1267.6339285714284"/>
         </scene>
-        <!--Book Appointment View Controller-->
+        <!--View Controller-->
         <scene sceneID="Aba-Ok-fev">
             <objects>
-                <viewController storyboardIdentifier="BookAppointmentViewController" id="J2w-TF-R4l" customClass="BookAppointmentViewController" customModule="firstpass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="J2w-TF-R4l" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PCX-mc-wQa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -8203,10 +8203,10 @@ Care team</string>
             </objects>
             <point key="canvasLocation" x="7015.9420289855079" y="4164.5089285714284"/>
         </scene>
-        <!--Indoor Map View Controller-->
+        <!--View Controller-->
         <scene sceneID="vQz-fe-1DX">
             <objects>
-                <viewController storyboardIdentifier="IndoorMapViewController" id="Xpj-Yg-GAs" customClass="IndoorMapViewController" customModule="firstpass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Xpj-Yg-GAs" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MyQ-3m-y5p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -9147,24 +9147,6 @@ Q2hvb3NlIERhdGUQOg
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmj-r1-eN0">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fXM-xW-nOO">
-                                        <rect key="frame" x="0.0" y="796" width="414" height="100"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="zAC-jO-0DY"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="fXM-xW-nOO" secondAttribute="bottom" id="KrA-lq-QM6"/>
-                                    <constraint firstAttribute="trailing" secondItem="fXM-xW-nOO" secondAttribute="trailing" id="qzV-jI-j8M"/>
-                                    <constraint firstItem="fXM-xW-nOO" firstAttribute="leading" secondItem="zmj-r1-eN0" secondAttribute="leading" id="xOA-fA-CeK"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ua-hh-Q1b">
                                 <rect key="frame" x="0.0" y="362" width="414" height="500"/>
                                 <subviews>
@@ -9328,6 +9310,24 @@ Q2hvb3NlIERhdGUQOg
                                     <constraint firstAttribute="trailing" secondItem="hwP-F1-b9O" secondAttribute="trailing" constant="40" id="min-jG-AXQ"/>
                                     <constraint firstAttribute="trailing" secondItem="KYp-q6-etQ" secondAttribute="trailing" constant="30" id="pX5-XM-0GO"/>
                                     <constraint firstItem="0xw-Yq-vwa" firstAttribute="leading" secondItem="8ua-hh-Q1b" secondAttribute="leading" constant="20" id="rlv-I9-wYT"/>
+                                </constraints>
+                            </view>
+                            <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmj-r1-eN0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fXM-xW-nOO">
+                                        <rect key="frame" x="0.0" y="796" width="414" height="100"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="zAC-jO-0DY"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="fXM-xW-nOO" secondAttribute="bottom" id="KrA-lq-QM6"/>
+                                    <constraint firstAttribute="trailing" secondItem="fXM-xW-nOO" secondAttribute="trailing" id="qzV-jI-j8M"/>
+                                    <constraint firstItem="fXM-xW-nOO" firstAttribute="leading" secondItem="zmj-r1-eN0" secondAttribute="leading" id="xOA-fA-CeK"/>
                                 </constraints>
                             </view>
                         </subviews>

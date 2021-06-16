@@ -12,7 +12,7 @@ class AccountViewController: UIViewController {
 
     @IBOutlet weak var bottomMenuView: Tabbar!
     @IBOutlet weak var collectionview: UICollectionView!
-    var categories = ["My Profile","My Appointment","Book Appointment","Payments","Reports","Indoor Map","Chat with Us","Logout"]
+    var categories = ["My Profile","My Appointments","Book Appointment","Payments","Reports","Indoor Map","Chat with Us","Logout"]
     var logoImages = ["accountpic","appointments","book","payments","reports","map","chat","logout"]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +48,7 @@ extension AccountViewController:UICollectionViewDelegate,UICollectionViewDataSou
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AccountCollectionViewCell", for: indexPath) as! AccountCollectionViewCell
         cell.categoryLabel.text = categories[indexPath.row]
         cell.logoImage.image = UIImage(named: logoImages[indexPath.row])
+        cell.bgView.layer.cornerRadius = 15
         cell.container.layer.cornerRadius = 20
         cell.container.layer.borderWidth = 0.2
         cell.container.layer.borderColor = UIColor.lightGray.cgColor
@@ -81,6 +82,14 @@ extension AccountViewController:UICollectionViewDelegate,UICollectionViewDataSou
 
             present(vc, animated: true, completion: nil)
         }
+        if (indexPath.row == 5)
+        {
+            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "IndoorMapViewController") as! IndoorMapViewController
+            vc.modalPresentationStyle = .fullScreen
+
+            present(vc, animated: true, completion: nil)
+        }
         if (indexPath.row == 6)
         {
             let storyboard = UIStoryboard(name: "Modified", bundle: nil)
@@ -96,8 +105,21 @@ extension AccountViewController:UICollectionViewDelegate,UICollectionViewDataSou
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true, completion: nil)
         }
+//        if (indexPath.row == 1)
+//        {
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "SwapTestPopup") as! SwapTestPopup
+//            vc.modalPresentationStyle = .fullScreen
+//            present(vc, animated: true, completion: nil)
+//        }
 
-        
+        if (indexPath.row == 2)
+        {
+            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "BookAppointmentViewController") as! BookAppointmentViewController
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
+        }
     }
 }
 extension AccountViewController:BottomViewDelegate
