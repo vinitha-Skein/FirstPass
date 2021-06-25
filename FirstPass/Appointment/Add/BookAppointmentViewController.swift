@@ -200,7 +200,7 @@ class BookAppointmentViewController: UIViewController {
         let appointmentTime = date + " " + converetedTime
         
         var params = [
-            "appointmentTime": appointmentTime,
+            "appointmentTime": converetedTime,
             "branchId": departmentId,
             "date": date,
             "doctorId": doctorId,
@@ -213,44 +213,47 @@ class BookAppointmentViewController: UIViewController {
             params["pId"] = viewModel.userPId
         }else
         {
-//            params["appointfor"] = member
-//            params["pId"] = memberPId
+            params["appointfor"] = ""
+            params["pId"] = memberPId
         }
-        bookAppointment(params: params)
-    }
-    
-    func bookAppointment(params:[String:Any]){
-//        self.activityIndicator(self.view, startAnimate: true)
-//        viewModel.createAppointment(params: params)
-        
-        viewModel.appointmentAddSuccess = {
-            let storyboard = UIStoryboard(name: "Main", bundle: .main)
-            let vc = storyboard.instantiateViewController(withIdentifier: "AppointmentBookedViewController") as! AppointmentBookedViewController
-            vc.appointmentData = self.viewModel.createdAppointmentData
-            vc.modalPresentationStyle = .fullScreen
-            //            self.view.window!.layer.add(self.leftToRightTransition(), forKey: kCATransition)
-            self.present(vc, animated: true)
-        }
-        
-        viewModel.loadingStatus = {
-            if self.viewModel.isLoading{
-                self.activityIndicator(self.view, startAnimate: true)
-            }else{
-                self.activityIndicator(self.view, startAnimate: false)
-                UIApplication.shared.endIgnoringInteractionEvents()
-            }
-        }
-        
-        viewModel.errorMessageAlert = {
-            self.showAlert(self.viewModel.errorMessage ?? "Error")
-        }
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        let storyboard = UIStoryboard(name: "Modified", bundle: .main)
         let vc = storyboard.instantiateViewController(withIdentifier: "AppointmentBookedViewController") as! AppointmentBookedViewController
-        vc.appointmentData = CreatedAppointmentData(pId: 0, messages: "", mrnNo: "347834455", patientName: "Natasha", doctorName: "Albert", departmentName: "Cardiology", serviceName: "Cardiology", appointmentTime: "2020-01-06", serviceBookedId: 0, status: "", message: "", error: "")
+        vc.appointmentData = CreatedAppointmentData(pId: 0, messages: "", mrnNo: "347834455", patientName: "Natasha", doctorName: doctor, departmentName: department, serviceName: "Cardiology", appointmentTime: time, serviceBookedId: 0, status: "", message: "", error: "",date:date)
         vc.modalPresentationStyle = .fullScreen
         //            self.view.window!.layer.add(self.leftToRightTransition(), forKey: kCATransition)
         self.present(vc, animated: true)
+
+        bookAppointment(params: params)
+    }
+    
+    func bookAppointment(params:[String:Any])
+    {
+//        self.activityIndicator(self.view, startAnimate: true)
+//        viewModel.createAppointment(params: params)
+//
+//        viewModel.appointmentAddSuccess =
+//            {
+//            let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "AppointmentBookedViewController") as! AppointmentBookedViewController
+//            vc.appointmentData = self.viewModel.createdAppointmentData
+//            vc.modalPresentationStyle = .fullScreen
+//            //            self.view.window!.layer.add(self.leftToRightTransition(), forKey: kCATransition)
+//            self.present(vc, animated: true)
+//        }
+//
+//        viewModel.loadingStatus = {
+//            if self.viewModel.isLoading{
+//                self.activityIndicator(self.view, startAnimate: true)
+//            }else{
+//                self.activityIndicator(self.view, startAnimate: false)
+//                UIApplication.shared.endIgnoringInteractionEvents()
+//            }
+//        }
+//
+//        viewModel.errorMessageAlert = {
+//            self.showAlert(self.viewModel.errorMessage ?? "Error")
+//        }
+        
     }
     
     func fetchLocations(){

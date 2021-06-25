@@ -36,6 +36,11 @@
 		1BF2232E266FB69B00759E13 /* AppointmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2232D266FB69B00759E13 /* AppointmentCollectionViewCell.swift */; };
 		A704C78E2674CEA80056C2A3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A704C78D2674CEA80056C2A3 /* Colors.xcassets */; };
 		A70691C026706BB9000C4129 /* PreChekinPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70691BF26706BB9000C4129 /* PreChekinPopup.swift */; };
+		A7093973267C5E3A0061EDFA /* AppointmentdetailsNewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7093971267C5E3A0061EDFA /* AppointmentdetailsNewTableViewCell.swift */; };
+		A7093974267C5E3A0061EDFA /* AppointmentdetailsNewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7093972267C5E3A0061EDFA /* AppointmentdetailsNewTableViewCell.xib */; };
+		A7093979267C78AC0061EDFA /* AppointdetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7093978267C78AC0061EDFA /* AppointdetailsCollectionViewCell.swift */; };
+		A717D6A5267B165A005E7A3A /* ReportsFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A717D6A4267B165A005E7A3A /* ReportsFilterViewController.swift */; };
+		A717D6AA267B19F7005E7A3A /* FiltersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A717D6A9267B19F7005E7A3A /* FiltersCollectionViewCell.swift */; };
 		A71AB86F26709A3300D8F151 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB86D26709A3300D8F151 /* APIRouter.swift */; };
 		A71AB87026709A3300D8F151 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB86E26709A3300D8F151 /* APIClient.swift */; };
 		A71AB87826709A9300D8F151 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB87726709A9300D8F151 /* Constants.swift */; };
@@ -48,6 +53,8 @@
 		A71AB89A26709C0A00D8F151 /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB89726709C0A00D8F151 /* PasswordViewModel.swift */; };
 		A71AB89B26709C0A00D8F151 /* PasswordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB89826709C0A00D8F151 /* PasswordModel.swift */; };
 		A71AB89C26709C0A00D8F151 /* PasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB89926709C0A00D8F151 /* PasswordViewController.swift */; };
+		A71C69E626805DE500F7F9A0 /* ChatwithusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C69E526805DE500F7F9A0 /* ChatwithusViewController.swift */; };
+		A71C69EB26805E3900F7F9A0 /* ChatwithusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C69EA26805E3900F7F9A0 /* ChatwithusTableViewCell.swift */; };
 		A721E33A267217190098E6A8 /* SetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721E339267217190098E6A8 /* SetPasswordViewController.swift */; };
 		A721E33F26721E420098E6A8 /* PasswordChangeSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721E33E26721E420098E6A8 /* PasswordChangeSuccessViewController.swift */; };
 		A7241D24265E0601009D9A7C /* CheckinInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7241D23265E0601009D9A7C /* CheckinInterfaceController.swift */; };
@@ -75,6 +82,13 @@
 		A7A49EE5265B7FE200AB1A57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7A49EE4265B7FE200AB1A57 /* Assets.xcassets */; };
 		A7A49EEA265B7FE200AB1A57 /* Firstpass-watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A7A49ECB265B7FD600AB1A57 /* Firstpass-watchOS.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A7A49EF7265B886200AB1A57 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7A49EF6265B886200AB1A57 /* Colors.xcassets */; };
+		A7D359392681B55A003AC0DE /* PaymentOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D359382681B55A003AC0DE /* PaymentOptionsViewController.swift */; };
+		A7D3593E2681B599003AC0DE /* NetBankingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D3593D2681B599003AC0DE /* NetBankingCollectionViewCell.swift */; };
+		A7D3594C2681B629003AC0DE /* CardsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D3594A2681B629003AC0DE /* CardsTableViewCell.swift */; };
+		A7D3594D2681B629003AC0DE /* CardsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7D3594B2681B629003AC0DE /* CardsTableViewCell.xib */; };
+		A7D8FBEC2684A8CB0038E6FD /* AppointmentHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D8FBEA2684A8CB0038E6FD /* AppointmentHistoryTableViewCell.swift */; };
+		A7D8FBED2684A8CB0038E6FD /* AppointmentHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7D8FBEB2684A8CB0038E6FD /* AppointmentHistoryTableViewCell.xib */; };
+		A7D8FBF22684A9320038E6FD /* AppointmentHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D8FBF12684A9320038E6FD /* AppointmentHistoryViewController.swift */; };
 		A803391C259EE8F400FE5FB5 /* SwapTestPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8033915259EE8F400FE5FB5 /* SwapTestPopup.swift */; };
 		A803391D259EE8F400FE5FB5 /* ParkingMapPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8033916259EE8F400FE5FB5 /* ParkingMapPopup.swift */; };
 		A803391E259EE8F400FE5FB5 /* TokenTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A8033917259EE8F400FE5FB5 /* TokenTableViewCell.xib */; };
@@ -256,6 +270,11 @@
 		83C05EB8E54AB32B13684667 /* Pods-FirstPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstPass.debug.xcconfig"; path = "Target Support Files/Pods-FirstPass/Pods-FirstPass.debug.xcconfig"; sourceTree = "<group>"; };
 		A704C78D2674CEA80056C2A3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		A70691BF26706BB9000C4129 /* PreChekinPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreChekinPopup.swift; sourceTree = "<group>"; };
+		A7093971267C5E3A0061EDFA /* AppointmentdetailsNewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentdetailsNewTableViewCell.swift; sourceTree = "<group>"; };
+		A7093972267C5E3A0061EDFA /* AppointmentdetailsNewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppointmentdetailsNewTableViewCell.xib; sourceTree = "<group>"; };
+		A7093978267C78AC0061EDFA /* AppointdetailsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointdetailsCollectionViewCell.swift; sourceTree = "<group>"; };
+		A717D6A4267B165A005E7A3A /* ReportsFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsFilterViewController.swift; sourceTree = "<group>"; };
+		A717D6A9267B19F7005E7A3A /* FiltersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersCollectionViewCell.swift; sourceTree = "<group>"; };
 		A71AB86D26709A3300D8F151 /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		A71AB86E26709A3300D8F151 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		A71AB87726709A9300D8F151 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -268,6 +287,8 @@
 		A71AB89726709C0A00D8F151 /* PasswordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
 		A71AB89826709C0A00D8F151 /* PasswordModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordModel.swift; sourceTree = "<group>"; };
 		A71AB89926709C0A00D8F151 /* PasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordViewController.swift; sourceTree = "<group>"; };
+		A71C69E526805DE500F7F9A0 /* ChatwithusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatwithusViewController.swift; sourceTree = "<group>"; };
+		A71C69EA26805E3900F7F9A0 /* ChatwithusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatwithusTableViewCell.swift; sourceTree = "<group>"; };
 		A721E339267217190098E6A8 /* SetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewController.swift; sourceTree = "<group>"; };
 		A721E33E26721E420098E6A8 /* PasswordChangeSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeSuccessViewController.swift; sourceTree = "<group>"; };
 		A7241D23265E0601009D9A7C /* CheckinInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinInterfaceController.swift; sourceTree = "<group>"; };
@@ -298,6 +319,13 @@
 		A7A49EE6265B7FE200AB1A57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7A49EE7265B7FE200AB1A57 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		A7A49EF6265B886200AB1A57 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		A7D359382681B55A003AC0DE /* PaymentOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOptionsViewController.swift; sourceTree = "<group>"; };
+		A7D3593D2681B599003AC0DE /* NetBankingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetBankingCollectionViewCell.swift; sourceTree = "<group>"; };
+		A7D3594A2681B629003AC0DE /* CardsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsTableViewCell.swift; sourceTree = "<group>"; };
+		A7D3594B2681B629003AC0DE /* CardsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardsTableViewCell.xib; sourceTree = "<group>"; };
+		A7D8FBEA2684A8CB0038E6FD /* AppointmentHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		A7D8FBEB2684A8CB0038E6FD /* AppointmentHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppointmentHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		A7D8FBF12684A9320038E6FD /* AppointmentHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentHistoryViewController.swift; sourceTree = "<group>"; };
 		A8033915259EE8F400FE5FB5 /* SwapTestPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwapTestPopup.swift; sourceTree = "<group>"; };
 		A8033916259EE8F400FE5FB5 /* ParkingMapPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkingMapPopup.swift; sourceTree = "<group>"; };
 		A8033917259EE8F400FE5FB5 /* TokenTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TokenTableViewCell.xib; sourceTree = "<group>"; };
@@ -468,6 +496,10 @@
 		1B5AC2B4266E6419002E7C12 /* Phase 2 */ = {
 			isa = PBXGroup;
 			children = (
+				A7D359372681B522003AC0DE /* Payment */,
+				A71C69E426805D7D00F7F9A0 /* Chat */,
+				A7093970267C5DE90061EDFA /* Appointment Details */,
+				A717D6A3267B1625005E7A3A /* Reports */,
 				A7304D6326738AFE00DA33B2 /* Family Members */,
 				A7209B8C2670F6670084E2AB /* Edit Profile */,
 				A764019F266F727E0050E41A /* Accounts */,
@@ -492,6 +524,37 @@
 				EE34F176B87465CD0E373D99 /* Pods_FirstPass.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7093970267C5DE90061EDFA /* Appointment Details */ = {
+			isa = PBXGroup;
+			children = (
+				A7093971267C5E3A0061EDFA /* AppointmentdetailsNewTableViewCell.swift */,
+				A7093972267C5E3A0061EDFA /* AppointmentdetailsNewTableViewCell.xib */,
+				A7093978267C78AC0061EDFA /* AppointdetailsCollectionViewCell.swift */,
+				A7D8FBEA2684A8CB0038E6FD /* AppointmentHistoryTableViewCell.swift */,
+				A7D8FBEB2684A8CB0038E6FD /* AppointmentHistoryTableViewCell.xib */,
+				A7D8FBF12684A9320038E6FD /* AppointmentHistoryViewController.swift */,
+			);
+			path = "Appointment Details";
+			sourceTree = "<group>";
+		};
+		A717D6A3267B1625005E7A3A /* Reports */ = {
+			isa = PBXGroup;
+			children = (
+				A717D6A4267B165A005E7A3A /* ReportsFilterViewController.swift */,
+				A717D6A9267B19F7005E7A3A /* FiltersCollectionViewCell.swift */,
+			);
+			path = Reports;
+			sourceTree = "<group>";
+		};
+		A71C69E426805D7D00F7F9A0 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				A71C69E526805DE500F7F9A0 /* ChatwithusViewController.swift */,
+				A71C69EA26805E3900F7F9A0 /* ChatwithusTableViewCell.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		A7209B8C2670F6670084E2AB /* Edit Profile */ = {
@@ -571,6 +634,17 @@
 				1B2566C526648CD100025108 /* CourierServicesInterfaceController.swift */,
 			);
 			path = "Firstpass-watchOS Extension";
+			sourceTree = "<group>";
+		};
+		A7D359372681B522003AC0DE /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				A7D359382681B55A003AC0DE /* PaymentOptionsViewController.swift */,
+				A7D3593D2681B599003AC0DE /* NetBankingCollectionViewCell.swift */,
+				A7D3594A2681B629003AC0DE /* CardsTableViewCell.swift */,
+				A7D3594B2681B629003AC0DE /* CardsTableViewCell.xib */,
+			);
+			path = Payment;
 			sourceTree = "<group>";
 		};
 		A8033914259EE8AA00FE5FB5 /* Token */ = {
@@ -1076,6 +1150,7 @@
 				C0B2081A2519F1FF00F048F2 /* group2.png in Resources */,
 				1B5AC27C266DE014002E7C12 /* Tabbar.xib in Resources */,
 				1B5AC29D266E5444002E7C12 /* SF-Pro-Display-Semibold.otf in Resources */,
+				A7D3594D2681B629003AC0DE /* CardsTableViewCell.xib in Resources */,
 				1BF222E4266F32A300759E13 /* phase2.storyboard in Resources */,
 				C0911B00254FC6480052E52C /* FeedbackTextTableViewCell.xib in Resources */,
 				C0088BD6251AE74A00777786 /* FamilyCollectionViewCell.xib in Resources */,
@@ -1090,6 +1165,7 @@
 				C0B2081B2519F1FF00F048F2 /* groupCopy2@3x.png in Resources */,
 				C059808C2506211800C92021 /* Main.storyboard in Resources */,
 				C0672AAA251507010060FB08 /* AppointmentTableViewCell.xib in Resources */,
+				A7093974267C5E3A0061EDFA /* AppointmentdetailsNewTableViewCell.xib in Resources */,
 				C0088BDE251B5F1A00777786 /* FeedbackTableViewCell.xib in Resources */,
 				C0B2081D2519F1FF00F048F2 /* groupCopy2.png in Resources */,
 				C0672AAE251507170060FB08 /* AppointmentDetailsTableViewCell.xib in Resources */,
@@ -1103,6 +1179,7 @@
 				A704C78E2674CEA80056C2A3 /* Colors.xcassets in Resources */,
 				1B5AC29C266E5441002E7C12 /* SF-Pro-Display-Regular.otf in Resources */,
 				C0376A862518ECEF00A3933D /* MemberTableViewCell.xib in Resources */,
+				A7D8FBED2684A8CB0038E6FD /* AppointmentHistoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1186,7 +1263,9 @@
 				C091239625559D3100CFBC89 /* AddAppointmentViewModel.swift in Sources */,
 				C05980A7250628D400C92021 /* LoginViewController.swift in Sources */,
 				C0560F2725715FFB0083CE50 /* AddInsuranceViewController.swift in Sources */,
+				A717D6AA267B19F7005E7A3A /* FiltersCollectionViewCell.swift in Sources */,
 				A76401E3266F94AD0050E41A /* AlertTableCell.swift in Sources */,
+				A7D8FBF22684A9320038E6FD /* AppointmentHistoryViewController.swift in Sources */,
 				C091239925559DC300CFBC89 /* MyAppointmentsModel.swift in Sources */,
 				A76401A6266F72BF0050E41A /* AccountCollectionViewCell.swift in Sources */,
 				C0FA053C25527AEB0011EF48 /* Validation.swift in Sources */,
@@ -1209,8 +1288,10 @@
 				A71AB88426709BA400D8F151 /* RegistrationViewModel.swift in Sources */,
 				C0F496FF2570C8570066C865 /* AppointmentDetailsModel.swift in Sources */,
 				A8033920259EE8F400FE5FB5 /* TokenPopup.swift in Sources */,
+				A717D6A5267B165A005E7A3A /* ReportsFilterViewController.swift in Sources */,
 				C01E2480255937D80096A5DB /* FeedbackViewModel.swift in Sources */,
 				A726873126783E6800BF0109 /* AddNewMemberViewController.swift in Sources */,
+				A7093979267C78AC0061EDFA /* AppointdetailsCollectionViewCell.swift in Sources */,
 				C01ACBA72554066100CE7F59 /* ProfileViewModel.swift in Sources */,
 				C05980852506211800C92021 /* AppDelegate.swift in Sources */,
 				A7462F8B2633EB7000ACD8E5 /* NewTableViewCell.swift in Sources */,
@@ -1220,6 +1301,7 @@
 				C094C3882513306B00F039E4 /* OnBoardViewController.swift in Sources */,
 				C012B2FA255A9C4F005B7E20 /* ReportModel.swift in Sources */,
 				C026C99825792EFC00249C91 /* FeedbackNotificationViewController.swift in Sources */,
+				A7D359392681B55A003AC0DE /* PaymentOptionsViewController.swift in Sources */,
 				C0FC47842515C0990093DC5E /* MyAppointmentsViewController.swift in Sources */,
 				A76401D2266F923F0050E41A /* ScannerViewController.swift in Sources */,
 				C023EA852552DB6000D6256C /* Realm.swift in Sources */,
@@ -1227,6 +1309,7 @@
 				C091688B2518B0FA0025D5CE /* FilterTableViewCell.swift in Sources */,
 				A71AB89C26709C0A00D8F151 /* PasswordViewController.swift in Sources */,
 				A786518F2634493E008C99FC /* BookingConfirmationViewController.swift in Sources */,
+				A7093973267C5E3A0061EDFA /* AppointmentdetailsNewTableViewCell.swift in Sources */,
 				C0560F2125715E2E0083CE50 /* InsuranceViewController.swift in Sources */,
 				A894564525BED4A4002EFB28 /* PharmacyCollectionPopup.swift in Sources */,
 				C091238F255597FE00CFBC89 /* HomeViewModel.swift in Sources */,
@@ -1236,15 +1319,18 @@
 				A71AB89026709BDF00D8F151 /* OtpViewModel.swift in Sources */,
 				A71AB89A26709C0A00D8F151 /* PasswordViewModel.swift in Sources */,
 				A71AB86F26709A3300D8F151 /* APIRouter.swift in Sources */,
+				A7D8FBEC2684A8CB0038E6FD /* AppointmentHistoryTableViewCell.swift in Sources */,
 				C0B207F32519CEE900F048F2 /* TokenViewController.swift in Sources */,
 				1B5AC28F266E4AAD002E7C12 /* MyImageView+Extension.swift in Sources */,
 				A70691C026706BB9000C4129 /* PreChekinPopup.swift in Sources */,
+				A7D3594C2681B629003AC0DE /* CardsTableViewCell.swift in Sources */,
 				A803391C259EE8F400FE5FB5 /* SwapTestPopup.swift in Sources */,
 				C0FC4788251608430093DC5E /* BookAppointmentViewController.swift in Sources */,
 				C0560F2525715E5A0083CE50 /* InsuranceViewModel.swift in Sources */,
 				C01E247E255937B70096A5DB /* FeedbackModel.swift in Sources */,
 				C0422E2E2577A93900910E4F /* OTPPopUpViewController.swift in Sources */,
 				C0DA40D825374B96003E1F77 /* IndoorMapViewController.swift in Sources */,
+				A71C69E626805DE500F7F9A0 /* ChatwithusViewController.swift in Sources */,
 				A8768C28259F213300DFF6BF /* NewTokenViewController.swift in Sources */,
 				C0B207F125199C3C00F048F2 /* SideMenuTableViewCell.swift in Sources */,
 				A8D2901F25BE9F6F003605D6 /* SwapPopup.swift in Sources */,
@@ -1259,6 +1345,7 @@
 				A7304D6526738B3A00DA33B2 /* DeleteFamilyMemberViewController.swift in Sources */,
 				C0672AA6251500E90060FB08 /* HomeViewController.swift in Sources */,
 				C0911AFF254FC6480052E52C /* FeedbackTextTableViewCell.swift in Sources */,
+				A7D3593E2681B599003AC0DE /* NetBankingCollectionViewCell.swift in Sources */,
 				1BB118F9265F5D3E00501E3E /* AppointmentViewController.swift in Sources */,
 				C0911B1025505FDA0052E52C /* LoginViewModel.swift in Sources */,
 				C0AA760B2551AAF200C8F0F7 /* FeedbackVC.swift in Sources */,
@@ -1282,6 +1369,7 @@
 				A71AB88226709BA400D8F151 /* RegistrationModel.swift in Sources */,
 				1B5AC290266E4AAD002E7C12 /* MyButton+Extension.swift in Sources */,
 				A721E33F26721E420098E6A8 /* PasswordChangeSuccessViewController.swift in Sources */,
+				A71C69EB26805E3900F7F9A0 /* ChatwithusTableViewCell.swift in Sources */,
 				C0376A852518ECEF00A3933D /* MemberTableViewCell.swift in Sources */,
 				C0FA0546255284D10011EF48 /* FamilyMemberModel.swift in Sources */,
 				C01152AC2513CB4100BC57F1 /* ProfileViewController.swift in Sources */,

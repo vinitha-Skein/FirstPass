@@ -10,17 +10,23 @@ import UIKit
 
 class DeleteFamilyMemberViewController: UIViewController {
 
+    @IBOutlet var textLabel: UILabel!
+    @IBOutlet var headLabel: UILabel!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var popup_container: UIView!
+    var contentText = "Are you sure you want to delete this family member?"
+    var headText = "Delete family member"
     @IBOutlet weak var container: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.clear
         view.isOpaque = false
-//        deleteButton.layer.cornerRadius = 8
-//        popup_container.layer.cornerRadius = 10
-//        container.layer.cornerRadius = 30
-        // Do any additional setup after loading the view.
+deleteButton.layer.cornerRadius = 8
+        popup_container.layer.cornerRadius = 10
+        container.layer.cornerRadius = 30
+        textLabel.text = contentText
+        headLabel.text = headText
+//         Do any additional setup after loading the view.
     }
     
 

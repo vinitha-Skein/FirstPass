@@ -17,7 +17,8 @@ class TokenViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        container.createBorderForView(cornerRadius: 30, borderWidth: 0, borderColor: .clear)
+        scrollviewContainer.createBorderForView(cornerRadius: 30, borderWidth: 0, borderColor: .clear)
+        scrollview.createBorderForView(cornerRadius: 30, borderWidth: 0, borderColor: .clear)
         scrollviewContainer.layer.masksToBounds = false
         scrollviewContainer.layer.shadowColor = UIColor.black.cgColor
         scrollviewContainer.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)

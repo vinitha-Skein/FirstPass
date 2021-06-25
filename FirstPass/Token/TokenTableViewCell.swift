@@ -19,6 +19,8 @@ class TokenTableViewCell: UITableViewCell {
     @IBOutlet weak var statusImageCenterY: NSLayoutConstraint!
     var startImageStatus :String!
     var delegate:CompleteStepDelegate?
+    var indoorMapButtonPressed : (() -> ()) = {}
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -28,7 +30,7 @@ class TokenTableViewCell: UITableViewCell {
         container.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         container.layer.shadowOpacity = 0.2
         
-        statusImage.createCircle()
+        //statusImage.createCircle()
         
     }
 
@@ -41,6 +43,10 @@ class TokenTableViewCell: UITableViewCell {
         delegate?.completeStep(index: sender.tag)
     }
     
+    @IBAction func indoorClicked(_ sender: Any)
+    {
+        indoorMapButtonPressed()
+    }
 }
 
 

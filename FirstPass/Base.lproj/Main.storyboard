@@ -520,10 +520,10 @@ Everyday.</string>
             </objects>
             <point key="canvasLocation" x="4384.057971014493" y="1262.2767857142856"/>
         </scene>
-        <!--Reports View Controller-->
+        <!--View Controller-->
         <scene sceneID="cCv-vD-Vm6">
             <objects>
-                <viewController storyboardIdentifier="ReportsViewController" id="V4C-vL-ZdW" customClass="ReportsViewController" customModule="firstpass" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="V4C-vL-ZdW" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hso-WG-c4i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

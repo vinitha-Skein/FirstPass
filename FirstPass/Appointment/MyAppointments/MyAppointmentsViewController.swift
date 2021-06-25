@@ -22,6 +22,10 @@ class MyAppointmentsViewController: UIViewController {
     var dummyAppointments = [ActiveAppointmentData]()
     var blurView = UIView()
     var checkInView = UIView()
+    var buttonBG = UIColor(red: 53/255, green: 35/255, blue: 100/255, alpha: 1)
+    var unselectedText = UIColor(red: 74/255, green: 79/255, blue: 87/255, alpha: 1)
+    let service = ["Cardiology","Internal Medicine","Laboratory"]
+    var precheckin = [Int]()
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -38,6 +42,7 @@ class MyAppointmentsViewController: UIViewController {
         let appointment2 = ActiveAppointmentData(pId: 0, mrnNo: "", patientName: "Patient 1", doctorName: "Doctor 1", departmentName: "Internal Medicine", serviceName: "Internal Medicine", appointmentTime: "2021-01-06 16:00:00", serviceBookedId: 0, status: "")
         let appointment3 = ActiveAppointmentData(pId: 0, mrnNo: "", patientName: "Patient 1", doctorName: "Doctor 1", departmentName: "Laboratory", serviceName: "Laboratory", appointmentTime: "2021-01-06 16:30:00", serviceBookedId: 0, status: "")
         dummyAppointments = [appointment1,appointment2,appointment3]
+        
     }
     @IBAction func backAction(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -46,7 +51,9 @@ class MyAppointmentsViewController: UIViewController {
         activeAppointments.createBorderForButton(cornerRadius: 4, borderWidth: 1, borderColor: .lightGray)
         historyButton.createBorderForButton(cornerRadius: 4, borderWidth: 0, borderColor: .clear)
         historyButton.backgroundColor = .clear
-        activeAppointments.backgroundColor = .white
+        activeAppointments.backgroundColor = buttonBG
+        activeAppointments.setTitleColor(.white, for: .normal)
+        historyButton.setTitleColor(unselectedText, for: .normal)
         isActiveAppointment = true
       //  fetchActiveAppointments()
         self.tableview.reloadData()
@@ -55,7 +62,9 @@ class MyAppointmentsViewController: UIViewController {
         historyButton.createBorderForButton(cornerRadius: 4, borderWidth: 1, borderColor: .lightGray)
         activeAppointments.createBorderForButton(cornerRadius: 4, borderWidth: 0, borderColor: .clear)
         activeAppointments.backgroundColor = .clear
-        historyButton.backgroundColor = .white
+        historyButton.backgroundColor = buttonBG
+        historyButton.setTitleColor(.white, for: .normal)
+        activeAppointments.setTitleColor(unselectedText, for: .normal)
         isActiveAppointment = false
     //    fetchAllAppointments()
         self.tableview.reloadData()
@@ -70,9 +79,10 @@ class MyAppointmentsViewController: UIViewController {
     }
     
     func setupUI(){
-        activeAppointments.createBorderForButton(cornerRadius: 4, borderWidth: 1, borderColor: .lightGray)
-        historyButton.backgroundColor = .clear
-        activeAppointments.backgroundColor = .white
+        activeAppointments.createBorderForButton(cornerRadius: 8, borderWidth: 0, borderColor: .lightGray)
+        historyButton.createBorderForButton(cornerRadius: 8, borderWidth: 0, borderColor: .lightGray)
+//        historyButton.backgroundColor = .clear
+//        activeAppointments.backgroundColor = .white
         bookButton.createBorderForButton(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
         container.clipsToBounds = true
         container.createBorderForView(cornerRadius: 30, borderWidth: 0, borderColor: .clear)
@@ -101,7 +111,6 @@ class MyAppointmentsViewController: UIViewController {
     func fetchAllAppointments(){
         self.activityIndicator(self.view, startAnimate: true)
         viewModel.fetchAllAppointments(userId: userId, page: 1)
-        
         viewModel.fetchAllSuccess = {
             self.tableview.reloadData()
         }
@@ -135,26 +144,84 @@ extension MyAppointmentsViewController:UITableViewDelegate,UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "AppointmentTableViewCell", for: indexPath) as! AppointmentTableViewCell
         cell.delegate = self
         cell.updateBackgroundColorUI(indexPath: indexPath)
-        if isActiveAppointment{
+        if isActiveAppointment
+        {
 //            cell.updateAppointmentDataToUI(data: (viewModel.activeAppointments?.appointmentDetails?[indexPath.row])!, indexpath: indexPath)
         cell.updateAppointmentDataToUI(data: (dummyAppointments[indexPath.row]), indexpath: indexPath)
-        }else{
-            cell.checkinButton.isHidden = true
+            cell.waitLabel.isHidden = true
+            cell.waiTimeLabel.isHidden = true
+            cell.precheckinButton.isHidden = false
+            cell.checkinButton.isHidden = false
+            cell.indoorButton.isHidden = false
+            cell.indoorButtonPressed =
+                {
+                    let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "IndoorMapViewController") as! IndoorMapViewController
+                    vc.modalPresentationStyle = .fullScreen
+                    self.present(vc, animated: true)
+                }
+        }else
+        {
+            //cell.checkinButton.isHidden = true
 //            cell.updateAppointmentDataToUI(data: (viewModel.allAppointments?.appointmentDetails?[indexPath.row])!, indexpath: indexPath)
         cell.updateAppointmentDataToUI(data: (dummyAppointments[indexPath.row]), indexpath: indexPath)
+            cell.waitLabel.isHidden = true
+            cell.waiTimeLabel.isHidden = true
+            cell.precheckinButton.isHidden = true
+            cell.checkinButton.isHidden = true
+            cell.indoorButton.isHidden = true
+        }
+        cell.preCheckinButtonPressed =
+            {
+                let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+                let vc = storyboard.instantiateViewController(withIdentifier: "PreChekinPopup") as! PreChekinPopup
+                vc.modalPresentationStyle = .overCurrentContext
+                self.present(vc, animated: true)
+                
+                self.precheckin.append(indexPath.row)
+                self.tableview.reloadData()
+            }
+        
+        if precheckin.contains(indexPath.row)
+        {
+            cell.precheckinButton.isHidden = true
+            cell.checkinHorizontalLayout.constant = 0
+            cell.waitLabel.isHidden = false
+            cell.waiTimeLabel.isHidden = false
         }
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        if isActiveAppointment
+        {
+            return 180
+        }
+        else
+        {
+        return 140
+        }
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
-        let vc = storyboard.instantiateViewController(withIdentifier: "AppointmentDetailsViewController") as! AppointmentDetailsViewController
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        if isActiveAppointment
+        {
+        let storyboard = UIStoryboard(name: "phase2", bundle: .main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "NewTokenViewController") as! NewTokenViewController
         vc.modalPresentationStyle = .fullScreen
+            vc.headtext = service[indexPath.row]
         view.window!.layer.add(rightToLeftTransition(), forKey: kCATransition)
         present(vc, animated: true)
+        }
+        else
+        {
+            let storyboard = UIStoryboard(name: "phase2", bundle: .main)
+            let vc = storyboard.instantiateViewController(withIdentifier: "AppointmentHistoryViewController") as! AppointmentHistoryViewController
+            vc.modalPresentationStyle = .fullScreen
+            vc.headtext = service[indexPath.row]
+            view.window!.layer.add(rightToLeftTransition(), forKey: kCATransition)
+            present(vc, animated: true)
+        }
     }
     
     
@@ -177,10 +244,10 @@ extension MyAppointmentsViewController:CheckInDelegate{
     }
     
     func appointmentPreCheckIn(appointmentIndex: Int) {
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
-        let vc = storyboard.instantiateViewController(withIdentifier: "PreChekinPopup") as! PreChekinPopup
-        vc.modalPresentationStyle = .overCurrentContext
-        present(vc, animated: true)
+//        let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "PreChekinPopup") as! PreChekinPopup
+//        vc.modalPresentationStyle = .overCurrentContext
+//        present(vc, animated: true)
     }
     
     func appointmentCheckIn(appointmentIndex: Int) {
@@ -190,8 +257,12 @@ extension MyAppointmentsViewController:CheckInDelegate{
         createCheckIn(appointmentName: dummyAppointments[appointmentIndex].serviceName ?? "")
     }
     
-    func appointmentIndoorMap(appointmentIndex: Int) {
-        
+    func appointmentIndoorMap(appointmentIndex: Int)
+    {
+        let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "IndoorMapViewController") as! IndoorMapViewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
 }
 

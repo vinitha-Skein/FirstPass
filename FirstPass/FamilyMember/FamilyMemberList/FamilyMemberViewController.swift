@@ -111,7 +111,7 @@ extension FamilyMemberViewController:UITableViewDelegate,UITableViewDataSource,E
         {
             let storyboard = UIStoryboard(name: "Modified", bundle: .main)
             let vc = storyboard.instantiateViewController(withIdentifier: "DeleteFamilyMemberViewController") as! DeleteFamilyMemberViewController
-            vc.modalPresentationStyle = .fullScreen
+            vc.modalPresentationStyle = .overCurrentContext
             //vc.isEdit = true
     //        vc.familyMember = viewModel.familyMemberData![index]
             //vc.userId = userId

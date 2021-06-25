@@ -99,4 +99,5 @@ struct CreatedAppointmentData:Decodable {
     let status:String?
     let message:String?
     let error:String?
+    let date:String?
 }

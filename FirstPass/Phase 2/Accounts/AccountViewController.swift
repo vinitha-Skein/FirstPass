@@ -93,7 +93,7 @@ extension AccountViewController:UICollectionViewDelegate,UICollectionViewDataSou
         if (indexPath.row == 6)
         {
             let storyboard = UIStoryboard(name: "Modified", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "TokenViewController") as! TokenViewController
+            let vc = storyboard.instantiateViewController(withIdentifier: "ChatwithusViewController") as! ChatwithusViewController
             vc.modalPresentationStyle = .fullScreen
 
             present(vc, animated: true, completion: nil)
@@ -102,6 +102,20 @@ extension AccountViewController:UICollectionViewDelegate,UICollectionViewDataSou
         {
             let storyboard = UIStoryboard(name: "Modified", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
+        }
+        if (indexPath.row == 1)
+        {
+            let storyboard = UIStoryboard(name: "phase2", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "MyAppointmentsViewController") as! MyAppointmentsViewController
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
+        }
+        if (indexPath.row == 4)
+        {
+            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "ReportsViewController") as! ReportsViewController
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true, completion: nil)
         }

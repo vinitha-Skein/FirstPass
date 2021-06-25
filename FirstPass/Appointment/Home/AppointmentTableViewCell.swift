@@ -9,6 +9,10 @@
 import UIKit
 
 class AppointmentTableViewCell: UITableViewCell {
+    @IBOutlet var indoorButton: UIButton!
+    @IBOutlet var waiTimeLabel: UILabel!
+    @IBOutlet var waitLabel: UILabel!
+    @IBOutlet var checkinHorizontalLayout: NSLayoutConstraint!
     @IBOutlet weak var appointmentName: UILabel!
 //    @IBOutlet weak var colorView: UIView!
     @IBOutlet weak var container: UIView!
@@ -21,6 +25,9 @@ class AppointmentTableViewCell: UITableViewCell {
     @IBOutlet weak var time: UILabel!
     @IBOutlet weak var date: UILabel!
     var delegate:CheckInDelegate?
+    var preCheckinButtonPressed : (() -> ()) = {}
+    var indoorButtonPressed : (() -> ()) = {}
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -28,9 +35,9 @@ class AppointmentTableViewCell: UITableViewCell {
         container.layer.shadowColor = UIColor.black.cgColor
         container.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         container.layer.shadowOpacity = 0.1
-        checkinButton.createBorderForButton(cornerRadius: 8, borderWidth: 1, borderColor: UIColor(hexString: "#797FDD"))
+        //checkinButton.createBorderForButton(cornerRadius: 8, borderWidth: 1, borderColor: UIColor(hexString: "#797FDD"))
 //        arrivedButton.createBorderForButton(cornerRadius: 8, borderWidth: 1, borderColor: UIColor(hexString: "#797FDD"))
-        precheckinButton.createBorderForButton(cornerRadius: 8, borderWidth: 1, borderColor: UIColor(hexString: "#797FDD"))
+        //precheckinButton.createBorderForButton(cornerRadius: 8, borderWidth: 1, borderColor: UIColor(hexString: "#797FDD"))
 
     }
 
@@ -71,7 +78,10 @@ class AppointmentTableViewCell: UITableViewCell {
     func updateBackgroundColorUI(indexPath: IndexPath) {
         updateBackgroundColorForIndexPath(indexPath)
     }
-    @IBAction func indoorMapAction(_ sender: Any) {
+    @IBAction func indoorMapAction(_ sender: UIButton)
+    {
+//        delegate?.appointmentCheckIn(appointmentIndex: sender.tag)
+        indoorButtonPressed()
     }
     
     @IBAction func checkInAction(_ sender: UIButton) {
@@ -79,7 +89,9 @@ class AppointmentTableViewCell: UITableViewCell {
         NSLog("Tag------->%d", sender.tag)
     }
     @IBAction func precheckInAction(_ sender: UIButton) {
-        delegate?.appointmentPreCheckIn(appointmentIndex: sender.tag)
+        //delegate?.appointmentPreCheckIn(appointmentIndex: sender.tag)
+        preCheckinButtonPressed()
+        
     }
 //    @IBAction func arrivedAction(_ sender: UIButton) {
 //        delegate?.appointmentArrived(appointmentIndex: sender.tag)

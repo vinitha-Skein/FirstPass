@@ -15,10 +15,8 @@ import UIKit
 import QuickLook
 class ReportsViewController: UIViewController,ReportDelegate {
  
-    @IBOutlet weak var scannerButton: UIButton!
-    @IBOutlet weak var profileButton: UIButton!
-    @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var filterButton: UIButton!
+    
+   // @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var tableview: UITableView!
     @IBOutlet weak var container: UIView!
     var isNeedBackButton = false
@@ -36,13 +34,13 @@ class ReportsViewController: UIViewController,ReportDelegate {
         filterTableview.dataSource = self
         filterTableview.delegate = self
         
-        reportData = [ReportData(name: "Glucose", doc: "GlucoseReport.doc"),ReportData(name: "Growth Harmone", doc: "GrowthHarmoneReport.doc")]
+        reportData = [ReportData(name: "CBP Test", doc: "GlucoseReport.doc"),ReportData(name: "Blood Test", doc: "GrowthHarmoneReport.doc"),ReportData(name: "Diabetes Test", doc: "GlucoseReport.doc"),ReportData(name: "CBP Test", doc: "GlucoseReport.doc"),ReportData(name: "Blood Test", doc: "GlucoseReport.doc"),ReportData(name: "Diabetes Test", doc: "GlucoseReport.doc"),ReportData(name: "CBP Test", doc: "GlucoseReport.doc")]
         
-        if isNeedBackButton{
-            backButton.isHidden = false
-        }else{
-            backButton.isHidden = true
-        }
+//        if isNeedBackButton{
+//            backButton.isHidden = false
+//        }else{
+//            backButton.isHidden = true
+//        }
         
         // Do any additional setup after loading the view.
     }
@@ -50,7 +48,12 @@ class ReportsViewController: UIViewController,ReportDelegate {
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func filterAction(_ sender: Any) {
+    @IBAction func filterAction(_ sender: Any)
+    {
+        let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ReportsFilterViewController") as! ReportsFilterViewController
+        vc.modalPresentationStyle = .overCurrentContext
+        present(vc, animated: true, completion: nil)
 //        createFilterView()
     }
     func setupUI(){
@@ -58,7 +61,9 @@ class ReportsViewController: UIViewController,ReportDelegate {
 //        profileButton.createCircle()
         container.createBorderForView(cornerRadius: 30, borderWidth: 0, borderColor: .clear)
         container.clipsToBounds = true
-        filterButton.createBorderForButton(cornerRadius: 4, borderWidth: 0, borderColor: .clear)
+        container.layer.borderWidth = 0.4
+        container.layer.borderColor = UIColor.gray.cgColor
+       
         
     }
     func viewReport(index: Int) {
@@ -175,6 +180,7 @@ extension ReportsViewController:UITableViewDelegate,UITableViewDataSource{
                 else {
                     return nil
             }
+            
             return view
         }else{
             return nil
