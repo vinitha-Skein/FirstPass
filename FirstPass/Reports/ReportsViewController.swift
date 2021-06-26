@@ -63,24 +63,27 @@ class ReportsViewController: UIViewController,ReportDelegate {
         container.clipsToBounds = true
         container.layer.borderWidth = 0.4
         container.layer.borderColor = UIColor.gray.cgColor
-       
+        container.layer.masksToBounds = false
+        container.layer.shadowColor = UIColor.black.cgColor
+        container.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        container.layer.shadowOpacity = 0.2
         
     }
     func viewReport(index: Int) {
         let previewController = QLPreviewController()
         // Set the preview item to display
         self.previewItem = self.getPreviewItem(withName: reportData[index].doc)
-        
+
         previewController.dataSource = self
         self.present(previewController, animated: true, completion: nil)
     }
     func getPreviewItem(withName name: String) -> NSURL{
-        
+
         //  Code to diplay file from the app bundle
         let file = name.components(separatedBy: ".")
         let path = Bundle.main.path(forResource: file.first!, ofType: file.last!)
         let url = NSURL(fileURLWithPath: path!)
-        
+
         return url
     }
     

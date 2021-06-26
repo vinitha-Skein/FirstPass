@@ -31,10 +31,20 @@ class PaymentOptionsViewController: UIViewController {
         view2.layer.cornerRadius = 10
         view3.layer.cornerRadius = 10
         view4.layer.cornerRadius = 10
+        container.layer.borderWidth = 0.2
+        container.layer.borderColor = UIColor.lightGray.cgColor
         container.layer.cornerRadius = 28
+        container.layer.masksToBounds = false
+        container.layer.shadowColor = UIColor.black.cgColor
+        container.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        container.layer.shadowOpacity = 0.2
     }
     
-
+    @IBAction func back_clicked(_ sender: Any)
+    {
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

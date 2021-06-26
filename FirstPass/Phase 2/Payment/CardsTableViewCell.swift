@@ -8,7 +8,8 @@
 
 import UIKit
 
-class CardsTableViewCell: UITableViewCell {
+class CardsTableViewCell: UITableViewCell
+{
 
     override func awakeFromNib() {
         super.awakeFromNib()

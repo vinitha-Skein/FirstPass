@@ -111,10 +111,11 @@ class RegistrationViewController: UIViewController {
         container.clipsToBounds = true
         container.layer.borderColor = UIColor.gray.cgColor
         container.layer.borderWidth = 0.4
+        container.layer.masksToBounds = false
         container.layer.shadowColor = UIColor.black.cgColor
-        container.layer.shadowOpacity = 1
-        container.layer.shadowOffset = .zero
-        container.layer.shadowRadius = 2
+        container.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        container.layer.shadowOpacity = 0.2
+
 //        container.layer.masksToBounds = false
 //        container.layer.shadowColor = UIColor.black.cgColor
 //        container.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)

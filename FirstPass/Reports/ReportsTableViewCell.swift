@@ -23,7 +23,7 @@ class ReportsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     @IBAction func viewReportAction(_ sender: UIButton) {
-        delegate?.viewReport(index: sender.tag)
+//        delegate?.viewReport(index: sender.tag)
     }
     
 }

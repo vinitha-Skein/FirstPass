@@ -33,6 +33,10 @@ class AppointmentHistoryViewController: UIViewController {
     }
     
 
+    @IBAction func back_clicked(_ sender: Any)
+    {
+        dismiss(animated: true, completion: nil)
+    }
     
 
 }

@@ -72,6 +72,10 @@ class PasswordViewController: UIViewController {
         container.clipsToBounds = true
         container.layer.borderWidth = 0.4
         container.layer.borderColor = UIColor.gray.cgColor
+        container.layer.masksToBounds = false
+        container.layer.shadowColor = UIColor.black.cgColor
+        container.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        container.layer.shadowOpacity = 0.2
         signinButton.createBorderForButton(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
         passwordView.layer.cornerRadius = 10
         confirmPasswordView.layer.cornerRadius = 10

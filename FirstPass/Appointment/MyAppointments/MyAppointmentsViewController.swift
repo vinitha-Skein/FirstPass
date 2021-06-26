@@ -70,10 +70,10 @@ class MyAppointmentsViewController: UIViewController {
         self.tableview.reloadData()
     }
     @IBAction func bookAppointmentAction(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        let storyboard = UIStoryboard(name: "Modified", bundle: .main)
         let vc = storyboard.instantiateViewController(withIdentifier: "BookAppointmentViewController") as! BookAppointmentViewController
         vc.modalPresentationStyle = .fullScreen
-        vc.isNeedBackButton = true
+        //vc.isNeedBackButton = true
         view.window!.layer.add(rightToLeftTransition(), forKey: kCATransition)
         present(vc, animated: true)
     }
@@ -251,10 +251,14 @@ extension MyAppointmentsViewController:CheckInDelegate{
     }
     
     func appointmentCheckIn(appointmentIndex: Int) {
-        createBlurView()
+        //createBlurView()
 //        createCheckIn(appointmentName: viewModel.appointmentData?.appointmentDetails?[appointmentIndex].serviceName ?? "")
         NSLog("Tag------->%d", appointmentIndex)
-        createCheckIn(appointmentName: dummyAppointments[appointmentIndex].serviceName ?? "")
+        //createCheckIn(appointmentName: dummyAppointments[appointmentIndex].serviceName ?? "")
+        let storyboard = UIStoryboard(name: "phase2", bundle: .main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AppointmentDetailsViewController") as! AppointmentDetailsViewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
     }
     
     func appointmentIndoorMap(appointmentIndex: Int)

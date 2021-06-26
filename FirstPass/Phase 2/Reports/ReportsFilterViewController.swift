@@ -38,6 +38,10 @@ class ReportsFilterViewController: UIViewController {
         
         Container.layer.cornerRadius = 30
         popupContainer.layer.cornerRadius = 30
+//        popupContainer.layer.masksToBounds = false
+//        popupContainer.layer.shadowColor = UIColor.black.cgColor
+//        popupContainer.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+//        popupContainer.layer.shadowOpacity = 0.2
         // Do any additional setup after loading the view.
     }
     @IBAction func backClicked(_ sender: Any) {

@@ -68,10 +68,9 @@ extension AccountViewController:UICollectionViewDelegate,UICollectionViewDataSou
     {
         if (indexPath.row == 3)
         {
-            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "ProcessFeedbackViewController") as! ProcessFeedbackViewController
+            let storyboard = UIStoryboard(name: "phase2", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "PaymentOptionsViewController") as! PaymentOptionsViewController
             vc.modalPresentationStyle = .fullScreen
-
             present(vc, animated: true, completion: nil)
         }
         if (indexPath.row == 7)
@@ -92,7 +91,7 @@ extension AccountViewController:UICollectionViewDelegate,UICollectionViewDataSou
         }
         if (indexPath.row == 6)
         {
-            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+            let storyboard = UIStoryboard(name: "phase2", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "ChatwithusViewController") as! ChatwithusViewController
             vc.modalPresentationStyle = .fullScreen
 

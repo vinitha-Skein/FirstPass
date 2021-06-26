@@ -67,7 +67,12 @@ class PreChekinPopup: UIViewController {
         container.layer.cornerRadius = 25
         container.layer.borderWidth = 0.4
         container.layer.borderColor = UIColor.gray.cgColor
+        container.layer.masksToBounds = false
+        container.layer.shadowColor = UIColor.black.cgColor
+        container.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        container.layer.shadowOpacity = 0.2
         submitButton.layer.cornerRadius = 8
+        
         cancelButton.createBorderForButton(cornerRadius: 8, borderWidth: 1, borderColor: buttonColor)
         carParkingYesLabel.textColor = highlightedcolor
         parkingNoLabel.textColor = defaultColor

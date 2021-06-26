@@ -140,6 +140,11 @@ extension LoginViewController{
         fieldContainer.layer.cornerRadius = 20
         fieldContainer.layer.borderColor = UIColor.gray.cgColor
         fieldContainer.layer.borderWidth = 0.4
+        fieldContainer.layer.masksToBounds = false
+        fieldContainer.layer.shadowColor = UIColor.black.cgColor
+        fieldContainer.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        fieldContainer.layer.shadowOpacity = 0.2
+
         passwordView.layer.cornerRadius = 10
         usernameView.layer.cornerRadius = 10
 //           let attributedString = NSMutableAttributedString(string: "Don’t have an account? Sign up", attributes: [

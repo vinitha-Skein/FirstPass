@@ -34,16 +34,16 @@ class IndoorMapViewController: UIViewController,CLLocationManagerDelegate {
                     let settings = MWZUISettings()
 
         MWZmapview = MWZUIView(frame: self.MWZmapview.frame, mapwizeOptions: opts, uiSettings: settings)
-      //        mapwizeView = MWZUIView(frame: <#T##CGRect#>, mapwizeOptions: <#T##MWZUIOptions#>, uiSettings: <#T##MWZUISettings#>)
+//              mapwizeView = MWZUIView(frame: <#T##CGRect#>, mapwizeOptions: <#T##MWZUIOptions#>, uiSettings: <#T##MWZUISettings#>)
 
-                    MWZmapview.translatesAutoresizingMaskIntoConstraints = false
+                    MWZmapview.translatesAutoresizingMaskIntoConstraints = true
                     MWZmapview?.delegate = self
                     self.view.addSubview(MWZmapview!)
-
-        NSLayoutConstraint.init(item: MWZmapview!, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .top, multiplier: 1.0, constant:100.0).isActive = true
-        NSLayoutConstraint.init(item: MWZmapview!, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1.0, constant: 20.0).isActive = true
-        NSLayoutConstraint.init(item: MWZmapview!, attribute: .right, relatedBy: .equal, toItem: self.view, attribute: .right, multiplier: 1.0, constant: 0.0).isActive = true
-        NSLayoutConstraint.init(item: MWZmapview!, attribute: .left, relatedBy: .equal, toItem: self.view, attribute: .left, multiplier: 1.0, constant: 0.0).isActive = true
+//
+//        NSLayoutConstraint.init(item: MWZmapview!, attribute: .top, relatedBy: .equal, toItem: self.view, attribute: .top, multiplier: 1.0, constant:100.0).isActive = true
+//        NSLayoutConstraint.init(item: MWZmapview!, attribute: .bottom, relatedBy: .equal, toItem: self.view, attribute: .bottom, multiplier: 1.0, constant: 20.0).isActive = true
+//        NSLayoutConstraint.init(item: MWZmapview!, attribute: .right, relatedBy: .equal, toItem: self.view, attribute: .right, multiplier: 1.0, constant: 50.0).isActive = true
+//        NSLayoutConstraint.init(item: MWZmapview!, attribute: .left, relatedBy: .equal, toItem: self.view, attribute: .left, multiplier: 1.0, constant: 20.0).isActive = true
         activityIndicatorView.isHidden = true
     }
 
