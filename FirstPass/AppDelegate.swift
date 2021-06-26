@@ -11,7 +11,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         // Override point for customization after application launch.
         Thread.sleep(forTimeInterval: 2)
         IQKeyboardManager.shared.enable = true
-        let mainStoryboard:UIStoryboard = UIStoryboard(name: "phase2", bundle: nil)
+        let mainStoryboard:UIStoryboard = UIStoryboard(name: "Modified", bundle: nil)
 //        if UserDefaults.standard.bool(forKey: "OnboardFinished")
 //        {
 //            if UserDefaults.standard.bool(forKey: "isLoggedIn")
@@ -28,8 +28,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 //        }
 //        else
 //        {
-        let loginPage = mainStoryboard.instantiateViewController(withIdentifier: "MyAppointmentsViewController") as!  MyAppointmentsViewController
-                    self.window?.rootViewController = loginPage
+        
+        let loginPage = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController") as!  LoginViewController
+        self.window?.rootViewController = loginPage
+        
 //        }
 //        let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 //            let homePage = mainStoryboard.instantiateViewController(withIdentifier: "InsuranceViewController") as! InsuranceViewController
@@ -40,7 +42,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 //        diskCapacity: diskCapacity,
 //        diskPath: "myCachePath")
 //        URLCache.shared = urlCache
-        
         return true
     }
 }

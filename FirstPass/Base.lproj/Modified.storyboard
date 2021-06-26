@@ -1592,7 +1592,7 @@
                                                                                 <rect key="frame" x="90" y="0.0" width="110" height="45"/>
                                                                                 <subviews>
                                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radioDeselected" translatesAutoresizingMaskIntoConstraints="NO" id="odb-EW-fW6">
-                                                                                        <rect key="frame" x="0.0" y="11.5" width="37.5" height="22.5"/>
+                                                                                        <rect key="frame" x="0.0" y="11.5" width="24" height="22.5"/>
                                                                                     </imageView>
                                                                                     <button opaque="NO" tag="4" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGg-N6-nbX">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="55" height="30"/>
@@ -1602,7 +1602,7 @@
                                                                                         </connections>
                                                                                     </button>
                                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Female" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fD6-7R-2bW">
-                                                                                        <rect key="frame" x="57.5" y="0.0" width="52.5" height="45"/>
+                                                                                        <rect key="frame" x="44" y="0.0" width="66" height="45"/>
                                                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                                         <color key="textColor" white="0.29635528430000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                         <nil key="highlightedColor"/>
@@ -1819,7 +1819,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hmk-7x-pgF" customClass="MWZUIView">
-                                        <rect key="frame" x="0.0" y="75" width="414" height="757"/>
+                                        <rect key="frame" x="0.0" y="95" width="414" height="737"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
@@ -1830,7 +1830,7 @@
                                     <constraint firstItem="Hmk-7x-pgF" firstAttribute="leading" secondItem="29Y-iQ-fR6" secondAttribute="leading" id="EAa-ZW-RmX"/>
                                     <constraint firstAttribute="bottom" secondItem="Hmk-7x-pgF" secondAttribute="bottom" id="OUa-qI-bdK"/>
                                     <constraint firstItem="6Tx-4B-JOU" firstAttribute="leading" secondItem="29Y-iQ-fR6" secondAttribute="leading" constant="20" id="Tht-1F-JUn"/>
-                                    <constraint firstItem="Hmk-7x-pgF" firstAttribute="top" secondItem="6Tx-4B-JOU" secondAttribute="bottom" constant="30" id="U7r-qc-k26"/>
+                                    <constraint firstItem="Hmk-7x-pgF" firstAttribute="top" secondItem="6Tx-4B-JOU" secondAttribute="bottom" constant="50" id="U7r-qc-k26"/>
                                     <constraint firstItem="SYS-YF-MpB" firstAttribute="centerX" secondItem="29Y-iQ-fR6" secondAttribute="centerX" id="gwO-rX-GVG"/>
                                     <constraint firstItem="SYS-YF-MpB" firstAttribute="leading" secondItem="6Tx-4B-JOU" secondAttribute="trailing" constant="16" id="moA-ZD-hpr"/>
                                     <constraint firstAttribute="trailing" secondItem="Hmk-7x-pgF" secondAttribute="trailing" id="qS4-eR-f8x"/>
@@ -3439,7 +3439,7 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="50" id="g70-3e-yqd"/>
                                                                 </constraints>
-                                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dX1-75-2BU">
+                                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="dX1-75-2BU">
                                                                     <size key="itemSize" width="50" height="50"/>
                                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -4288,7 +4288,7 @@ U3VjY2Vzcy4QEBAhA
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0E9-1T-XFa">
-                                <rect key="frame" x="20" y="84" width="374" height="758"/>
+                                <rect key="frame" x="20" y="104" width="374" height="738"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KRl-Wf-Iwn">
@@ -4351,7 +4351,7 @@ U3VjY2Vzcy4QEBAhA
                             <constraint firstItem="9Gq-sK-VOx" firstAttribute="trailing" secondItem="KRl-Wf-Iwn" secondAttribute="trailing" constant="40" id="LRW-hP-7Na"/>
                             <constraint firstItem="9Gq-sK-VOx" firstAttribute="trailing" secondItem="0E9-1T-XFa" secondAttribute="trailing" constant="20" id="RK0-YQ-2kD"/>
                             <constraint firstItem="KRl-Wf-Iwn" firstAttribute="centerY" secondItem="dp3-d5-Hhl" secondAttribute="centerY" id="Vy8-Zm-jiu"/>
-                            <constraint firstItem="0E9-1T-XFa" firstAttribute="top" secondItem="9Gq-sK-VOx" secondAttribute="top" constant="40" id="arE-sf-P4P"/>
+                            <constraint firstItem="0E9-1T-XFa" firstAttribute="top" secondItem="9Gq-sK-VOx" secondAttribute="top" constant="60" id="arE-sf-P4P"/>
                             <constraint firstItem="0E9-1T-XFa" firstAttribute="leading" secondItem="9Gq-sK-VOx" secondAttribute="leading" constant="20" id="h0U-YZ-dY4"/>
                             <constraint firstItem="KRl-Wf-Iwn" firstAttribute="centerX" secondItem="dp3-d5-Hhl" secondAttribute="centerX" id="xfC-5z-s30"/>
                         </constraints>
@@ -4404,10 +4404,6 @@ U3VjY2Vzcy4QEBAhA
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OAT-oF-Irf">
                                 <rect key="frame" x="20" y="100" width="374" height="742"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ufW-Oo-gY5">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="656"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </tableView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gB-MB-tgU">
                                         <rect key="frame" x="20" y="676" width="334" height="46"/>
                                         <color key="backgroundColor" name="Button Color"/>
@@ -4415,13 +4411,17 @@ U3VjY2Vzcy4QEBAhA
                                             <constraint firstAttribute="height" constant="46" id="jhM-EP-mYy"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Add New Member">
+                                        <state key="normal" title="Add new member">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="addMemberAction:" destination="eNl-5R-W9i" eventType="touchUpInside" id="dF5-Wq-ibZ"/>
                                         </connections>
                                     </button>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ufW-Oo-gY5">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="656"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.98030644659999999" green="0.98044699430000004" blue="0.98027580979999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -4894,7 +4894,7 @@ EFBheW1lbnQgTWV0aG9kA
                                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="46" id="zH9-BN-PdA"/>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                                        <state key="normal" title="Add member">
+                                                                        <state key="normal" title="Add Member">
                                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
                                                                         <connections>
@@ -5044,7 +5044,7 @@ EFBheW1lbnQgTWV0aG9kA
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yc4-y1-hoF">
                                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="85"/>
                                                                 <subviews>
-                                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AXF-KN-Umv">
+                                                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AXF-KN-Umv">
                                                                         <rect key="frame" x="20" y="27" width="334" height="50"/>
                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <constraints>
@@ -5456,7 +5456,7 @@ EFBheW1lbnQgTWV0aG9kA
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="05v-DQ-bsY">
-                                                <rect key="frame" x="20" y="115.5" width="334" height="343"/>
+                                                <rect key="frame" x="20" y="115.5" width="334" height="344"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dC8-2L-W8Q">
                                                         <rect key="frame" x="0.0" y="0.0" width="334" height="99.5"/>
@@ -5525,16 +5525,16 @@ EFBheW1lbnQgTWV0aG9kA
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ajn-7Z-bSC">
-                                                        <rect key="frame" x="0.0" y="179" width="334" height="76.5"/>
+                                                        <rect key="frame" x="0.0" y="179" width="334" height="77.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consulting Physician" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zm0-fd-Uy5">
-                                                                <rect key="frame" x="46" y="8.5" width="131" height="17"/>
+                                                                <rect key="frame" x="48" y="9.5" width="131" height="17"/>
                                                                 <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="14"/>
                                                                 <color key="textColor" name="Normal heading"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr. Ayesha Raza" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="buv-us-vHu">
-                                                                <rect key="frame" x="26" y="40.5" width="131.5" height="22"/>
+                                                                <rect key="frame" x="26" y="41.5" width="131.5" height="22"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="22" id="lnG-QI-TTi"/>
                                                                 </constraints>
@@ -5542,8 +5542,8 @@ EFBheW1lbnQgTWV0aG9kA
                                                                 <color key="textColor" name="Theme color"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doctor-12" translatesAutoresizingMaskIntoConstraints="NO" id="LMn-WH-V4a">
-                                                                <rect key="frame" x="24" y="10" width="14" height="14"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doctorgrey" translatesAutoresizingMaskIntoConstraints="NO" id="LMn-WH-V4a">
+                                                                <rect key="frame" x="24" y="10" width="16" height="16"/>
                                                                 <color key="tintColor" name="Theme color"/>
                                                             </imageView>
                                                         </subviews>
@@ -5559,7 +5559,7 @@ EFBheW1lbnQgTWV0aG9kA
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iZF-5y-Fez">
-                                                        <rect key="frame" x="0.0" y="255.5" width="334" height="87.5"/>
+                                                        <rect key="frame" x="0.0" y="256.5" width="334" height="87.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Patient Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9I3-db-HX3">
                                                                 <rect key="frame" x="56.5" y="13.5" width="85" height="17"/>
@@ -5968,7 +5968,7 @@ EFBheW1lbnQgTWV0aG9kA
         <image name="checkboxSelected" width="24" height="24"/>
         <image name="closeicon" width="24" height="24"/>
         <image name="date" width="24" height="24"/>
-        <image name="doctor-12" width="14" height="14"/>
+        <image name="doctorgrey" width="16" height="16"/>
         <image name="doctors" width="24" height="24"/>
         <image name="edit" width="24" height="24"/>
         <image name="filters" width="24" height="24"/>
