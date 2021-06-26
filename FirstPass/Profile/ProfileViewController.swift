@@ -182,13 +182,13 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,ImagePickerDel
 //    }
     func didSelect(image: String?) {
         let imgData = Data(base64Encoded: image!, options: .ignoreUnknownCharacters)
-        self.activityIndicator(self.view, startAnimate: true)
-        viewModel.updateProfileImage(userId: userId, params: ["profile_pic":image ?? ""])
-        viewModel.updateImageSuccess = {
+//        self.activityIndicator(self.view, startAnimate: true)
+//        viewModel.updateProfileImage(userId: userId, params: ["profile_pic":image ?? ""])
+//        viewModel.updateImageSuccess = {
             DispatchQueue.main.async {
                 self.profileImage.image = UIImage(data: imgData!)
             }
-        }
+//        }
     }
     func updateProfile(params:[String:Any]){
         self.activityIndicator(self.view, startAnimate: true)
