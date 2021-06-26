@@ -14,6 +14,7 @@ class DeleteFamilyMemberViewController: UIViewController {
     @IBOutlet var headLabel: UILabel!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var popup_container: UIView!
+    var deleteFamilyMember = true
     var contentText = "Are you sure you want to delete this family member?"
     var headText = "Delete family member"
     @IBOutlet weak var container: UIView!
@@ -37,7 +38,18 @@ deleteButton.layer.cornerRadius = 8
     
     @IBAction func delete_Clicked(_ sender: Any)
     {
+        if (deleteFamilyMember == true)
+        {
         dismiss(animated: true, completion: nil)
+        }
+        else
+        {
+            let storyboard = UIStoryboard(name: "phase2", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "MyAppointmentsViewController") as! MyAppointmentsViewController
+            vc.modalPresentationStyle = .overCurrentContext
+            self.present(vc, animated: true, completion: nil)
+        }
+
     }
     
 }

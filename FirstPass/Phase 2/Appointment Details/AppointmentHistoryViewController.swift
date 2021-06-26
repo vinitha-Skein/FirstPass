@@ -15,7 +15,7 @@ class AppointmentHistoryViewController: UIViewController {
     @IBOutlet var scrollViewContainer: UIScrollView!
     @IBOutlet var tableview: UITableView!
     var headtext = String()
-    var Departmentsections = ["Registration","Vitals","Blood Test","Cath Test","Pharmacy"]
+    var Departmentsections = ["Vitals","Cardiology","Blood Test","Pharmacy"]
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -49,11 +49,11 @@ extension AppointmentHistoryViewController:UITableViewDelegate,UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableview.dequeueReusableCell(withIdentifier: "AppointmentHistoryTableViewCell") as! AppointmentHistoryTableViewCell
         cell.departmentLabel.text = Departmentsections[indexPath.row]
-        
+        cell.container.layer.cornerRadius = 8
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 70
     }
     
 }

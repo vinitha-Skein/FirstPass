@@ -119,9 +119,9 @@ extension AppointmentDetailsViewController:UITableViewDelegate,UITableViewDataSo
             cell.iconImage.image = UIImage(named: "iconlyCurvedPaper")
             cell.categoryLabel.text = Appointments[indexPath.row]
             cell.categoryLabel.textColor = UIColor.white
-            cell.statusLabel.textColor = UIColor.white
-            cell.statusLabel.text = "Ongoing"
-            cell.statusView.backgroundColor = UIColor(red: 233/255, green: 134/255, blue: 0/255, alpha: 1)
+            cell.statusButton.setTitleColor(UIColor.white, for: .normal)
+            cell.statusButton.setTitle("Ongoing", for: .normal)
+            cell.statusButton.backgroundColor = UIColor(red: 233/255, green: 134/255, blue: 0/255, alpha: 1)
             cell.servingCounterLabel.textColor = UIColor.white
             cell.estimatedWaittimeLabel.textColor = UIColor.white
             cell.timeHeadLabel.textColor = UIColor.white
@@ -129,17 +129,18 @@ extension AppointmentDetailsViewController:UITableViewDelegate,UITableViewDataSo
             cell.container.backgroundColor = UIColor(red: 53/255, green: 35/255, blue: 100/255, alpha: 1)
             cell.indoorMapicon.setImage( UIImage(named: "indoor"), for: .normal)
             cell.container.layer.cornerRadius = 10
-            cell.statusView.layer.cornerRadius = 5
+            cell.statusButton.layer.cornerRadius = 5
         }
         else if(indexPath.row == 2)
         {
-            cell.statusView.backgroundColor = UIColor(red: 204/255, green: 192/255, blue: 255/255, alpha: 1)
-            cell.statusLabel.text = "Upcomming"
-            cell.statusLabel.textColor = UIColor(red: 53/255, green: 35/255, blue: 100/255, alpha: 1)
+            cell.statusButton.backgroundColor = UIColor(red: 204/255, green: 192/255, blue: 255/255, alpha: 1)
+            cell.statusButton.setTitle("Upcomming", for: .normal)
+            let bg = UIColor(red: 53/255, green: 35/255, blue: 100/255, alpha: 1)
+            cell.statusButton.setTitleColor(bg, for: .normal)
             cell.categoryLabel.text = Appointments[indexPath.row]
             cell.container.layer.cornerRadius = 10
-            cell.statusView.layer.cornerRadius = 5
-            cell.statusView.isHidden = false
+            cell.statusButton.layer.cornerRadius = 5
+            cell.statusButton.isHidden = false
 
         }
         else
@@ -148,14 +149,32 @@ extension AppointmentDetailsViewController:UITableViewDelegate,UITableViewDataSo
             cell.container.layer.cornerRadius = 10
             if(indexPath.row == 0)
             {
-                cell.statusView.isHidden = false
+                cell.statusButton.isHidden = false
             }
             else
             {
-                cell.statusView.isHidden = true
+                cell.statusButton.isHidden = true
 
             }
         }
+        cell.indoorMapButtonPressed =
+            {
+                let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "IndoorMapViewController") as! IndoorMapViewController
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true, completion: nil)
+
+            }
+        cell.statusButtonPressed =
+            {
+                if (cell.statusButton.currentTitle == "Upcomming")
+                {
+                    let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "TokenPopup") as! TokenPopup
+                    vc.modalPresentationStyle = .fullScreen
+                    self.present(vc, animated: true, completion: nil)
+                }
+            }
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -201,6 +220,23 @@ extension AppointmentDetailsViewController:UICollectionViewDelegate,UICollection
         {
             cells.statusButton.isHidden = true
         }
+        cells.indoorMapButtonPressed =
+        {
+            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "IndoorMapViewController") as! IndoorMapViewController
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true, completion: nil)
+        }
+        cells.statusButtonPressed =
+            {
+                if (cells.statusButton.currentTitle == "Upcomming")
+                {
+                    let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "TokenPopup") as! TokenPopup
+                    vc.modalPresentationStyle = .fullScreen
+                    self.present(vc, animated: true, completion: nil)
+                }
+            }
         return cells
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

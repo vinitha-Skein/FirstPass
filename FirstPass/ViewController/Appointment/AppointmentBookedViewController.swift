@@ -47,8 +47,14 @@ class AppointmentBookedViewController: UIViewController,FeedbackDelegate {
     func setupUI(){
         container.createBorderForView(cornerRadius: 30, borderWidth: 0, borderColor: .clear)
         container.clipsToBounds = true
-        backButton.createBorderForButton(cornerRadius: 5, borderWidth: 0, borderColor: .clear)
-        feedbackButton.createBorderForButton(cornerRadius: 5, borderWidth: 0.5, borderColor: buttonBorder)
+        container.layer.borderWidth = 0.4
+        container.layer.borderColor = UIColor.gray.cgColor
+        container.layer.masksToBounds = false
+        container.layer.shadowColor = UIColor.black.cgColor
+        container.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        container.layer.shadowOpacity = 0.2
+        backButton.createBorderForButton(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
+        feedbackButton.createBorderForButton(cornerRadius: 8, borderWidth: 1, borderColor: buttonBorder)
     }
     func feedbackAddStatus(status: Bool, message: String) {
         self.dismiss(animated: true, completion: nil)

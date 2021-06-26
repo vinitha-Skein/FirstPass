@@ -42,27 +42,12 @@
                                 <color key="textColor" red="0.20784313725490194" green="0.13725490196078433" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5L2-gj-flg">
-                                <rect key="frame" x="220" y="16" width="74" height="24"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Mj-hc-ZB3">
-                                        <rect key="frame" x="7.5" y="5" width="59.5" height="14"/>
-                                        <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="12"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="74" id="Mkz-wj-AYp"/>
-                                    <constraint firstAttribute="height" constant="24" id="eKN-zb-Knf"/>
-                                    <constraint firstItem="9Mj-hc-ZB3" firstAttribute="centerX" secondItem="5L2-gj-flg" secondAttribute="centerX" id="mhD-RG-G1R"/>
-                                    <constraint firstItem="9Mj-hc-ZB3" firstAttribute="centerY" secondItem="5L2-gj-flg" secondAttribute="centerY" id="xKi-Nu-V4q"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NAK-1j-qgh">
                                 <rect key="frame" x="310" y="16" width="24" height="24"/>
                                 <state key="normal" image="indoorBlue"/>
+                                <connections>
+                                    <action selector="indoorClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="pL5-m6-dkK"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estimated wait time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PiO-hp-syZ">
                                 <rect key="frame" x="16" y="55" width="109" height="14"/>
@@ -88,24 +73,38 @@
                                 <color key="textColor" name="Normal heading"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ix4-7i-WdG">
+                                <rect key="frame" x="220" y="15" width="74" height="26"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="74" id="GN5-qY-Efi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="12"/>
+                                <state key="normal" title="Completed">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="status_Clicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="YwE-kK-Oy9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Ix4-7i-WdG" firstAttribute="centerY" secondItem="vDj-yp-f6t" secondAttribute="centerY" id="8Zi-GB-da8"/>
                             <constraint firstItem="o8U-hd-JV8" firstAttribute="top" secondItem="ELw-EX-sOy" secondAttribute="bottom" constant="2" id="9Dr-Uy-pQR"/>
                             <constraint firstItem="ELw-EX-sOy" firstAttribute="centerY" secondItem="PiO-hp-syZ" secondAttribute="centerY" id="ELn-Zg-hYU"/>
                             <constraint firstItem="PiO-hp-syZ" firstAttribute="top" secondItem="hxA-Ug-LdF" secondAttribute="bottom" constant="15" id="FsA-Kd-gL1"/>
                             <constraint firstItem="JH1-75-BPX" firstAttribute="top" secondItem="PiO-hp-syZ" secondAttribute="bottom" constant="2" id="HMh-Jr-rQ0"/>
                             <constraint firstAttribute="trailing" secondItem="NAK-1j-qgh" secondAttribute="trailing" constant="16" id="IvU-Zv-QWW"/>
-                            <constraint firstItem="5L2-gj-flg" firstAttribute="centerY" secondItem="vDj-yp-f6t" secondAttribute="centerY" id="U8f-Ln-BKC"/>
+                            <constraint firstItem="ELw-EX-sOy" firstAttribute="leading" secondItem="Ix4-7i-WdG" secondAttribute="leading" id="TeJ-Lf-i94"/>
                             <constraint firstItem="NAK-1j-qgh" firstAttribute="top" secondItem="zA1-Wa-7b1" secondAttribute="top" constant="16" id="V9b-rI-fU4"/>
                             <constraint firstItem="PiO-hp-syZ" firstAttribute="leading" secondItem="hxA-Ug-LdF" secondAttribute="leading" id="VCX-lk-7Np"/>
-                            <constraint firstItem="ELw-EX-sOy" firstAttribute="leading" secondItem="5L2-gj-flg" secondAttribute="leading" id="VsH-Cv-lXx"/>
+                            <constraint firstItem="NAK-1j-qgh" firstAttribute="leading" secondItem="Ix4-7i-WdG" secondAttribute="trailing" constant="16" id="akK-sY-DPy"/>
                             <constraint firstItem="JH1-75-BPX" firstAttribute="leading" secondItem="PiO-hp-syZ" secondAttribute="leading" id="dUA-vQ-gMK"/>
                             <constraint firstItem="hxA-Ug-LdF" firstAttribute="leading" secondItem="zA1-Wa-7b1" secondAttribute="leading" constant="16" id="hEd-Qg-FOX"/>
                             <constraint firstItem="vDj-yp-f6t" firstAttribute="leading" secondItem="hxA-Ug-LdF" secondAttribute="trailing" constant="16" id="ods-pF-rJ9"/>
                             <constraint firstItem="o8U-hd-JV8" firstAttribute="leading" secondItem="ELw-EX-sOy" secondAttribute="leading" id="quw-xi-1Lh"/>
                             <constraint firstItem="vDj-yp-f6t" firstAttribute="centerY" secondItem="hxA-Ug-LdF" secondAttribute="centerY" id="rkH-5V-3vP"/>
-                            <constraint firstItem="NAK-1j-qgh" firstAttribute="leading" secondItem="5L2-gj-flg" secondAttribute="trailing" constant="16" id="ssI-a2-Dkf"/>
                             <constraint firstItem="hxA-Ug-LdF" firstAttribute="top" secondItem="zA1-Wa-7b1" secondAttribute="top" constant="16" id="yCC-LC-sgU"/>
                         </constraints>
                     </view>
@@ -127,8 +126,7 @@
                 <outlet property="indoorMapicon" destination="NAK-1j-qgh" id="0Pt-69-HxV"/>
                 <outlet property="servingCounterLabel" destination="o8U-hd-JV8" id="PmN-v7-dg6"/>
                 <outlet property="servingLabel" destination="ELw-EX-sOy" id="MbV-Sf-vSW"/>
-                <outlet property="statusLabel" destination="9Mj-hc-ZB3" id="7GJ-bN-BHa"/>
-                <outlet property="statusView" destination="5L2-gj-flg" id="YkQ-hg-4IA"/>
+                <outlet property="statusButton" destination="Ix4-7i-WdG" id="d0X-3m-HJu"/>
                 <outlet property="timeHeadLabel" destination="PiO-hp-syZ" id="vzV-HR-h1K"/>
             </connections>
             <point key="canvasLocation" x="146.37681159420291" y="72.321428571428569"/>

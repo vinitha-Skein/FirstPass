@@ -61,7 +61,11 @@ class RegistrationViewController: UIViewController {
             self.showAlert("Incorrect Mobile number")
             return
         }
-        
+        if (emiratesID == "")
+        {
+            self.showAlert("Enter Emirites ID")
+            return
+        }
         
         
         let params = [
@@ -69,33 +73,36 @@ class RegistrationViewController: UIViewController {
             "full_name": firstName,
             "email": email,
             "phone_no": phone]
-        self.activityIndicator(self.view, startAnimate: true)
+        //self.activityIndicator(self.view, startAnimate: true)
         viewModel.registerUser(params: params)
-        viewModel.registerSuccess = {
-            let storyboard = UIStoryboard(name: "Modified", bundle: .main)
-            let vc = storyboard.instantiateViewController(withIdentifier: "OTPViewController") as! OTPViewController
-            vc.modalPresentationStyle = .fullScreen
-            vc.userId = self.viewModel.registerNewUser?.user_id ?? 0
-            vc.otpfromSource = self.viewModel.registerNewUser?.OTP ?? 0
-            
-            print(self.viewModel.registerNewUser?.OTP ?? 0)
-            print(self.viewModel.registerNewUser?.user_id ?? 0)
-            self.view.window!.layer.add(self.rightToLeftTransition(), forKey: kCATransition)
-            self.present(vc, animated: true)
+        viewModel.registerSuccess =
+        {
+                
         }
+        let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "OTPViewController") as! OTPViewController
+        vc.modalPresentationStyle = .fullScreen
+        vc.userId = self.viewModel.registerNewUser?.user_id ?? 0
+        vc.otpfromSource = self.viewModel.registerNewUser?.OTP ?? 0
         
-        viewModel.loadingStatus = {
-            if self.viewModel.isLoading{
-                self.activityIndicator(self.view, startAnimate: true)
-            }else{
-                self.activityIndicator(self.view, startAnimate: false)
-                UIApplication.shared.endIgnoringInteractionEvents()
-            }
-        }
+        print(self.viewModel.registerNewUser?.OTP ?? 0)
+        print(self.viewModel.registerNewUser?.user_id ?? 0)
+        self.view.window!.layer.add(self.rightToLeftTransition(), forKey: kCATransition)
+        self.present(vc, animated: true)
+//        viewModel.loadingStatus =
+//        {
+//
+//            if self.viewModel.isLoading{
+//                self.activityIndicator(self.view, startAnimate: true)
+//            }else{
+//                self.activityIndicator(self.view, startAnimate: false)
+//                UIApplication.shared.endIgnoringInteractionEvents()
+//            }
+//        }
         
-        viewModel.errorMessageAlert = {
-            self.showAlert(self.viewModel.errorMessage ?? "Error")
-        }
+//        viewModel.errorMessageAlert = {
+//            self.showAlert(self.viewModel.errorMessage ?? "Error")
+//        }
     }
     
     @IBAction func LoginAction(_ sender: Any) {
