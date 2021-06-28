@@ -186,7 +186,7 @@ class HomeViewController: UIViewController,ScanFinishedDelegate {
     }
     
     @IBAction func upcomingAppointments(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
+        let storyboard = UIStoryboard(name: "phase2", bundle: .main)
         let vc = storyboard.instantiateViewController(withIdentifier: "MyAppointmentsViewController") as! MyAppointmentsViewController
         vc.userId = userId
         vc.modalPresentationStyle = .fullScreen

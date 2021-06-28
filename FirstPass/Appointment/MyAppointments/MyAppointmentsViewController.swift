@@ -79,13 +79,14 @@ class MyAppointmentsViewController: UIViewController {
     }
     
     func setupUI(){
-        activeAppointments.createBorderForButton(cornerRadius: 8, borderWidth: 0, borderColor: .lightGray)
-        historyButton.createBorderForButton(cornerRadius: 8, borderWidth: 0, borderColor: .lightGray)
-//        historyButton.backgroundColor = .clear
-//        activeAppointments.backgroundColor = .white
-        bookButton.createBorderForButton(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
-        container.clipsToBounds = true
-        container.createBorderForView(cornerRadius: 30, borderWidth: 0, borderColor: .clear)
+        activeAppointments.createBorderForButton(cornerRadius: 4, borderWidth: 1, borderColor: .lightGray)
+        historyButton.createBorderForButton(cornerRadius: 4, borderWidth: 0, borderColor: .clear)
+        historyButton.backgroundColor = .clear
+        activeAppointments.backgroundColor = buttonBG
+        activeAppointments.setTitleColor(.white, for: .normal)
+        historyButton.setTitleColor(unselectedText, for: .normal)
+        isActiveAppointment = true
+        self.tableview.reloadData()
     }
     func fetchActiveAppointments(){
         self.activityIndicator(self.view, startAnimate: true)

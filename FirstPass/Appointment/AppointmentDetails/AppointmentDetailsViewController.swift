@@ -196,7 +196,7 @@ extension AppointmentDetailsViewController:UICollectionViewDelegate,UICollection
         
         if (indexPath.row == 0)
         {
-            cells.statusButton.backgroundColor = UIColor.green
+            cells.statusButton.backgroundColor = UIColor(red: 21/255, green: 181/255, blue: 48/255, alpha: 1)
             cells.statusButton.setTitle("Completed", for: .normal)
             cells.statusButton.setTitleColor(UIColor.white, for: .normal)
             cells.statusButton.isHidden = false
