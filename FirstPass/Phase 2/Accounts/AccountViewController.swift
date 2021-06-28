@@ -26,6 +26,7 @@ class AccountViewController: UIViewController {
     {
         let storyboard = UIStoryboard(name: "Modified", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "AlertNotificationViewController") as! AlertNotificationViewController
+        vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
     }
     
@@ -33,6 +34,7 @@ class AccountViewController: UIViewController {
     {
         let storyboard = UIStoryboard(name: "Modified", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "ScannerViewController") as! ScannerViewController
+        vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
     }
     
@@ -77,6 +79,7 @@ extension AccountViewController:UICollectionViewDelegate,UICollectionViewDataSou
         {
             let storyboard = UIStoryboard(name: "Modified", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            UserDefaults.standard.set(false, forKey: "isLoggedIn")
             vc.modalPresentationStyle = .fullScreen
 
             present(vc, animated: true, completion: nil)
@@ -137,13 +140,15 @@ extension AccountViewController:UICollectionViewDelegate,UICollectionViewDataSou
 }
 extension AccountViewController:BottomViewDelegate
 {
-    func AccountsClicked() {
+    func AccountsClicked()
+    {
         
     }
     
     func AppointmentsClicked() {
         let storyboard = UIStoryboard(name: "phase2", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+        vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
     }
     

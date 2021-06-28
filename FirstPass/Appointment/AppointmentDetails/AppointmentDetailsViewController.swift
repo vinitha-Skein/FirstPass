@@ -229,7 +229,7 @@ extension AppointmentDetailsViewController:UICollectionViewDelegate,UICollection
         }
         cells.statusButtonPressed =
             {
-                if (cells.statusButton.currentTitle == "Upcomming")
+                if (indexPath.row == 2)
                 {
                     let storyboard = UIStoryboard(name: "Modified", bundle: nil)
                     let vc = storyboard.instantiateViewController(withIdentifier: "TokenPopup") as! TokenPopup

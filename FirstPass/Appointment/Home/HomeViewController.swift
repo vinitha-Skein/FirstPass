@@ -55,7 +55,7 @@ class HomeViewController: UIViewController,ScanFinishedDelegate {
     var titleMenu = ["Medicine Collections","Cardiology","Cardiology"]
     var checkinSelected = -1
     var appointmentBooked = -1
-    
+    var preArrivalfilled = [Int]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -256,30 +256,40 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
         return titleMenu.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AppointmentCollectionViewCell", for: indexPath) as! AppointmentCollectionViewCell
         cell.titleLabel.text = titleMenu[indexPath.row]
-        if indexPath.row == 2{
+        if preArrivalfilled.contains(indexPath.row)
+        {
             cell.prearrivalButtonHeight.constant = 0
             cell.prefilledLabel.isHidden = false
-        } else {
+        }
+        else
+        {
             cell.prefilledLabel.isHidden = true
             cell.prearrivalButtonHeight.constant = 50
         }
-        if checkinSelected == indexPath.row {
+        if checkinSelected == indexPath.row
+        {
             let attrStri = NSMutableAttributedString.init(string:"Cancel")
             cell.prearrivalButton.setAttributedTitle(attrStri, for: .normal)
             cell.checkinButton.setTitle("Yes, Check-in", for: .normal)
             cell.noteLabel.text = "Are you sure you want to check in?"
-        } else {
+        }
+        else
+        {
             cell.prearrivalButton.setTitle("Pre- arrival", for: .normal)
             cell.checkinButton.setTitle("Check-in", for: .normal)
             cell.noteLabel.text = "Note: Please arrive 15 mins early from the scheduled appointment time."
         }
         
-        if appointmentBooked == indexPath.row {
+        if appointmentBooked == indexPath.row
+        {
             cell.DetailsView.isHidden = false
-        } else {
+        }
+        else
+        {
             cell.DetailsView.isHidden = true
         }
         
@@ -301,38 +311,49 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+        return CGSize(width: collectionView.frame.width, height: 538)
     }
     
-    @objc func CheckinButtonPressed(sender : UIButton){
+    @objc func CheckinButtonPressed(sender : UIButton)
+    {
         if sender.accessibilityHint! == "Check-in" {
             self.checkinSelected = sender.tag
             appointmentsCollectionView.reloadData()
-        } else {
+        }
+        else
+        {
             self.appointmentBooked = sender.tag
             appointmentsCollectionView.reloadData()
         }
     }
     
-    @objc func prearrivalButtonPressed(sender : UIButton){
-        if sender.accessibilityHint! == "Pre- arrival" {
+    @objc func prearrivalButtonPressed(sender : UIButton)
+    {
+        if sender.accessibilityHint! == "Pre- arrival"
+        {
             let storyboard = UIStoryboard(name: "Modified", bundle: .main)
             let vc = storyboard.instantiateViewController(withIdentifier: "PreChekinPopup") as! PreChekinPopup
             vc.modalPresentationStyle = .fullScreen
             self.view.window!.layer.add(self.rightToLeftTransition(), forKey: kCATransition)
             self.present(vc, animated: true)
-        } else {
+            self.preArrivalfilled.append(sender.tag)
+            print(sender.tag)
+            appointmentsCollectionView.reloadData()
+        }
+        else
+        {
             self.checkinSelected = -1
             self.appointmentBooked = -1
         }
     }
     
-    @objc func indoorMapButtonPressed(sender: UIButton) {
-//        let storyboard = UIStoryboard(name: "Modified", bundle: .main)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "IndoorMapViewController") as! IndoorMapViewController
-//        vc.modalPresentationStyle = .fullScreen
-//        self.view.window!.layer.add(self.rightToLeftTransition(), forKey: kCATransition)
-//        self.present(vc, animated: true)
+    @objc func indoorMapButtonPressed(sender: UIButton)
+    {
+        let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "IndoorMapViewController") as! IndoorMapViewController
+        vc.modalPresentationStyle = .fullScreen
+        self.view.window!.layer.add(self.rightToLeftTransition(), forKey: kCATransition)
+        self.present(vc, animated: true)
     }
     
     
