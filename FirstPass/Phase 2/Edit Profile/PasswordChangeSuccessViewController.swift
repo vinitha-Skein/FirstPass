@@ -14,7 +14,13 @@ class PasswordChangeSuccessViewController: UIViewController {
     @IBOutlet weak var done_Button: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        container.layer.cornerRadius = 30
+        container.layer.cornerRadius = 28
+        container.layer.borderColor = UIColor.lightGray.cgColor
+        container.layer.borderWidth = 0.4
+        container.layer.masksToBounds = false
+        container.layer.shadowColor = UIColor.black.cgColor
+        container.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        container.layer.shadowOpacity = 0.2
         container.layer.borderColor = UIColor.lightGray.cgColor
         container.layer.borderWidth = 0.4
         done_Button.layer.cornerRadius = 10

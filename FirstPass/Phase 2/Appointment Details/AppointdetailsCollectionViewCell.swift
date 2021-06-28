@@ -12,6 +12,8 @@ class AppointdetailsCollectionViewCell: UICollectionViewCell
 {
     
     var indoorMapButtonPressed : (() -> ()) = {}
+    var statusButtonPressed : (() -> ()) = {}
+
 
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var statusButton: Mybutton!
@@ -19,6 +21,10 @@ class AppointdetailsCollectionViewCell: UICollectionViewCell
     @IBAction func indoorMapClicked(_ sender: Any)
     {
         indoorMapButtonPressed()
+    }
+    @IBAction func statusButton_Clicked(_ sender: Any)
+    {
+        statusButtonPressed()
     }
     
 }

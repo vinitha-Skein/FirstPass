@@ -339,6 +339,10 @@ extension ProfileViewController:DatePickerDelegate,OTPPopUpDelegate{
         profileImage.layer.cornerRadius = 29
         container.layer.borderColor = UIColor.lightGray.cgColor
         container.layer.borderWidth = 0.4
+        container.layer.masksToBounds = false
+        container.layer.shadowColor = UIColor.black.cgColor
+        container.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        container.layer.shadowOpacity = 0.2
         changePicBgView.layer.cornerRadius = 10
     }
     //Create Blur background
@@ -601,7 +605,8 @@ extension ProfileViewController:UICollectionViewDelegate,UICollectionViewDataSou
         return familyMemberData.count+2
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FamilyCollectionViewCell", for: indexPath) as! FamilyCollectionViewCell
         let users = ["person1","person2","person3","person"]
         if indexPath.row == 4
@@ -616,6 +621,15 @@ extension ProfileViewController:UICollectionViewDelegate,UICollectionViewDataSou
             cell.memberImage.layer.cornerRadius = 15
         }
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if (indexPath.row == 4)
+        {
+            let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+            let vc = storyboard.instantiateViewController(withIdentifier: "AddNewMemberViewController") as! AddNewMemberViewController
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+        }
     }
     
 }

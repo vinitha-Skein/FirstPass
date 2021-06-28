@@ -701,5 +701,13 @@ extension BookAppointmentViewController:UICollectionViewDelegate,UICollectionVie
         }
         return cell
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if (indexPath.row == 4)
+        {
+            let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+            let vc = storyboard.instantiateViewController(withIdentifier: "AddNewMemberViewController") as! AddNewMemberViewController
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+        }
+    }
 }

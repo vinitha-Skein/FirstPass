@@ -25,9 +25,13 @@ class SetPasswordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         submitButton.layer.cornerRadius = 10
-        container.layer.cornerRadius = 30
+        container.layer.cornerRadius = 28
         container.layer.borderWidth = 0.4
         container.layer.borderColor = UIColor.gray.cgColor
+        container.layer.masksToBounds = false
+        container.layer.shadowColor = UIColor.black.cgColor
+        container.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        container.layer.shadowOpacity = 0.2
         passwordView.layer.cornerRadius = 5
         confirmpasswordView.layer.cornerRadius = 5
         // Do any additional setup after loading the view.

@@ -18,18 +18,25 @@ class EditPersonalInformationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         emailView.layer.cornerRadius = 5
         numberView.layer.cornerRadius = 5
         nameView.layer.cornerRadius = 5
         changesButton.layer.cornerRadius = 10
-        container.layer.cornerRadius = 30
+        container.layer.cornerRadius = 28
         container.layer.borderWidth = 0.4
         container.layer.borderColor = UIColor.lightGray.cgColor
+        container.layer.masksToBounds = false
+        container.layer.shadowColor = UIColor.black.cgColor
+        container.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        container.layer.shadowOpacity = 0.2
         // Do any additional setup after loading the view.
     }
     
     @IBAction func back_clicked(_ sender: Any)
+    {
+        dismiss(animated: true, completion: nil)
+    }
+    @IBAction func changes_saved(_ sender: Any)
     {
         dismiss(animated: true, completion: nil)
     }

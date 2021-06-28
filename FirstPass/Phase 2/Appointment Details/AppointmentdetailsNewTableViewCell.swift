@@ -10,6 +10,7 @@ import UIKit
 
 class AppointmentdetailsNewTableViewCell: UITableViewCell {
 
+    @IBOutlet var statusButton: UIButton!
     @IBOutlet weak var indoorMapicon: UIButton!
     @IBOutlet weak var servingLabel: UILabel!
     @IBOutlet weak var timeHeadLabel: UILabel!
@@ -17,10 +18,10 @@ class AppointmentdetailsNewTableViewCell: UITableViewCell {
     @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var servingCounterLabel: UILabel!
     @IBOutlet weak var estimatedWaittimeLabel: UILabel!
-    @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
-    @IBOutlet weak var statusView: UIView!
     var indoorMapButtonPressed : (() -> ()) = {}
+    var statusButtonPressed : (() -> ()) = {}
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,6 +32,10 @@ class AppointmentdetailsNewTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    @IBAction func status_Clicked(_ sender: Any)
+    {
+        statusButtonPressed()
     }
     
     @IBAction func indoorClicked(_ sender: Any)

@@ -89,30 +89,36 @@ class PasswordViewController: UIViewController {
             "OTP": otp] as [String : Any]
         print(otp)
         print(userId)
-        self.activityIndicator(self.view, startAnimate: true)
-        viewModel.setPassword(params: params)
-        viewModel.passwordSetSuccess = {
-            let storyboard = UIStoryboard(name: "Modified", bundle: .main)
-            let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-            vc.modalPresentationStyle = .fullScreen
-            //        view.window!.layer.add(, forKey: kCATransition)
-            self.present(vc, animated: true)
-            //self.showAlert("Congratulations! Account Created Successfully.")
-            
-        }
+//        self.activityIndicator(self.view, startAnimate: true)
+//        viewModel.setPassword(params: params)
+//        viewModel.passwordSetSuccess =
+//            {
+//            let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+//            vc.modalPresentationStyle = .fullScreen
+//            //        view.window!.layer.add(, forKey: kCATransition)
+//            self.present(vc, animated: true)
+//            //self.showAlert("Congratulations! Account Created Successfully.")
+//
+//        }
+        let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        vc.modalPresentationStyle = .fullScreen
+        //        view.window!.layer.add(, forKey: kCATransition)
+        self.present(vc, animated: true)
+        //self.showAlert("Congratulations! Account Created Successfully.")
+//        viewModel.loadingStatus = {
+//            if self.viewModel.isLoading{
+//                self.activityIndicator(self.view, startAnimate: true)
+//            }else{
+//                self.activityIndicator(self.view, startAnimate: false)
+//                UIApplication.shared.endIgnoringInteractionEvents()
+//            }
+//        }
         
-        viewModel.loadingStatus = {
-            if self.viewModel.isLoading{
-                self.activityIndicator(self.view, startAnimate: true)
-            }else{
-                self.activityIndicator(self.view, startAnimate: false)
-                UIApplication.shared.endIgnoringInteractionEvents()
-            }
-        }
-        
-        viewModel.errorMessageAlert = {
-            self.showAlert(self.viewModel.errorMessage ?? "Error")
-        }
+//        viewModel.errorMessageAlert = {
+//            self.showAlert(self.viewModel.errorMessage ?? "Error")
+//        }
     }
     
 }

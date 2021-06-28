@@ -71,6 +71,7 @@ class NewTokenViewController: UIViewController/*, swapCathLabDelegate,PharmacyDe
         let vc = storyboard.instantiateViewController(withIdentifier: "DeleteFamilyMemberViewController") as! DeleteFamilyMemberViewController
         vc.headText = "Delete appointment"
         vc.contentText = "Are you sure you want to delete this appointment?"
+        vc.deleteFamilyMember = false
         vc.modalPresentationStyle = .overCurrentContext
 
         self.present(vc, animated: true, completion: nil)

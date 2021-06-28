@@ -104,23 +104,30 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
     {
         print("otp: \(otpfunc)")
         print("otpfunc: \(otpfromSource)")
-        if (otpfunc == otpfromSource)
-        {
-            let storyboard = UIStoryboard(name: "Modified", bundle: .main)
-            let vc = storyboard.instantiateViewController(withIdentifier: "PasswordViewController") as! PasswordViewController
-            vc.modalPresentationStyle = .fullScreen
-            self.view.window!.layer.add(self.rightToLeftTransition(), forKey: kCATransition)
-            vc.userId = self.userId
-            vc.otp = otpfromSource
-            self.present(vc, animated: true)
-        }
-        else
-        {
-            let alertController = UIAlertController(title: "Invalid OTP", message: "You have entered an Invalid OTP", preferredStyle: .alert)
-            let action = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
-            alertController.addAction(action)
-            present(alertController, animated: true, completion: nil)
-        }
+//        if (otpfunc == otpfromSource)
+//        {
+//            let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "PasswordViewController") as! PasswordViewController
+//            vc.modalPresentationStyle = .fullScreen
+//            self.view.window!.layer.add(self.rightToLeftTransition(), forKey: kCATransition)
+//            vc.userId = self.userId
+//            vc.otp = otpfromSource
+//            self.present(vc, animated: true)
+//        }
+//        else
+//        {
+//            let alertController = UIAlertController(title: "Invalid OTP", message: "You have entered an Invalid OTP", preferredStyle: .alert)
+//            let action = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+//            alertController.addAction(action)
+//            present(alertController, animated: true, completion: nil)
+//        }
+        let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PasswordViewController") as! PasswordViewController
+        vc.modalPresentationStyle = .fullScreen
+        self.view.window!.layer.add(self.rightToLeftTransition(), forKey: kCATransition)
+        vc.userId = self.userId
+        vc.otp = otpfromSource
+        self.present(vc, animated: true)
     }
     func verifyOTP(otp:String){
         let params = [
