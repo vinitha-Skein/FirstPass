@@ -9,6 +9,7 @@
 import UIKit
 
 class RegistrationViewController: UIViewController {
+    @IBOutlet var scrollView: UIScrollView!
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var email: UITextField!
@@ -25,7 +26,8 @@ class RegistrationViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func agreeTerms(_ sender: Any) {
+    @IBAction func agreeTerms(_ sender: Any)
+    {
         checkBoxState = !checkBoxState
         checkBox.setImage(checkBoxState == true ? UIImage(named: "checkBoxSelected"):UIImage(named: "checkBox"), for: .normal)
     }
@@ -68,17 +70,17 @@ class RegistrationViewController: UIViewController {
         }
         
         
-        let params = [
-            "Emirates_id": emiratesID,
-            "full_name": firstName,
-            "email": email,
-            "phone_no": phone]
-        //self.activityIndicator(self.view, startAnimate: true)
-        viewModel.registerUser(params: params)
-        viewModel.registerSuccess =
-        {
-                
-        }
+//        let params = [
+//            "Emirates_id": emiratesID,
+//            "full_name": firstName,
+//            "email": email,
+//            "phone_no": phone]
+//        //self.activityIndicator(self.view, startAnimate: true)
+//        viewModel.registerUser(params: params)
+//        viewModel.registerSuccess =
+//        {
+//
+//        }
         let storyboard = UIStoryboard(name: "Modified", bundle: .main)
         let vc = storyboard.instantiateViewController(withIdentifier: "OTPViewController") as! OTPViewController
         vc.modalPresentationStyle = .fullScreen
@@ -122,7 +124,7 @@ class RegistrationViewController: UIViewController {
         container.layer.shadowColor = UIColor.black.cgColor
         container.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         container.layer.shadowOpacity = 0.2
-
+        scrollView.layer.cornerRadius = 30
 //        container.layer.masksToBounds = false
 //        container.layer.shadowColor = UIColor.black.cgColor
 //        container.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)

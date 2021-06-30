@@ -9,6 +9,8 @@
 import UIKit
 
 class BookAppointmentViewController: UIViewController {
+    @IBOutlet var mainContainer: UIView!
+    @IBOutlet var scrollView: UIScrollView!
     @IBOutlet weak var myselfButton: UIButton!
     @IBOutlet weak var familyMemberButton: UIButton!
     @IBOutlet weak var container: UIView!
@@ -429,7 +431,8 @@ class BookAppointmentViewController: UIViewController {
             }
         }
         
-        viewModel.errorMessageAlert = {
+        viewModel.errorMessageAlert =
+            {
             self.showAlert(self.viewModel.errorMessage ?? "Error")
         }
         
@@ -446,12 +449,15 @@ class BookAppointmentViewController: UIViewController {
         self.present(popup, animated: true, completion: nil)
     }
     
-    func fetchFamilyMembers(){
+    func fetchFamilyMembers()
+    {
       //  self.activityIndicator(self.view, startAnimate: true)
      //   viewModel.fetchFamilyMember(userId: viewModel.userId ?? 0)
         
-        viewModel.memberFetchSuccess = {
-            if self.viewModel.doctorData?.doctors?.count != 0{
+        viewModel.memberFetchSuccess =
+            {
+            if self.viewModel.doctorData?.doctors?.count != 0
+            {
                 self.selectedField = PopUpFor.FamilyMember
                 let storyboard = UIStoryboard(name: "Main", bundle: .main)
                 let popup = storyboard.instantiateViewController(withIdentifier: "SelectPopupViewController") as! SelectPopupViewController
@@ -495,7 +501,15 @@ class BookAppointmentViewController: UIViewController {
     
     func setupUI(){
         container.createBorderForView(cornerRadius: 30, borderWidth: 0, borderColor: .clear)
+        scrollView.layer.cornerRadius = 30
+        mainContainer.layer.cornerRadius = 30
         container.clipsToBounds = true
+        container.layer.borderWidth = 0.4
+        container.layer.borderColor = UIColor.gray.cgColor
+        container.layer.masksToBounds = false
+        container.layer.shadowColor = UIColor.black.cgColor
+        container.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        container.layer.shadowOpacity = 0.2
         //memberTextfield.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
         locationTextfield.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
         departmentTextfield.createBorderForTextfield(cornerRadius: 8, borderWidth: 0, borderColor: .clear)

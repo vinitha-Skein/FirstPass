@@ -9,6 +9,7 @@ import UIKit
 
 class PreChekinPopup: UIViewController {
     
+    @IBOutlet var scrollView: UIScrollView!
     @IBOutlet weak var carParkingYesLabel: UILabel!
     @IBOutlet weak var parkingNoLabel: UILabel!
     @IBOutlet weak var specialAssistanceYesLabel: UILabel!
@@ -64,6 +65,7 @@ class PreChekinPopup: UIViewController {
         } 
         view.backgroundColor = UIColor.clear
         view.isOpaque = false
+        scrollView.layer.cornerRadius = 25
         container.layer.cornerRadius = 25
         container.layer.borderWidth = 0.4
         container.layer.borderColor = UIColor.gray.cgColor

@@ -9,6 +9,10 @@
 import UIKit
 
 class AppointmentBookedViewController: UIViewController,FeedbackDelegate {
+    @IBOutlet var stackBottomView: UIView!
+    @IBOutlet var stackTopView: UIView!
+    @IBOutlet var mainContainer: UIView!
+    @IBOutlet var scrollView: UIScrollView!
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var feedbackButton: UIButton!
     @IBOutlet weak var backButton: UIButton!
@@ -46,6 +50,10 @@ class AppointmentBookedViewController: UIViewController,FeedbackDelegate {
     
     func setupUI(){
         container.createBorderForView(cornerRadius: 30, borderWidth: 0, borderColor: .clear)
+        stackTopView.layer.cornerRadius = 10
+        stackBottomView.layer.cornerRadius = 10
+        stackBottomView.layer.maskedCorners = [.layerMaxXMaxYCorner,.layerMinXMaxYCorner]
+        stackTopView.layer.maskedCorners = [.layerMinXMinYCorner,.layerMaxXMinYCorner]
         container.clipsToBounds = true
         container.layer.borderWidth = 0.4
         container.layer.borderColor = UIColor.gray.cgColor
@@ -53,6 +61,8 @@ class AppointmentBookedViewController: UIViewController,FeedbackDelegate {
         container.layer.shadowColor = UIColor.black.cgColor
         container.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
         container.layer.shadowOpacity = 0.2
+        mainContainer.layer.cornerRadius = 30
+        scrollView.layer.cornerRadius = 30
         backButton.createBorderForButton(cornerRadius: 8, borderWidth: 0, borderColor: .clear)
         feedbackButton.createBorderForButton(cornerRadius: 8, borderWidth: 1, borderColor: buttonBorder)
     }

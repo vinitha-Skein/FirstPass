@@ -32,7 +32,18 @@ class OTPViewController: UIViewController,UITextFieldDelegate {
         print(otpfromSource)
         // Do any additional setup after loading the view.
     }
+    @IBAction func back_clicked(_ sender: Any)
+    {
+        dismiss(animated: true, completion: nil)
+    }
     
+    @IBAction func login_Clicked(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        vc.modalPresentationStyle = .fullScreen
+        //        view.window!.layer.add(, forKey: kCATransition)
+        self.present(vc, animated: true)
+    }
     func setupUI(){
         container.createBorderForView(cornerRadius: 25, borderWidth: 0, borderColor: .clear)
         container.clipsToBounds = true
