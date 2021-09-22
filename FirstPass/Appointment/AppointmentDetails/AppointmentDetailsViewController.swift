@@ -159,10 +159,10 @@ extension AppointmentDetailsViewController:UITableViewDelegate,UITableViewDataSo
         }
         cell.indoorMapButtonPressed =
             {
-                let storyboard = UIStoryboard(name: "Modified", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "IndoorMapViewController") as! IndoorMapViewController
-                vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: true, completion: nil)
+//                let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+//                let vc = storyboard.instantiateViewController(withIdentifier: "IndoorMapViewController") as! IndoorMapViewController
+//                vc.modalPresentationStyle = .fullScreen
+//                self.present(vc, animated: true, completion: nil)
 
             }
         cell.statusButtonPressed =
@@ -222,10 +222,10 @@ extension AppointmentDetailsViewController:UICollectionViewDelegate,UICollection
         }
         cells.indoorMapButtonPressed =
         {
-            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "IndoorMapViewController") as! IndoorMapViewController
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)
+//            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "IndoorMapViewController") as! IndoorMapViewController
+//            vc.modalPresentationStyle = .fullScreen
+//            self.present(vc, animated: true, completion: nil)
         }
         cells.statusButtonPressed =
             {

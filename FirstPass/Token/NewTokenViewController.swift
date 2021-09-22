@@ -108,11 +108,11 @@ extension NewTokenViewController:UITableViewDelegate,UITableViewDataSource
         cell.status.text = Departmentsections[indexPath.row]
         cell.indoorMapButtonPressed =
         {
-            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "IndoorMapViewController") as! IndoorMapViewController
-            vc.modalPresentationStyle = .fullScreen
-
-            self.present(vc, animated: true, completion: nil)
+//            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "IndoorMapViewController") as! IndoorMapViewController
+//            vc.modalPresentationStyle = .fullScreen
+//
+//            self.present(vc, animated: true, completion: nil)
         }
         return cell
     }

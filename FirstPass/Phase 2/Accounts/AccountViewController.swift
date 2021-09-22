@@ -121,13 +121,13 @@ extension AccountViewController:UICollectionViewDelegate,UICollectionViewDataSou
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true, completion: nil)
         }
-//        if (indexPath.row == 1)
-//        {
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let vc = storyboard.instantiateViewController(withIdentifier: "SwapTestPopup") as! SwapTestPopup
-//            vc.modalPresentationStyle = .fullScreen
-//            present(vc, animated: true, completion: nil)
-//        }
+        if (indexPath.row == 1)
+        {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "SwapTestPopup") as! SwapTestPopup
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
+        }
 
         if (indexPath.row == 2)
         {

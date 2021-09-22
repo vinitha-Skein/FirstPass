@@ -12,29 +12,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         Thread.sleep(forTimeInterval: 2)
         IQKeyboardManager.shared.enable = true
         let mainStoryboard:UIStoryboard = UIStoryboard(name: "phase2", bundle: nil)
-        if UserDefaults.standard.bool(forKey: "OnboardFinished")
-        {
-            if UserDefaults.standard.bool(forKey: "isLoggedIn")
-            {
-                print("Inn")
-                let homePage = mainStoryboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
-                self.window?.rootViewController = homePage
-            }
-            else
-            {
-                let storyboard:UIStoryboard = UIStoryboard(name: "Modified", bundle: nil)
-
-                let loginPage = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-                self.window?.rootViewController = loginPage
-            }
-        }
-        else
-        {
-            let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let homePage = storyboard.instantiateViewController(withIdentifier: "OnBoardViewController") as! OnBoardViewController
+//        if UserDefaults.standard.bool(forKey: "OnboardFinished")
+//        {
+//            if UserDefaults.standard.bool(forKey: "isLoggedIn")
+//            {
+//                print("Inn")
+//                let homePage = mainStoryboard.instantiateViewController(withIdentifier: "HomeViewController") as! HomeViewController
+//                self.window?.rootViewController = homePage
+//            }
+//            else
+//            {
+//                let storyboard:UIStoryboard = UIStoryboard(name: "Modified", bundle: nil)
+//
+//                let loginPage = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+//                self.window?.rootViewController = loginPage
+//            }
+//        }
+//        else
+//        {
+            let storyboard:UIStoryboard = UIStoryboard(name: "Modified", bundle: nil)
+            let homePage = storyboard.instantiateViewController(withIdentifier: "DoctorLookupViewController") as! DoctorLookupViewController
             self.window?.rootViewController = homePage
 
-        }
+       // }
         
 //        }
 //        let mainStoryboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

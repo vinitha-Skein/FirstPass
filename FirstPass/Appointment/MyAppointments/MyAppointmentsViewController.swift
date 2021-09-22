@@ -156,10 +156,10 @@ extension MyAppointmentsViewController:UITableViewDelegate,UITableViewDataSource
             cell.indoorButton.isHidden = false
             cell.indoorButtonPressed =
                 {
-                    let storyboard = UIStoryboard(name: "Modified", bundle: .main)
-                    let vc = storyboard.instantiateViewController(withIdentifier: "IndoorMapViewController") as! IndoorMapViewController
-                    vc.modalPresentationStyle = .fullScreen
-                    self.present(vc, animated: true)
+//                    let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+//                    let vc = storyboard.instantiateViewController(withIdentifier: "IndoorMapViewController") as! IndoorMapViewController
+//                    vc.modalPresentationStyle = .fullScreen
+//                    self.present(vc, animated: true)
                 }
         }else
         {
@@ -264,10 +264,10 @@ extension MyAppointmentsViewController:CheckInDelegate{
     
     func appointmentIndoorMap(appointmentIndex: Int)
     {
-        let storyboard = UIStoryboard(name: "Modified", bundle: .main)
-        let vc = storyboard.instantiateViewController(withIdentifier: "IndoorMapViewController") as! IndoorMapViewController
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
+//        let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "IndoorMapViewController") //as! IndoorMapViewController
+//        vc.modalPresentationStyle = .fullScreen
+//        present(vc, animated: true)
     }
 }
 

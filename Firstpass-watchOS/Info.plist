@@ -26,7 +26,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>com.skein.Firstpassmodified</string>
+	<string>com.vectramind.firstpassphasetwo</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>

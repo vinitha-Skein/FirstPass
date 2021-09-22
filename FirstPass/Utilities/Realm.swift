@@ -108,7 +108,7 @@ class Mrn:Decodable {
         return "userId"
     }
     
-    required init()
+    required override init()
     {
         super.init()
     }

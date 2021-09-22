@@ -349,11 +349,11 @@ extension HomeViewController:UICollectionViewDelegate,UICollectionViewDataSource
     
     @objc func indoorMapButtonPressed(sender: UIButton)
     {
-        let storyboard = UIStoryboard(name: "Modified", bundle: .main)
-        let vc = storyboard.instantiateViewController(withIdentifier: "IndoorMapViewController") as! IndoorMapViewController
-        vc.modalPresentationStyle = .fullScreen
-        self.view.window!.layer.add(self.rightToLeftTransition(), forKey: kCATransition)
-        self.present(vc, animated: true)
+//        let storyboard = UIStoryboard(name: "Modified", bundle: .main)
+//        let vc = storyboard.instantiateViewController(withIdentifier: "IndoorMapViewController") as! IndoorMapViewController
+//        vc.modalPresentationStyle = .fullScreen
+//        self.view.window!.layer.add(self.rightToLeftTransition(), forKey: kCATransition)
+//        self.present(vc, animated: true)
     }
     
     
