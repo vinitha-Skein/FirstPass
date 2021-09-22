@@ -41,6 +41,7 @@
 		A7093979267C78AC0061EDFA /* AppointdetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7093978267C78AC0061EDFA /* AppointdetailsCollectionViewCell.swift */; };
 		A717D6A5267B165A005E7A3A /* ReportsFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A717D6A4267B165A005E7A3A /* ReportsFilterViewController.swift */; };
 		A717D6AA267B19F7005E7A3A /* FiltersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A717D6A9267B19F7005E7A3A /* FiltersCollectionViewCell.swift */; };
+		A718F75126FB3EA400CCFF1A /* BMICalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A718F75026FB3EA400CCFF1A /* BMICalculatorViewController.swift */; };
 		A71AB86F26709A3300D8F151 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB86D26709A3300D8F151 /* APIRouter.swift */; };
 		A71AB87026709A3300D8F151 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB86E26709A3300D8F151 /* APIClient.swift */; };
 		A71AB87826709A9300D8F151 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71AB87726709A9300D8F151 /* Constants.swift */; };
@@ -279,6 +280,7 @@
 		A7093978267C78AC0061EDFA /* AppointdetailsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointdetailsCollectionViewCell.swift; sourceTree = "<group>"; };
 		A717D6A4267B165A005E7A3A /* ReportsFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsFilterViewController.swift; sourceTree = "<group>"; };
 		A717D6A9267B19F7005E7A3A /* FiltersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersCollectionViewCell.swift; sourceTree = "<group>"; };
+		A718F75026FB3EA400CCFF1A /* BMICalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMICalculatorViewController.swift; sourceTree = "<group>"; };
 		A71AB86D26709A3300D8F151 /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		A71AB86E26709A3300D8F151 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		A71AB87726709A9300D8F151 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -662,6 +664,7 @@
 				A7E981D526F9E78A00F8551B /* DoctorLookupViewController.swift */,
 				A7E981DA26F9ED5700F8551B /* DoctorsLookupTableViewCell.swift */,
 				A7E981DB26F9ED5700F8551B /* DoctorsLookupTableViewCell.xib */,
+				A718F75026FB3EA400CCFF1A /* BMICalculatorViewController.swift */,
 			);
 			path = "Phase 2 Modified";
 			sourceTree = "<group>";
@@ -1360,6 +1363,7 @@
 				A8D2901F25BE9F6F003605D6 /* SwapPopup.swift in Sources */,
 				C094C38525132EF500F039E4 /* Extension.swift in Sources */,
 				A71AB87026709A3300D8F151 /* APIClient.swift in Sources */,
+				A718F75126FB3EA400CCFF1A /* BMICalculatorViewController.swift in Sources */,
 				C091239B25559DDD00CFBC89 /* MyAppointmentsViewModel.swift in Sources */,
 				C09123912555980B00CFBC89 /* HomeModel.swift in Sources */,
 				C003574A25184FC000F76902 /* FamilyMemberViewController.swift in Sources */,

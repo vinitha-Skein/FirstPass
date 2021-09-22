@@ -12,8 +12,8 @@ class AccountViewController: UIViewController {
 
     @IBOutlet weak var bottomMenuView: Tabbar!
     @IBOutlet weak var collectionview: UICollectionView!
-    var categories = ["My Profile","My Appointments","Book Appointment","Payments","Reports","Indoor Map","Chat with Us","Logout"]
-    var logoImages = ["accountpic","appointments","book","payments","reports","map","chat","logout"]
+    var categories = ["My Profile","My Appointments","Book Appointment","Payments","Reports","Indoor Map","Contact","About Hospital","Location Search","BMI Calculator","Chat with Us","Doctor Lookup","Special Offers","Logout"]
+    var logoImages = ["accountpic","appointments","book","payments","reports","map","appointments","appointments","appointments","appointments","chat","appointments","appointments","logout"]
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionview.delegate = self

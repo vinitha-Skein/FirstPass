@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 //        else
 //        {
             let storyboard:UIStoryboard = UIStoryboard(name: "Modified", bundle: nil)
-            let homePage = storyboard.instantiateViewController(withIdentifier: "DoctorLookupViewController") as! DoctorLookupViewController
+            let homePage = storyboard.instantiateViewController(withIdentifier: "BMICalculatorViewController") as! BMICalculatorViewController
             self.window?.rootViewController = homePage
 
        // }

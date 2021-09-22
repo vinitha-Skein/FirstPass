@@ -3115,13 +3115,13 @@
         <image name="background" width="375" height="812"/>
         <image name="bluecalendar" width="20" height="20"/>
         <image name="bluetimeSquare" width="20" height="20"/>
-        <image name="date" width="12" height="12"/>
+        <image name="date" width="24" height="24"/>
         <image name="date_color" width="24" height="24"/>
         <image name="doctorgrey" width="16" height="16"/>
         <image name="doctors" width="24" height="24"/>
         <image name="google-pay-gpay-logo" width="10000" height="4146"/>
         <image name="iconly-light-arrow-left-square" width="24" height="24"/>
-        <image name="iconlyCurvedPaper" width="24" height="24"/>
+        <image name="iconlyCurvedPaper" width="16" height="16"/>
         <image name="iconlyCurvedSend" width="24" height="24"/>
         <image name="indoor" width="24" height="24"/>
         <image name="list" width="24" height="24"/>
