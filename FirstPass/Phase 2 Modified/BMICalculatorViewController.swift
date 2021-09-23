@@ -114,8 +114,8 @@ class BMICalculatorViewController: UIViewController {
         weightLabelView.layer.maskedCorners = [.layerMaxXMinYCorner,.layerMaxXMaxYCorner]
         
         Container.layer.cornerRadius = 20
-        Container.layer.borderColor = UIColor.gray.cgColor
-        Container.layer.borderWidth = 0.4
+//        Container.layer.borderColor = UIColor.gray.cgColor
+//        Container.layer.borderWidth = 0.4
         Container.layer.masksToBounds = false
         Container.layer.shadowColor = UIColor.black.cgColor
         Container.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)

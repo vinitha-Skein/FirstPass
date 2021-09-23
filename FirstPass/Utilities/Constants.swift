@@ -29,6 +29,12 @@ struct Colors{
     static var lineColor = "#e9e9e9"
 }
 
+struct Urls
+{
+    static var aboutus = "https://www.youtube.com"
+    static var specialoffers = "https://www.google.com"
+    static var healthTips = "https://www.yahoo.com"
+}
 
 
 

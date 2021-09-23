@@ -68,38 +68,6 @@ extension AccountViewController:UICollectionViewDelegate,UICollectionViewDataSou
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-        if (indexPath.row == 3)
-        {
-            let storyboard = UIStoryboard(name: "phase2", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "PaymentOptionsViewController") as! PaymentOptionsViewController
-            vc.modalPresentationStyle = .fullScreen
-            present(vc, animated: true, completion: nil)
-        }
-        if (indexPath.row == 7)
-        {
-            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-            UserDefaults.standard.set(false, forKey: "isLoggedIn")
-            vc.modalPresentationStyle = .fullScreen
-
-            present(vc, animated: true, completion: nil)
-        }
-        if (indexPath.row == 5)
-        {
-            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "IndoorMapViewController") as! IndoorMapViewController
-            vc.modalPresentationStyle = .fullScreen
-
-            present(vc, animated: true, completion: nil)
-        }
-        if (indexPath.row == 6)
-        {
-            let storyboard = UIStoryboard(name: "phase2", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "ChatwithusViewController") as! ChatwithusViewController
-            vc.modalPresentationStyle = .fullScreen
-
-            present(vc, animated: true, completion: nil)
-        }
         if (indexPath.row == 0)
         {
             let storyboard = UIStoryboard(name: "Modified", bundle: nil)
@@ -114,21 +82,6 @@ extension AccountViewController:UICollectionViewDelegate,UICollectionViewDataSou
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true, completion: nil)
         }
-        if (indexPath.row == 4)
-        {
-            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "ReportsViewController") as! ReportsViewController
-            vc.modalPresentationStyle = .fullScreen
-            present(vc, animated: true, completion: nil)
-        }
-        if (indexPath.row == 1)
-        {
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "SwapTestPopup") as! SwapTestPopup
-            vc.modalPresentationStyle = .fullScreen
-            present(vc, animated: true, completion: nil)
-        }
-
         if (indexPath.row == 2)
         {
             let storyboard = UIStoryboard(name: "Modified", bundle: nil)
@@ -136,6 +89,113 @@ extension AccountViewController:UICollectionViewDelegate,UICollectionViewDataSou
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true, completion: nil)
         }
+        
+        if (indexPath.row == 3)
+        {
+            let storyboard = UIStoryboard(name: "phase2", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "PaymentOptionsViewController") as! PaymentOptionsViewController
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
+        }
+        if (indexPath.row == 4)
+        {
+            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "ReportsViewController") as! ReportsViewController
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
+        }
+        if (indexPath.row == 5)
+        {
+            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "IndoorMapViewController") as! IndoorMapViewController
+            vc.modalPresentationStyle = .fullScreen
+
+            present(vc, animated: true, completion: nil)
+        }
+        if (indexPath.row == 6)
+        {
+            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "ContactsViewController") as! ContactsViewController
+            vc.modalPresentationStyle = .fullScreen
+
+            present(vc, animated: true, completion: nil)
+        }
+        if (indexPath.row == 7)
+        {
+            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "WebviewViewController") as! WebviewViewController
+            vc.Aboutus = true
+            vc.modalPresentationStyle = .fullScreen
+
+            present(vc, animated: true, completion: nil)
+        }
+        if (indexPath.row == 8)
+        {
+//            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+//            UserDefaults.standard.set(false, forKey: "isLoggedIn")
+//            vc.modalPresentationStyle = .fullScreen
+//
+//            present(vc, animated: true, completion: nil)
+        }
+        if (indexPath.row == 9)
+        {
+            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "BMICalculatorViewController") as! BMICalculatorViewController
+            vc.modalPresentationStyle = .fullScreen
+
+            present(vc, animated: true, completion: nil)
+        }
+        if (indexPath.row == 10)
+        {
+            let storyboard = UIStoryboard(name: "phase2", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "ChatwithusViewController") as! ChatwithusViewController
+            UserDefaults.standard.set(false, forKey: "isLoggedIn")
+            vc.modalPresentationStyle = .fullScreen
+
+            present(vc, animated: true, completion: nil)
+        }
+        if (indexPath.row == 11)
+        {
+            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "DoctorLookupViewController") as!  DoctorLookupViewController
+            vc.modalPresentationStyle = .fullScreen
+
+            present(vc, animated: true, completion: nil)
+        }
+        if (indexPath.row == 12)
+        {
+            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "WebviewViewController") as! WebviewViewController
+            vc.specialOffers = true
+            vc.modalPresentationStyle = .fullScreen
+
+            present(vc, animated: true, completion: nil)
+        }
+        if (indexPath.row == 13)
+        {
+            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            UserDefaults.standard.set(false, forKey: "isLoggedIn")
+            vc.modalPresentationStyle = .fullScreen
+
+            present(vc, animated: true, completion: nil)
+        }
+       
+       
+       
+        
+        
+     
+//        if (indexPath.row == 1)
+//        {
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "SwapTestPopup") as! SwapTestPopup
+//            vc.modalPresentationStyle = .fullScreen
+//            present(vc, animated: true, completion: nil)
+//        }
+
+        
     }
 }
 extension AccountViewController:BottomViewDelegate

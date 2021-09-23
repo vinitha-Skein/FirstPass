@@ -83,6 +83,10 @@
 		A7A49EE5265B7FE200AB1A57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7A49EE4265B7FE200AB1A57 /* Assets.xcassets */; };
 		A7A49EEA265B7FE200AB1A57 /* Firstpass-watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A7A49ECB265B7FD600AB1A57 /* Firstpass-watchOS.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A7A49EF7265B886200AB1A57 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7A49EF6265B886200AB1A57 /* Colors.xcassets */; };
+		A7C5675626FC4CBC005366DC /* WebviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5675526FC4CBC005366DC /* WebviewViewController.swift */; };
+		A7C5675B26FC894D005366DC /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5675A26FC894D005366DC /* ContactsViewController.swift */; };
+		A7C5676126FC9BB4005366DC /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5675F26FC9BB4005366DC /* ContactsTableViewCell.swift */; };
+		A7C5676226FC9BB4005366DC /* ContactsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7C5676026FC9BB4005366DC /* ContactsTableViewCell.xib */; };
 		A7D359392681B55A003AC0DE /* PaymentOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D359382681B55A003AC0DE /* PaymentOptionsViewController.swift */; };
 		A7D3593E2681B599003AC0DE /* NetBankingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D3593D2681B599003AC0DE /* NetBankingCollectionViewCell.swift */; };
 		A7D3594C2681B629003AC0DE /* CardsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D3594A2681B629003AC0DE /* CardsTableViewCell.swift */; };
@@ -325,6 +329,10 @@
 		A7A49EE6265B7FE200AB1A57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7A49EE7265B7FE200AB1A57 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		A7A49EF6265B886200AB1A57 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		A7C5675526FC4CBC005366DC /* WebviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebviewViewController.swift; sourceTree = "<group>"; };
+		A7C5675A26FC894D005366DC /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		A7C5675F26FC9BB4005366DC /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
+		A7C5676026FC9BB4005366DC /* ContactsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactsTableViewCell.xib; sourceTree = "<group>"; };
 		A7D359382681B55A003AC0DE /* PaymentOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentOptionsViewController.swift; sourceTree = "<group>"; };
 		A7D3593D2681B599003AC0DE /* NetBankingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetBankingCollectionViewCell.swift; sourceTree = "<group>"; };
 		A7D3594A2681B629003AC0DE /* CardsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsTableViewCell.swift; sourceTree = "<group>"; };
@@ -665,6 +673,10 @@
 				A7E981DA26F9ED5700F8551B /* DoctorsLookupTableViewCell.swift */,
 				A7E981DB26F9ED5700F8551B /* DoctorsLookupTableViewCell.xib */,
 				A718F75026FB3EA400CCFF1A /* BMICalculatorViewController.swift */,
+				A7C5675526FC4CBC005366DC /* WebviewViewController.swift */,
+				A7C5675A26FC894D005366DC /* ContactsViewController.swift */,
+				A7C5675F26FC9BB4005366DC /* ContactsTableViewCell.swift */,
+				A7C5676026FC9BB4005366DC /* ContactsTableViewCell.xib */,
 			);
 			path = "Phase 2 Modified";
 			sourceTree = "<group>";
@@ -1185,6 +1197,7 @@
 				C05980912506211900C92021 /* LaunchScreen.storyboard in Resources */,
 				C059808E2506211900C92021 /* Assets.xcassets in Resources */,
 				C0B208192519F1FF00F048F2 /* group2@2x.png in Resources */,
+				A7C5676226FC9BB4005366DC /* ContactsTableViewCell.xib in Resources */,
 				C0B2081B2519F1FF00F048F2 /* groupCopy2@3x.png in Resources */,
 				A7E981DD26F9ED5700F8551B /* DoctorsLookupTableViewCell.xib in Resources */,
 				C059808C2506211800C92021 /* Main.storyboard in Resources */,
@@ -1371,6 +1384,7 @@
 				1B95AD1326691CA800FE94C0 /* UIView+Extension.swift in Sources */,
 				C0560F1E25714FDD0083CE50 /* ImageCache.swift in Sources */,
 				A7304D6526738B3A00DA33B2 /* DeleteFamilyMemberViewController.swift in Sources */,
+				A7C5675B26FC894D005366DC /* ContactsViewController.swift in Sources */,
 				C0672AA6251500E90060FB08 /* HomeViewController.swift in Sources */,
 				C0911AFF254FC6480052E52C /* FeedbackTextTableViewCell.swift in Sources */,
 				A7D3593E2681B599003AC0DE /* NetBankingCollectionViewCell.swift in Sources */,
@@ -1386,10 +1400,12 @@
 				C01F2ED02537007000632278 /* TabViewController.swift in Sources */,
 				A721E33A267217190098E6A8 /* SetPasswordViewController.swift in Sources */,
 				C068AAFB2571FB8E00253D81 /* InsuranceTableViewCell.swift in Sources */,
+				A7C5676126FC9BB4005366DC /* ContactsTableViewCell.swift in Sources */,
 				C0911B0E25505FC20052E52C /* LoginModel.swift in Sources */,
 				A8D2902125BEA8D5003605D6 /* PharmacyPopup.swift in Sources */,
 				C0672AA9251507010060FB08 /* AppointmentTableViewCell.swift in Sources */,
 				C003574E2518882500F76902 /* ReportsViewController.swift in Sources */,
+				A7C5675626FC4CBC005366DC /* WebviewViewController.swift in Sources */,
 				C01D1DDF2562CC7000F3FF16 /* ImageManager.swift in Sources */,
 				A8033921259EE8F400FE5FB5 /* TokenTableViewCell.swift in Sources */,
 				C012B2F6255A82E8005B7E20 /* MenuModel.swift in Sources */,

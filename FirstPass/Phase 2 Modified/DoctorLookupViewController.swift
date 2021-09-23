@@ -11,6 +11,7 @@ import UIKit
 class DoctorLookupViewController: UIViewController {
     @IBOutlet weak var tableview: UITableView!
     
+    
     let names = ["Dr. John Smith","Dr. John Carter","Dr. Emma ava","Dr. Charlotte jolie"]
     var department = ["Cardiologist","Dermatology","Medical genetics","Anesthesiology"]
     var doctorImages = ["person","person1","person2","person3","person4"]
@@ -26,6 +27,10 @@ class DoctorLookupViewController: UIViewController {
     }
     
 
+    @IBAction func back_Clicked(_ sender: Any)
+    {
+        dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func fliter_Clicked(_ sender: Any)
     {
