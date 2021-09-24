@@ -34,6 +34,9 @@
 		1BD710A626612E7700D2C607 /* JourneyRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD710A526612E7700D2C607 /* JourneyRowController.swift */; };
 		1BF222E4266F32A300759E13 /* phase2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BF222E3266F32A300759E13 /* phase2.storyboard */; };
 		1BF2232E266FB69B00759E13 /* AppointmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF2232D266FB69B00759E13 /* AppointmentCollectionViewCell.swift */; };
+		2205312B26FB76E1009A9D36 /* InPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205312A26FB76E1009A9D36 /* InPatientViewController.swift */; };
+		22D9377326FDD43A00CA95D6 /* InPatientServicesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D9377226FDD43A00CA95D6 /* InPatientServicesCVC.swift */; };
+		22D9377B26FE229200CA95D6 /* UpcommingActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D9377A26FE229200CA95D6 /* UpcommingActivitiesViewController.swift */; };
 		A704C78E2674CEA80056C2A3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A704C78D2674CEA80056C2A3 /* Colors.xcassets */; };
 		A70691C026706BB9000C4129 /* PreChekinPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70691BF26706BB9000C4129 /* PreChekinPopup.swift */; };
 		A7093973267C5E3A0061EDFA /* AppointmentdetailsNewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7093971267C5E3A0061EDFA /* AppointmentdetailsNewTableViewCell.swift */; };
@@ -281,6 +284,9 @@
 		1BD710A526612E7700D2C607 /* JourneyRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JourneyRowController.swift; sourceTree = "<group>"; };
 		1BF222E3266F32A300759E13 /* phase2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = phase2.storyboard; sourceTree = "<group>"; };
 		1BF2232D266FB69B00759E13 /* AppointmentCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentCollectionViewCell.swift; sourceTree = "<group>"; };
+		2205312A26FB76E1009A9D36 /* InPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InPatientViewController.swift; sourceTree = "<group>"; };
+		22D9377226FDD43A00CA95D6 /* InPatientServicesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InPatientServicesCVC.swift; sourceTree = "<group>"; };
+		22D9377A26FE229200CA95D6 /* UpcommingActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcommingActivitiesViewController.swift; sourceTree = "<group>"; };
 		83C05EB8E54AB32B13684667 /* Pods-FirstPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstPass.debug.xcconfig"; path = "Target Support Files/Pods-FirstPass/Pods-FirstPass.debug.xcconfig"; sourceTree = "<group>"; };
 		A704C78D2674CEA80056C2A3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		A70691BF26706BB9000C4129 /* PreChekinPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreChekinPopup.swift; sourceTree = "<group>"; };
@@ -524,6 +530,7 @@
 		1B5AC2B4266E6419002E7C12 /* Phase 2 */ = {
 			isa = PBXGroup;
 			children = (
+				2205312926FB76A4009A9D36 /* In Patient  */,
 				A7D359372681B522003AC0DE /* Payment */,
 				A71C69E426805D7D00F7F9A0 /* Chat */,
 				A7093970267C5DE90061EDFA /* Appointment Details */,
@@ -535,6 +542,16 @@
 				1BF222E3266F32A300759E13 /* phase2.storyboard */,
 			);
 			path = "Phase 2";
+			sourceTree = "<group>";
+		};
+		2205312926FB76A4009A9D36 /* In Patient  */ = {
+			isa = PBXGroup;
+			children = (
+				2205312A26FB76E1009A9D36 /* InPatientViewController.swift */,
+				22D9377226FDD43A00CA95D6 /* InPatientServicesCVC.swift */,
+				22D9377A26FE229200CA95D6 /* UpcommingActivitiesViewController.swift */,
+			);
+			path = "In Patient ";
 			sourceTree = "<group>";
 		};
 		33223E1A76C7B3D51FD18074 /* Pods */ = {
@@ -1314,11 +1331,13 @@
 				C0FA0543255284A40011EF48 /* AddMemberViewModel.swift in Sources */,
 				C02B2309255AE509004ABBB3 /* FilterCategoryTableViewCell.swift in Sources */,
 				C091239625559D3100CFBC89 /* AddAppointmentViewModel.swift in Sources */,
+				2205312B26FB76E1009A9D36 /* InPatientViewController.swift in Sources */,
 				C05980A7250628D400C92021 /* LoginViewController.swift in Sources */,
 				C0560F2725715FFB0083CE50 /* AddInsuranceViewController.swift in Sources */,
 				A717D6AA267B19F7005E7A3A /* FiltersCollectionViewCell.swift in Sources */,
 				A76401E3266F94AD0050E41A /* AlertTableCell.swift in Sources */,
 				A7D8FBF22684A9320038E6FD /* AppointmentHistoryViewController.swift in Sources */,
+				22D9377B26FE229200CA95D6 /* UpcommingActivitiesViewController.swift in Sources */,
 				C091239925559DC300CFBC89 /* MyAppointmentsModel.swift in Sources */,
 				A76401A6266F72BF0050E41A /* AccountCollectionViewCell.swift in Sources */,
 				A7E981CE26F9E53100F8551B /* DoctorFilterViewController.swift in Sources */,
@@ -1382,6 +1401,7 @@
 				A70691C026706BB9000C4129 /* PreChekinPopup.swift in Sources */,
 				A7D3594C2681B629003AC0DE /* CardsTableViewCell.swift in Sources */,
 				A803391C259EE8F400FE5FB5 /* SwapTestPopup.swift in Sources */,
+				22D9377326FDD43A00CA95D6 /* InPatientServicesCVC.swift in Sources */,
 				C0FC4788251608430093DC5E /* BookAppointmentViewController.swift in Sources */,
 				C0560F2525715E5A0083CE50 /* InsuranceViewModel.swift in Sources */,
 				C01E247E255937B70096A5DB /* FeedbackModel.swift in Sources */,
@@ -1721,7 +1741,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SDX3Y5X346;
 				INFOPLIST_FILE = FirstPass/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1743,7 +1763,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SDX3Y5X346;
 				INFOPLIST_FILE = FirstPass/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

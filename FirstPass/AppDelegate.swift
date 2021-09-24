@@ -12,6 +12,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         Thread.sleep(forTimeInterval: 2)
         IQKeyboardManager.shared.enable = true
         let mainStoryboard:UIStoryboard = UIStoryboard(name: "phase2", bundle: nil)
+        let homePage = mainStoryboard.instantiateViewController(withIdentifier: "InPatientViewController") as! InPatientViewController
+        self.window?.rootViewController = homePage
+
 //        if UserDefaults.standard.bool(forKey: "OnboardFinished")
 //        {
 //            if UserDefaults.standard.bool(forKey: "isLoggedIn")
@@ -30,9 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 //        }
 //        else
 //        {
-            let storyboard:UIStoryboard = UIStoryboard(name: "Modified", bundle: nil)
-            let homePage = storyboard.instantiateViewController(withIdentifier: "HygieneViewController") as! HygieneViewController
-            self.window?.rootViewController = homePage
+//            let storyboard:UIStoryboard = UIStoryboard(name: "Modified", bundle: nil)
+//            let homePage = storyboard.instantiateViewController(withIdentifier: "DoctorLookupViewController") as! DoctorLookupViewController
+//            self.window?.rootViewController = homePage
 
        // }
         

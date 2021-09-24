@@ -12,4 +12,5 @@ pod 'RealmSwift'
 pod 'AlamofireImage', '~> 4.1'
 pod 'MapwizeUI', '~> 2.0'
 pod 'UICircularProgressRing'
+pod 'StepProgressIndicatorView'
 end
