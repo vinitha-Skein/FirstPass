@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 //        else
 //        {
             let storyboard:UIStoryboard = UIStoryboard(name: "Modified", bundle: nil)
-            let homePage = storyboard.instantiateViewController(withIdentifier: "AccountViewController") as! AccountViewController
+            let homePage = storyboard.instantiateViewController(withIdentifier: "HygieneViewController") as! HygieneViewController
             self.window?.rootViewController = homePage
 
        // }

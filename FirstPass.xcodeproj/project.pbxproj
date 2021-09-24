@@ -83,6 +83,11 @@
 		A7A49EE5265B7FE200AB1A57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7A49EE4265B7FE200AB1A57 /* Assets.xcassets */; };
 		A7A49EEA265B7FE200AB1A57 /* Firstpass-watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = A7A49ECB265B7FD600AB1A57 /* Firstpass-watchOS.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A7A49EF7265B886200AB1A57 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7A49EF6265B886200AB1A57 /* Colors.xcassets */; };
+		A7BCF9D226FDB5890087EA9C /* NurseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BCF9D026FDB5890087EA9C /* NurseTableViewCell.swift */; };
+		A7BCF9D326FDB5890087EA9C /* NurseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7BCF9D126FDB5890087EA9C /* NurseTableViewCell.xib */; };
+		A7BCF9D826FDB7860087EA9C /* NurseCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BCF9D726FDB7860087EA9C /* NurseCallViewController.swift */; };
+		A7BCF9DD26FDB79C0087EA9C /* HygieneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BCF9DC26FDB79C0087EA9C /* HygieneViewController.swift */; };
+		A7BCF9E226FDE2C10087EA9C /* NurseandHygienePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BCF9E126FDE2C10087EA9C /* NurseandHygienePopupViewController.swift */; };
 		A7C5675626FC4CBC005366DC /* WebviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5675526FC4CBC005366DC /* WebviewViewController.swift */; };
 		A7C5675B26FC894D005366DC /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5675A26FC894D005366DC /* ContactsViewController.swift */; };
 		A7C5676126FC9BB4005366DC /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5675F26FC9BB4005366DC /* ContactsTableViewCell.swift */; };
@@ -329,6 +334,11 @@
 		A7A49EE6265B7FE200AB1A57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7A49EE7265B7FE200AB1A57 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		A7A49EF6265B886200AB1A57 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		A7BCF9D026FDB5890087EA9C /* NurseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseTableViewCell.swift; sourceTree = "<group>"; };
+		A7BCF9D126FDB5890087EA9C /* NurseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NurseTableViewCell.xib; sourceTree = "<group>"; };
+		A7BCF9D726FDB7860087EA9C /* NurseCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseCallViewController.swift; sourceTree = "<group>"; };
+		A7BCF9DC26FDB79C0087EA9C /* HygieneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HygieneViewController.swift; sourceTree = "<group>"; };
+		A7BCF9E126FDE2C10087EA9C /* NurseandHygienePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseandHygienePopupViewController.swift; sourceTree = "<group>"; };
 		A7C5675526FC4CBC005366DC /* WebviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebviewViewController.swift; sourceTree = "<group>"; };
 		A7C5675A26FC894D005366DC /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		A7C5675F26FC9BB4005366DC /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
@@ -677,6 +687,11 @@
 				A7C5675A26FC894D005366DC /* ContactsViewController.swift */,
 				A7C5675F26FC9BB4005366DC /* ContactsTableViewCell.swift */,
 				A7C5676026FC9BB4005366DC /* ContactsTableViewCell.xib */,
+				A7BCF9D026FDB5890087EA9C /* NurseTableViewCell.swift */,
+				A7BCF9D126FDB5890087EA9C /* NurseTableViewCell.xib */,
+				A7BCF9D726FDB7860087EA9C /* NurseCallViewController.swift */,
+				A7BCF9DC26FDB79C0087EA9C /* HygieneViewController.swift */,
+				A7BCF9E126FDE2C10087EA9C /* NurseandHygienePopupViewController.swift */,
 			);
 			path = "Phase 2 Modified";
 			sourceTree = "<group>";
@@ -1197,6 +1212,7 @@
 				C05980912506211900C92021 /* LaunchScreen.storyboard in Resources */,
 				C059808E2506211900C92021 /* Assets.xcassets in Resources */,
 				C0B208192519F1FF00F048F2 /* group2@2x.png in Resources */,
+				A7BCF9D326FDB5890087EA9C /* NurseTableViewCell.xib in Resources */,
 				A7C5676226FC9BB4005366DC /* ContactsTableViewCell.xib in Resources */,
 				C0B2081B2519F1FF00F048F2 /* groupCopy2@3x.png in Resources */,
 				A7E981DD26F9ED5700F8551B /* DoctorsLookupTableViewCell.xib in Resources */,
@@ -1335,6 +1351,7 @@
 				C05980852506211800C92021 /* AppDelegate.swift in Sources */,
 				A7462F8B2633EB7000ACD8E5 /* NewTableViewCell.swift in Sources */,
 				C0088BE1251B604B00777786 /* FeedbackCollectionViewCell.swift in Sources */,
+				A7BCF9E226FDE2C10087EA9C /* NurseandHygienePopupViewController.swift in Sources */,
 				C01D45F3255C3EDE006A24D8 /* ImagePicker.swift in Sources */,
 				A71AB87826709A9300D8F151 /* Constants.swift in Sources */,
 				C094C3882513306B00F039E4 /* OnBoardViewController.swift in Sources */,
@@ -1377,8 +1394,11 @@
 				C094C38525132EF500F039E4 /* Extension.swift in Sources */,
 				A71AB87026709A3300D8F151 /* APIClient.swift in Sources */,
 				A718F75126FB3EA400CCFF1A /* BMICalculatorViewController.swift in Sources */,
+				A7BCF9D826FDB7860087EA9C /* NurseCallViewController.swift in Sources */,
 				C091239B25559DDD00CFBC89 /* MyAppointmentsViewModel.swift in Sources */,
+				A7BCF9D226FDB5890087EA9C /* NurseTableViewCell.swift in Sources */,
 				C09123912555980B00CFBC89 /* HomeModel.swift in Sources */,
+				A7BCF9DD26FDB79C0087EA9C /* HygieneViewController.swift in Sources */,
 				C003574A25184FC000F76902 /* FamilyMemberViewController.swift in Sources */,
 				A76401DA266F93550050E41A /* AlertNotificationViewController.swift in Sources */,
 				1B95AD1326691CA800FE94C0 /* UIView+Extension.swift in Sources */,
