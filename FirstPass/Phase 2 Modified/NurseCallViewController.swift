@@ -10,6 +10,7 @@ import UIKit
 
 class NurseCallViewController: UIViewController {
     @IBOutlet weak var tableview: UITableView!
+    @IBOutlet weak var container: UIView!
     var icons = ["toilet-sanitization","Clinical Assistance","massage-therapi","General Request"]
     var activities = ["Request Urinal assistance","Request Clinical Assistance","Request massage/therapist","General Request"]
     override func viewDidLoad() {
@@ -19,6 +20,13 @@ class NurseCallViewController: UIViewController {
         tableview.delegate = self
         tableview.dataSource = self
 
+        container.layer.cornerRadius = 20
+//        Container.layer.borderColor = UIColor.gray.cgColor
+//        Container.layer.borderWidth = 0.4
+        container.layer.masksToBounds = false
+        container.layer.shadowColor = UIColor.black.cgColor
+        container.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        container.layer.shadowOpacity = 0.2
     
         // Do any additional setup after loading the view.
     }

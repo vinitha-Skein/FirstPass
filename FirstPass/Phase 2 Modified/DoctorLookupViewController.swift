@@ -11,6 +11,7 @@ import UIKit
 class DoctorLookupViewController: UIViewController {
     @IBOutlet weak var tableview: UITableView!
     
+    @IBOutlet weak var container: UIView!
     
     let names = ["Dr. John Smith","Dr. John Carter","Dr. Emma ava","Dr. Charlotte jolie"]
     var department = ["Cardiologist","Dermatology","Medical genetics","Anesthesiology"]
@@ -23,6 +24,13 @@ class DoctorLookupViewController: UIViewController {
         tableview.register(UINib(nibName: "DoctorsLookupTableViewCell", bundle: .main), forCellReuseIdentifier: "DoctorsLookupTableViewCell")
         tableview.delegate = self
         tableview.dataSource = self
+        container.layer.cornerRadius = 20
+//        Container.layer.borderColor = UIColor.gray.cgColor
+//        Container.layer.borderWidth = 0.4
+        container.layer.masksToBounds = false
+        container.layer.shadowColor = UIColor.black.cgColor
+        container.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        container.layer.shadowOpacity = 0.2
         // Do any additional setup after loading the view.
     }
     

@@ -33,9 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 //        }
 //        else
 //        {
-//            let storyboard:UIStoryboard = UIStoryboard(name: "Modified", bundle: nil)
-//            let homePage = storyboard.instantiateViewController(withIdentifier: "DoctorLookupViewController") as! DoctorLookupViewController
-//            self.window?.rootViewController = homePage
+            let storyboard:UIStoryboard = UIStoryboard(name: "Modified", bundle: nil)
+            let homePage = storyboard.instantiateViewController(withIdentifier: "AccountViewController") as! AccountViewController
+            self.window?.rootViewController = homePage
 
        // }
         

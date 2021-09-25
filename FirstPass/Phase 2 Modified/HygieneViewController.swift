@@ -9,6 +9,7 @@
 import UIKit
 
 class HygieneViewController: UIViewController {
+    @IBOutlet weak var container: UIView!
     @IBOutlet weak var tableview: UITableView!
     var icons = ["room sanitizing","toilet-sanitization","bedsheet pillow change","icons_Laundry 1","add bedsheet-pillow"]
     
@@ -20,6 +21,13 @@ class HygieneViewController: UIViewController {
         tableview.delegate = self
         tableview.dataSource = self
 
+        container.layer.cornerRadius = 20
+//        Container.layer.borderColor = UIColor.gray.cgColor
+//        Container.layer.borderWidth = 0.4
+        container.layer.masksToBounds = false
+        container.layer.shadowColor = UIColor.black.cgColor
+        container.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        container.layer.shadowOpacity = 0.2
         // Do any additional setup after loading the view.
     }
     
