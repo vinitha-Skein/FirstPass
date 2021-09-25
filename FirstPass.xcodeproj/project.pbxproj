@@ -37,6 +37,7 @@
 		2205312B26FB76E1009A9D36 /* InPatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2205312A26FB76E1009A9D36 /* InPatientViewController.swift */; };
 		22D9377326FDD43A00CA95D6 /* InPatientServicesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D9377226FDD43A00CA95D6 /* InPatientServicesCVC.swift */; };
 		22D9377B26FE229200CA95D6 /* UpcommingActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D9377A26FE229200CA95D6 /* UpcommingActivitiesViewController.swift */; };
+		22E0D69D26FEE07B0061817A /* DischargeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E0D69C26FEE07B0061817A /* DischargeViewController.swift */; };
 		A704C78E2674CEA80056C2A3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A704C78D2674CEA80056C2A3 /* Colors.xcassets */; };
 		A70691C026706BB9000C4129 /* PreChekinPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = A70691BF26706BB9000C4129 /* PreChekinPopup.swift */; };
 		A7093973267C5E3A0061EDFA /* AppointmentdetailsNewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7093971267C5E3A0061EDFA /* AppointmentdetailsNewTableViewCell.swift */; };
@@ -90,7 +91,6 @@
 		A7BCF9D326FDB5890087EA9C /* NurseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7BCF9D126FDB5890087EA9C /* NurseTableViewCell.xib */; };
 		A7BCF9D826FDB7860087EA9C /* NurseCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BCF9D726FDB7860087EA9C /* NurseCallViewController.swift */; };
 		A7BCF9DD26FDB79C0087EA9C /* HygieneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BCF9DC26FDB79C0087EA9C /* HygieneViewController.swift */; };
-		A7BCF9E226FDE2C10087EA9C /* NurseandHygienePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BCF9E126FDE2C10087EA9C /* NurseandHygienePopupViewController.swift */; };
 		A7C5675626FC4CBC005366DC /* WebviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5675526FC4CBC005366DC /* WebviewViewController.swift */; };
 		A7C5675B26FC894D005366DC /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5675A26FC894D005366DC /* ContactsViewController.swift */; };
 		A7C5676126FC9BB4005366DC /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C5675F26FC9BB4005366DC /* ContactsTableViewCell.swift */; };
@@ -287,6 +287,7 @@
 		2205312A26FB76E1009A9D36 /* InPatientViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InPatientViewController.swift; sourceTree = "<group>"; };
 		22D9377226FDD43A00CA95D6 /* InPatientServicesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InPatientServicesCVC.swift; sourceTree = "<group>"; };
 		22D9377A26FE229200CA95D6 /* UpcommingActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcommingActivitiesViewController.swift; sourceTree = "<group>"; };
+		22E0D69C26FEE07B0061817A /* DischargeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DischargeViewController.swift; sourceTree = "<group>"; };
 		83C05EB8E54AB32B13684667 /* Pods-FirstPass.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirstPass.debug.xcconfig"; path = "Target Support Files/Pods-FirstPass/Pods-FirstPass.debug.xcconfig"; sourceTree = "<group>"; };
 		A704C78D2674CEA80056C2A3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		A70691BF26706BB9000C4129 /* PreChekinPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreChekinPopup.swift; sourceTree = "<group>"; };
@@ -344,7 +345,6 @@
 		A7BCF9D126FDB5890087EA9C /* NurseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NurseTableViewCell.xib; sourceTree = "<group>"; };
 		A7BCF9D726FDB7860087EA9C /* NurseCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseCallViewController.swift; sourceTree = "<group>"; };
 		A7BCF9DC26FDB79C0087EA9C /* HygieneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HygieneViewController.swift; sourceTree = "<group>"; };
-		A7BCF9E126FDE2C10087EA9C /* NurseandHygienePopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NurseandHygienePopupViewController.swift; sourceTree = "<group>"; };
 		A7C5675526FC4CBC005366DC /* WebviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebviewViewController.swift; sourceTree = "<group>"; };
 		A7C5675A26FC894D005366DC /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		A7C5675F26FC9BB4005366DC /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
@@ -530,6 +530,7 @@
 		1B5AC2B4266E6419002E7C12 /* Phase 2 */ = {
 			isa = PBXGroup;
 			children = (
+				22E0D69826FEE05F0061817A /* Discharge */,
 				2205312926FB76A4009A9D36 /* In Patient  */,
 				A7D359372681B522003AC0DE /* Payment */,
 				A71C69E426805D7D00F7F9A0 /* Chat */,
@@ -552,6 +553,14 @@
 				22D9377A26FE229200CA95D6 /* UpcommingActivitiesViewController.swift */,
 			);
 			path = "In Patient ";
+			sourceTree = "<group>";
+		};
+		22E0D69826FEE05F0061817A /* Discharge */ = {
+			isa = PBXGroup;
+			children = (
+				22E0D69C26FEE07B0061817A /* DischargeViewController.swift */,
+			);
+			path = Discharge;
 			sourceTree = "<group>";
 		};
 		33223E1A76C7B3D51FD18074 /* Pods */ = {
@@ -708,7 +717,6 @@
 				A7BCF9D126FDB5890087EA9C /* NurseTableViewCell.xib */,
 				A7BCF9D726FDB7860087EA9C /* NurseCallViewController.swift */,
 				A7BCF9DC26FDB79C0087EA9C /* HygieneViewController.swift */,
-				A7BCF9E126FDE2C10087EA9C /* NurseandHygienePopupViewController.swift */,
 			);
 			path = "Phase 2 Modified";
 			sourceTree = "<group>";
@@ -1370,7 +1378,6 @@
 				C05980852506211800C92021 /* AppDelegate.swift in Sources */,
 				A7462F8B2633EB7000ACD8E5 /* NewTableViewCell.swift in Sources */,
 				C0088BE1251B604B00777786 /* FeedbackCollectionViewCell.swift in Sources */,
-				A7BCF9E226FDE2C10087EA9C /* NurseandHygienePopupViewController.swift in Sources */,
 				C01D45F3255C3EDE006A24D8 /* ImagePicker.swift in Sources */,
 				A71AB87826709A9300D8F151 /* Constants.swift in Sources */,
 				C094C3882513306B00F039E4 /* OnBoardViewController.swift in Sources */,
@@ -1418,6 +1425,7 @@
 				C091239B25559DDD00CFBC89 /* MyAppointmentsViewModel.swift in Sources */,
 				A7BCF9D226FDB5890087EA9C /* NurseTableViewCell.swift in Sources */,
 				C09123912555980B00CFBC89 /* HomeModel.swift in Sources */,
+				22E0D69D26FEE07B0061817A /* DischargeViewController.swift in Sources */,
 				A7BCF9DD26FDB79C0087EA9C /* HygieneViewController.swift in Sources */,
 				C003574A25184FC000F76902 /* FamilyMemberViewController.swift in Sources */,
 				A76401DA266F93550050E41A /* AlertNotificationViewController.swift in Sources */,

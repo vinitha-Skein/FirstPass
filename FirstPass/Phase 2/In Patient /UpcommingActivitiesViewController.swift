@@ -62,7 +62,7 @@ class UpcommingActivitiesViewController: UIViewController {
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
-        
+        self.dismiss(animated: true, completion: nil)
     }
     
  
