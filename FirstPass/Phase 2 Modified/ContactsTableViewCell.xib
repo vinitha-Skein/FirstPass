@@ -52,7 +52,7 @@ UG8gEEJveCAxNzkyOSBKZWJlbCBBbGkgZnJlZSBab25lLA
                                 <rect key="frame" x="20" y="86" width="20" height="17"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+971-716-1212-564" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8W4-LR-79d">
-                                <rect key="frame" x="50" y="88.5" width="96" height="12"/>
+                                <rect key="frame" x="46" y="88.5" width="96" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -87,7 +87,7 @@ UG8gEEJveCAxNzkyOSBKZWJlbCBBbGkgZnJlZSBab25lLA
                             <constraint firstItem="1dh-1z-DuA" firstAttribute="centerY" secondItem="8W4-LR-79d" secondAttribute="centerY" id="lr5-Ey-reE"/>
                             <constraint firstItem="8W4-LR-79d" firstAttribute="centerY" secondItem="I7r-VA-LZz" secondAttribute="centerY" id="oMZ-SZ-WbY"/>
                             <constraint firstItem="bGm-KB-d9h" firstAttribute="trailing" secondItem="Nh3-ow-afs" secondAttribute="trailing" constant="-20" id="tGA-Hd-vgK"/>
-                            <constraint firstItem="8W4-LR-79d" firstAttribute="leading" secondItem="I7r-VA-LZz" secondAttribute="trailing" constant="10" id="uOM-qz-GS7"/>
+                            <constraint firstItem="8W4-LR-79d" firstAttribute="leading" secondItem="I7r-VA-LZz" secondAttribute="trailing" constant="6" id="uOM-qz-GS7"/>
                         </constraints>
                     </view>
                 </subviews>

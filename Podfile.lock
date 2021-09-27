@@ -1,26 +1,26 @@
 PODS:
-  - Alamofire (5.2.1)
-  - AlamofireImage (4.1.0):
-    - Alamofire (~> 5.1)
+  - Alamofire (5.4.3)
+  - AlamofireImage (4.2.0):
+    - Alamofire (~> 5.4)
   - IndoorLocation (1.0.4)
   - IQKeyboardManagerSwift (6.5.6)
   - Mapbox-iOS-SDK (5.9.0):
     - MapboxMobileEvents (= 0.10.2)
   - MapboxMobileEvents (0.10.2)
-  - MapwizeSDK (3.5.2):
+  - MapwizeSDK (3.6.1):
     - IndoorLocation (= 1.0.4)
     - Mapbox-iOS-SDK (~> 5.0)
     - SSZipArchive (= 2.2.3)
-  - MapwizeUI (2.4.3):
-    - MapwizeSDK (= 3.5.2)
-  - Realm (5.4.8):
-    - Realm/Headers (= 5.4.8)
-  - Realm/Headers (5.4.8)
-  - RealmSwift (5.4.8):
-    - Realm (= 5.4.8)
+  - MapwizeUI (2.5.3):
+    - MapwizeSDK (= 3.6.1)
+  - Realm (10.10.0):
+    - Realm/Headers (= 10.10.0)
+  - Realm/Headers (10.10.0)
+  - RealmSwift (10.10.0):
+    - Realm (= 10.10.0)
   - SSZipArchive (2.2.3)
   - StepProgressIndicatorView (1.0.2)
-  - UICircularProgressRing (7.0.0)
+  - UICircularProgressRing (8.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
@@ -48,20 +48,20 @@ SPEC REPOS:
     - UICircularProgressRing
 
 SPEC CHECKSUMS:
-  Alamofire: e911732990610fe89af59ac0077f923d72dc3dfd
-  AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  AlamofireImage: 34a2d90b0e5fe6a5605f85ae4b7b01e784c60192
   IndoorLocation: 9812c8c2d499ef25e6146ef90cf23f8d107213a8
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   Mapbox-iOS-SDK: a5915700ec84bc1a7f8b3e746d474789e35b7956
   MapboxMobileEvents: 2bc0ca2eedb627b73cf403258dce2b2fa98074a6
-  MapwizeSDK: 6f05fc97bbd77834e5cac8f2e3372abc9c662cb5
-  MapwizeUI: 69a79b919bea1b4b366703817ef38e02ec219845
-  Realm: 042bbb59227a0159eda397b8a5a49fbd67495ce7
-  RealmSwift: 15ddd6b3398ebfc99810811c44f095df1313adb3
+  MapwizeSDK: 9481ac082a9539dd22cfde3c93d1c5c0c8d902ad
+  MapwizeUI: fe08b6fec5664dcc453b66e1eae63d0503a4ff7f
+  Realm: f501df41a4222c67850c77cf135d472192ecf294
+  RealmSwift: c69aadfc7db0d60075178d037c2f34ada73d5201
   SSZipArchive: 62d4947b08730e4cda640473b0066d209ff033c9
   StepProgressIndicatorView: e842baf626a270fad54c2527c4d4efc63f47fda3
-  UICircularProgressRing: 738b48db0ec1fbbd8482d727979392bb8c272e8d
+  UICircularProgressRing: 19927375b2b21b5fa5fd9582f15ccdef9659da16
 
 PODFILE CHECKSUM: f261b05510259c44ade2a4331c24b4aeb01ee054
 
-COCOAPODS: 1.10.2
+COCOAPODS: 1.10.1

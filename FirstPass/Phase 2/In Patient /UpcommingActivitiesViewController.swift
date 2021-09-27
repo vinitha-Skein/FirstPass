@@ -12,21 +12,21 @@ import StepProgressIndicatorView
 class UpcommingActivitiesViewController: UIViewController {
 
     @IBOutlet weak var headerView: UIView!
-    
+
     @IBOutlet weak var buttonBack: UIButton!
-    
+
     @IBOutlet weak var titleLabel: UILabel!
-    
+
     @IBOutlet weak var titlesView: UIView!
-    
+
     @IBOutlet weak var PreviousDAteButton: UIButton!
-    
+
     @IBOutlet weak var TodayDateButton: UIButton!
-    
+
     @IBOutlet weak var futureDateButton: UIButton!
-    
+
     @IBOutlet weak var progressView: StepProgressIndicatorView!
-    
+
     let firstSteps = ["09:00 am","10:30 am","12:30 pm","01:30 pm","04:30 pm","05:00 pm","09:30 pm"]
     let details = [
         0: "Breakfast",
@@ -58,13 +58,13 @@ class UpcommingActivitiesViewController: UIViewController {
         for i in 0...2 {
             progressView.currentStep = i
         }
-        
+
     }
-    
+
     @IBAction func backButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-    
- 
+
+
 
 }

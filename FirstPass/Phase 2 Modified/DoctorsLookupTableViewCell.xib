@@ -102,7 +102,7 @@
                 <outlet property="doctorImage" destination="7HC-lM-dWR" id="Bqz-4t-TBR"/>
                 <outlet property="nameLabel" destination="7Bu-5t-2q0" id="fkS-A3-T5A"/>
             </connections>
-            <point key="canvasLocation" x="58" y="91"/>
+            <point key="canvasLocation" x="57.971014492753625" y="90.736607142857139"/>
         </tableViewCell>
     </objects>
     <resources>

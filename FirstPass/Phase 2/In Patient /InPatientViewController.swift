@@ -12,34 +12,34 @@ import StepProgressIndicatorView
 class InPatientViewController: UIViewController {
 
     @IBOutlet weak var headerView: UIView!
-    
+
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
-    
+
     @IBOutlet weak var activityView: UIView!
-    
+
     @IBOutlet weak var MyActivitiesLabel: UILabel!
-    
+
     @IBOutlet weak var UpcommingActivitiesButton: UIButton!
-    
+
     @IBOutlet weak var MyActivitiesView: MyUIView!
     @IBOutlet weak var TodayLabel: UILabel!
-    
+
     @IBOutlet weak var ProgressView: StepProgressIndicatorView!
-    
-    
+
+
     @IBOutlet weak var viewMoreButton: UIButton!
-    
+
     @IBOutlet weak var servicesLabel: UILabel!
-    
+
     @IBOutlet weak var servicesCollectionView: UICollectionView!
-    
+
     @IBOutlet weak var activitiesViewHeight: NSLayoutConstraint!
-    
+
     let firstSteps = [
         "09:00 am","10:30 am","12:30 pm","01:30 pm","04:30 pm","05:00 pm","09:30 pm"
     ]
-    
+
     let details = [
         0: "Breakfast",
         1: "Visit Dr.Ayesha",
@@ -49,11 +49,11 @@ class InPatientViewController: UIViewController {
         5: "Walk",
         6: "Dinner",
     ]
-    
+
     var ServicesImages = [UIImage(named:"nurseCall"),UIImage(named:"hygieneServices"),UIImage(named:"food&Beverages"),UIImage(named:"Discgharge")]
     var serviceNames = ["Nurse Call","Hygiene Services","Food & Beverages","Discharge "]
     var lesserView = true
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -75,11 +75,11 @@ class InPatientViewController: UIViewController {
         for i in 0...2 {
         ProgressView.currentStep = i
         }
-        
+
         servicesCollectionView.reloadData()
         TodayLabel.text = "- Today,\(getCurrentDate()) -"
     }
-    
+
 
     @IBAction func viewMoreButtonPressed(_ sender: Any) {
         if lesserView {
@@ -94,14 +94,14 @@ class InPatientViewController: UIViewController {
             lesserView = true
         }
     }
-    
+
     @IBAction func upcommingActivitiesPressed(_ sender: Any) {
         let storyboard = UIStoryboard(name: "phase2", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "UpcommingActivitiesViewController") as! UpcommingActivitiesViewController
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
     }
-    
+
         func getCurrentDate() -> String  {
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -109,9 +109,9 @@ class InPatientViewController: UIViewController {
             let yourDate = formatter.date(from: myString)
             formatter.dateFormat = "MMM dd"
             let myStringafd = formatter.string(from: yourDate!)
-            
+
             return (myStringafd)
-            
+
         }
         func getYesterdayDate() -> String {
             let formatter = DateFormatter()
@@ -122,7 +122,7 @@ class InPatientViewController: UIViewController {
             let myStringafd = formatter.string(from: yourDate!)
             return (myStringafd)
         }
-        
+
         func getTomorrowDate() -> String {
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -132,8 +132,8 @@ class InPatientViewController: UIViewController {
             let myStringafd = formatter.string(from: yourDate!)
             return (myStringafd)
         }
-    
-    
+
+
 }
 extension InPatientViewController : UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -144,14 +144,14 @@ extension InPatientViewController : UICollectionViewDelegate,UICollectionViewDat
         cell.servicesLabel.text = serviceNames[indexPath.row]
 //        cell.ServicesImageView.image = ServicesImages[indexPath.row]
         return cell
-        
+
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize  {
-       
+
             let width = servicesCollectionView.frame.width/2-4
             return CGSize(width: width, height: 180)
-       
+
     }
-    
+
 }

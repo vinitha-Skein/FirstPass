@@ -62,6 +62,9 @@
 		A71C69EB26805E3900F7F9A0 /* ChatwithusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71C69EA26805E3900F7F9A0 /* ChatwithusTableViewCell.swift */; };
 		A721E33A267217190098E6A8 /* SetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721E339267217190098E6A8 /* SetPasswordViewController.swift */; };
 		A721E33F26721E420098E6A8 /* PasswordChangeSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A721E33E26721E420098E6A8 /* PasswordChangeSuccessViewController.swift */; };
+		A722B39626FF05CA003667DC /* FoodandBeveragesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A722B39426FF05CA003667DC /* FoodandBeveragesTableViewCell.swift */; };
+		A722B39726FF05CA003667DC /* FoodandBeveragesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A722B39526FF05CA003667DC /* FoodandBeveragesTableViewCell.xib */; };
+		A722B39C26FF06ED003667DC /* FoodandBeveragesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A722B39B26FF06ED003667DC /* FoodandBeveragesViewController.swift */; };
 		A7241D24265E0601009D9A7C /* CheckinInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7241D23265E0601009D9A7C /* CheckinInterfaceController.swift */; };
 		A7249FCE2671E67A0043D22C /* EditPersonalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7249FCD2671E67A0043D22C /* EditPersonalInformationViewController.swift */; };
 		A726873126783E6800BF0109 /* AddNewMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A726873026783E6600BF0109 /* AddNewMemberViewController.swift */; };
@@ -313,6 +316,9 @@
 		A71C69EA26805E3900F7F9A0 /* ChatwithusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatwithusTableViewCell.swift; sourceTree = "<group>"; };
 		A721E339267217190098E6A8 /* SetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPasswordViewController.swift; sourceTree = "<group>"; };
 		A721E33E26721E420098E6A8 /* PasswordChangeSuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeSuccessViewController.swift; sourceTree = "<group>"; };
+		A722B39426FF05CA003667DC /* FoodandBeveragesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodandBeveragesTableViewCell.swift; sourceTree = "<group>"; };
+		A722B39526FF05CA003667DC /* FoodandBeveragesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodandBeveragesTableViewCell.xib; sourceTree = "<group>"; };
+		A722B39B26FF06ED003667DC /* FoodandBeveragesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodandBeveragesViewController.swift; sourceTree = "<group>"; };
 		A7241D23265E0601009D9A7C /* CheckinInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinInterfaceController.swift; sourceTree = "<group>"; };
 		A7249FCD2671E67A0043D22C /* EditPersonalInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPersonalInformationViewController.swift; sourceTree = "<group>"; };
 		A726873026783E6600BF0109 /* AddNewMemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewMemberViewController.swift; sourceTree = "<group>"; };
@@ -717,6 +723,9 @@
 				A7BCF9D126FDB5890087EA9C /* NurseTableViewCell.xib */,
 				A7BCF9D726FDB7860087EA9C /* NurseCallViewController.swift */,
 				A7BCF9DC26FDB79C0087EA9C /* HygieneViewController.swift */,
+				A722B39426FF05CA003667DC /* FoodandBeveragesTableViewCell.swift */,
+				A722B39526FF05CA003667DC /* FoodandBeveragesTableViewCell.xib */,
+				A722B39B26FF06ED003667DC /* FoodandBeveragesViewController.swift */,
 			);
 			path = "Phase 2 Modified";
 			sourceTree = "<group>";
@@ -1255,6 +1264,7 @@
 				1B5AC298266E543F002E7C12 /* SF-Pro-Display-Medium.otf in Resources */,
 				C0035748251619B600F76902 /* FamilyMemberTableViewCell.xib in Resources */,
 				A704C78E2674CEA80056C2A3 /* Colors.xcassets in Resources */,
+				A722B39726FF05CA003667DC /* FoodandBeveragesTableViewCell.xib in Resources */,
 				1B5AC29C266E5441002E7C12 /* SF-Pro-Display-Regular.otf in Resources */,
 				C0376A862518ECEF00A3933D /* MemberTableViewCell.xib in Resources */,
 				A7D8FBED2684A8CB0038E6FD /* AppointmentHistoryTableViewCell.xib in Resources */,
@@ -1365,6 +1375,7 @@
 				C0088BD8251B327300777786 /* AppointmentBookedViewController.swift in Sources */,
 				C012B2FC255A9C5D005B7E20 /* ReportViewModel.swift in Sources */,
 				A803391D259EE8F400FE5FB5 /* ParkingMapPopup.swift in Sources */,
+				A722B39C26FF06ED003667DC /* FoodandBeveragesViewController.swift in Sources */,
 				C0088BDA251B5EFB00777786 /* FeedbackViewController.swift in Sources */,
 				C01ACBA52554065100CE7F59 /* ProfileModel.swift in Sources */,
 				A71AB88426709BA400D8F151 /* RegistrationViewModel.swift in Sources */,
@@ -1415,6 +1426,7 @@
 				C0422E2E2577A93900910E4F /* OTPPopUpViewController.swift in Sources */,
 				C0DA40D825374B96003E1F77 /* IndoorMapViewController.swift in Sources */,
 				A71C69E626805DE500F7F9A0 /* ChatwithusViewController.swift in Sources */,
+				A722B39626FF05CA003667DC /* FoodandBeveragesTableViewCell.swift in Sources */,
 				A8768C28259F213300DFF6BF /* NewTokenViewController.swift in Sources */,
 				C0B207F125199C3C00F048F2 /* SideMenuTableViewCell.swift in Sources */,
 				A8D2901F25BE9F6F003605D6 /* SwapPopup.swift in Sources */,

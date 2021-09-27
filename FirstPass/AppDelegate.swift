@@ -11,8 +11,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate
         // Override point for customization after application launch.
         Thread.sleep(forTimeInterval: 2)
         IQKeyboardManager.shared.enable = true
-        let mainStoryboard:UIStoryboard = UIStoryboard(name: "phase2", bundle: nil)
-        let homePage = mainStoryboard.instantiateViewController(withIdentifier: "InPatientViewController") as! InPatientViewController
+        let mainStoryboard:UIStoryboard = UIStoryboard(name: "Modified", bundle: nil)
+        let homePage = mainStoryboard.instantiateViewController(withIdentifier: "AccountViewController") as! AccountViewController
         self.window?.rootViewController = homePage
 
 //        if UserDefaults.standard.bool(forKey: "OnboardFinished")
@@ -33,9 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 //        }
 //        else
 //        {
-            let storyboard:UIStoryboard = UIStoryboard(name: "Modified", bundle: nil)
-            let homePage = storyboard.instantiateViewController(withIdentifier: "AccountViewController") as! AccountViewController
-            self.window?.rootViewController = homePage
+//            let storyboard:UIStoryboard = UIStoryboard(name: "Modified", bundle: nil)
+//            let homePage = storyboard.instantiateViewController(withIdentifier: "AccountViewController") as! AccountViewController
+//            self.window?.rootViewController = homePage
 
        // }
         
