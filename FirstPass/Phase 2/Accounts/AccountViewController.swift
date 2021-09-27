@@ -131,12 +131,12 @@ extension AccountViewController:UICollectionViewDelegate,UICollectionViewDataSou
         }
         if (indexPath.row == 8)
         {
-//            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
-//            let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "FoodandBeveragesViewController") as! FoodandBeveragesViewController
 //            UserDefaults.standard.set(false, forKey: "isLoggedIn")
 //            vc.modalPresentationStyle = .fullScreen
-//
-//            present(vc, animated: true, completion: nil)
+
+            present(vc, animated: true, completion: nil)
         }
         if (indexPath.row == 9)
         {

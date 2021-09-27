@@ -31,7 +31,10 @@ class HygieneViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func back_Clicked(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 
 }
 extension HygieneViewController: UITableViewDelegate,UITableViewDataSource
@@ -50,11 +53,11 @@ extension HygieneViewController: UITableViewDelegate,UITableViewDataSource
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-//        let storyboard = UIStoryboard(name: "Modified", bundle: nil)
-//        let vc = storyboard.instantiateViewController(withIdentifier: "NurseandHygienePopupViewController") as! NurseandHygienePopupViewController
-//        vc.Hygiene = true
-//        vc.modalPresentationStyle = .overCurrentContext
-//        self.present(vc, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "NurseandHygienePopupViewController") as! NurseandHygienePopupViewController
+        vc.Hygiene = true
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true, completion: nil)
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 82

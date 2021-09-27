@@ -68,6 +68,9 @@
 		A7241D24265E0601009D9A7C /* CheckinInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7241D23265E0601009D9A7C /* CheckinInterfaceController.swift */; };
 		A7249FCE2671E67A0043D22C /* EditPersonalInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7249FCD2671E67A0043D22C /* EditPersonalInformationViewController.swift */; };
 		A726873126783E6800BF0109 /* AddNewMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A726873026783E6600BF0109 /* AddNewMemberViewController.swift */; };
+		A72CF3AC27018360009F86C8 /* NurseandHygienePopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CF3AB2701835F009F86C8 /* NurseandHygienePopupViewController.swift */; };
+		A72CF3B22701922D009F86C8 /* FoodandBeveragesHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A72CF3B02701922D009F86C8 /* FoodandBeveragesHeader.xib */; };
+		A72CF3B32701922D009F86C8 /* FoodandBeveragesHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72CF3B12701922D009F86C8 /* FoodandBeveragesHeader.swift */; };
 		A7304D6526738B3A00DA33B2 /* DeleteFamilyMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7304D6426738B3A00DA33B2 /* DeleteFamilyMemberViewController.swift */; };
 		A737D422265BB52E008B4D61 /* UpcommingAppointmentsInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A737D421265BB52E008B4D61 /* UpcommingAppointmentsInterfaceController.swift */; };
 		A737D42E265BB624008B4D61 /* UpcommingappointmentsRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A737D42D265BB624008B4D61 /* UpcommingappointmentsRowController.swift */; };
@@ -322,6 +325,9 @@
 		A7241D23265E0601009D9A7C /* CheckinInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckinInterfaceController.swift; sourceTree = "<group>"; };
 		A7249FCD2671E67A0043D22C /* EditPersonalInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPersonalInformationViewController.swift; sourceTree = "<group>"; };
 		A726873026783E6600BF0109 /* AddNewMemberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewMemberViewController.swift; sourceTree = "<group>"; };
+		A72CF3AB2701835F009F86C8 /* NurseandHygienePopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NurseandHygienePopupViewController.swift; path = "../../../../git firsrtpass complete 2/FirstPass/FirstPass/Phase 2 Modified/NurseandHygienePopupViewController.swift"; sourceTree = "<group>"; };
+		A72CF3B02701922D009F86C8 /* FoodandBeveragesHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FoodandBeveragesHeader.xib; path = FirstPass/Reports/FoodandBeveragesHeader.xib; sourceTree = SOURCE_ROOT; };
+		A72CF3B12701922D009F86C8 /* FoodandBeveragesHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodandBeveragesHeader.swift; path = FirstPass/Reports/FoodandBeveragesHeader.swift; sourceTree = SOURCE_ROOT; };
 		A7304D6426738B3A00DA33B2 /* DeleteFamilyMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFamilyMemberViewController.swift; sourceTree = "<group>"; };
 		A737D421265BB52E008B4D61 /* UpcommingAppointmentsInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcommingAppointmentsInterfaceController.swift; sourceTree = "<group>"; };
 		A737D42D265BB624008B4D61 /* UpcommingappointmentsRowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcommingappointmentsRowController.swift; sourceTree = "<group>"; };
@@ -710,6 +716,8 @@
 		A7E981CC26F9E4D100F8551B /* Phase 2 Modified */ = {
 			isa = PBXGroup;
 			children = (
+				A72CF3B12701922D009F86C8 /* FoodandBeveragesHeader.swift */,
+				A72CF3B02701922D009F86C8 /* FoodandBeveragesHeader.xib */,
 				A7E981CD26F9E53100F8551B /* DoctorFilterViewController.swift */,
 				A7E981D526F9E78A00F8551B /* DoctorLookupViewController.swift */,
 				A7E981DA26F9ED5700F8551B /* DoctorsLookupTableViewCell.swift */,
@@ -722,6 +730,7 @@
 				A7BCF9D026FDB5890087EA9C /* NurseTableViewCell.swift */,
 				A7BCF9D126FDB5890087EA9C /* NurseTableViewCell.xib */,
 				A7BCF9D726FDB7860087EA9C /* NurseCallViewController.swift */,
+				A72CF3AB2701835F009F86C8 /* NurseandHygienePopupViewController.swift */,
 				A7BCF9DC26FDB79C0087EA9C /* HygieneViewController.swift */,
 				A722B39426FF05CA003667DC /* FoodandBeveragesTableViewCell.swift */,
 				A722B39526FF05CA003667DC /* FoodandBeveragesTableViewCell.xib */,
@@ -1259,6 +1268,7 @@
 				A76401E4266F94AD0050E41A /* AlertTableCell.xib in Resources */,
 				A803391E259EE8F400FE5FB5 /* TokenTableViewCell.xib in Resources */,
 				1B5AC294266E543C002E7C12 /* SF-Pro-Display-Bold.otf in Resources */,
+				A72CF3B22701922D009F86C8 /* FoodandBeveragesHeader.xib in Resources */,
 				C02B230A255AE509004ABBB3 /* FilterCategoryTableViewCell.xib in Resources */,
 				C0035759251891D100F76902 /* ReportHeader.xib in Resources */,
 				1B5AC298266E543F002E7C12 /* SF-Pro-Display-Medium.otf in Resources */,
@@ -1364,6 +1374,7 @@
 				A71AB89B26709C0A00D8F151 /* PasswordModel.swift in Sources */,
 				C0035757251891C200F76902 /* ReportHeader.swift in Sources */,
 				A7E981DC26F9ED5700F8551B /* DoctorsLookupTableViewCell.swift in Sources */,
+				A72CF3B32701922D009F86C8 /* FoodandBeveragesHeader.swift in Sources */,
 				A71AB88E26709BDF00D8F151 /* OTPModel.swift in Sources */,
 				C0088BDD251B5F1A00777786 /* FeedbackTableViewCell.swift in Sources */,
 				C0B207EF25199C2800F048F2 /* SideMenuViewController.swift in Sources */,
@@ -1469,6 +1480,7 @@
 				C01D1DDF2562CC7000F3FF16 /* ImageManager.swift in Sources */,
 				A8033921259EE8F400FE5FB5 /* TokenTableViewCell.swift in Sources */,
 				C012B2F6255A82E8005B7E20 /* MenuModel.swift in Sources */,
+				A72CF3AC27018360009F86C8 /* NurseandHygienePopupViewController.swift in Sources */,
 				C012B2F8255A82FA005B7E20 /* MenuViewModel.swift in Sources */,
 				A71AB88226709BA400D8F151 /* RegistrationModel.swift in Sources */,
 				1B5AC290266E4AAD002E7C12 /* MyButton+Extension.swift in Sources */,

@@ -10,6 +10,10 @@ import UIKit
 
 class FoodandBeveragesTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var container: UIView!
+    @IBOutlet weak var itemImage: CustomImageView!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var TitleLabel: UILabel!
     @IBOutlet weak var quantityLabel: UILabel!
     @IBOutlet weak var addButton: Mybutton!
     @IBOutlet weak var quantityView: UIView!
