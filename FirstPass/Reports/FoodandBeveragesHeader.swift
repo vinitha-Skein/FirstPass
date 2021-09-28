@@ -12,6 +12,5 @@ class FoodandBeveragesHeader: UITableViewHeaderFooterView {
 
     @IBOutlet weak var container: UIView!
     @IBOutlet weak var HeadLabel: UILabel!
-    
 
 }

@@ -21,7 +21,6 @@ class FoodandBeveragesViewController: UIViewController {
     @IBOutlet weak var tableview: UITableView!
     
     var cartQuantity = 0
-    var cartDictionary = [["Item":String(),"Price":Int(),"Quality":Int()]]
     
     struct CartItemsData:Decodable {
         let ItemName:String?
@@ -63,7 +62,6 @@ class FoodandBeveragesViewController: UIViewController {
         cartItemQuantityView.layer.cornerRadius = cartItemQuantityView.frame.width/2
         self.cartItemQuantityView.isHidden = true
         
-        cartDictionary.append(["Item":"Cofeee","Price":50,"Quanitity":5])
 //        var item1 = CartItemsData(ItemName: "Coffee", Price: "Rs. 20", Quantity: 1)
 //        ItemsArray.append(item1)
 //        ItemsArray[0].Quantity = 5
