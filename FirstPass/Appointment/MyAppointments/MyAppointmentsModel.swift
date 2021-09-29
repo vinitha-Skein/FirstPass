@@ -28,3 +28,4 @@ struct ActiveAppointmentData:Decodable {
     let serviceBookedId: Int?
     let status:String?
 }
+

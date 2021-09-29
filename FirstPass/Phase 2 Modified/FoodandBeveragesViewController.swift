@@ -8,6 +8,12 @@
 
 import UIKit
 
+struct CartItemsData:Decodable {
+    let ItemName:String?
+    let Price:Int?
+    var Quantity:Int?
+}
+
 class FoodandBeveragesViewController: UIViewController {
     
     @IBOutlet weak var cartQuantityLabel: UILabel!
@@ -22,11 +28,7 @@ class FoodandBeveragesViewController: UIViewController {
     
     var cartQuantity = 0
     
-    struct CartItemsData:Decodable {
-        let ItemName:String?
-        let Price:String?
-        var Quantity:Int?
-    }
+    
     var ItemsArray = [CartItemsData]()
     
     var buttonBG = UIColor(red: 53/255, green: 35/255, blue: 100/255, alpha: 1)
@@ -35,7 +37,7 @@ class FoodandBeveragesViewController: UIViewController {
     let headerTitles = ["Snacks","Main Course","Beverages"]
     let foodItems = [["Lentil soup","Veg Soup","Mushroom Soup"],["Muttton Curry","Fish Fillet Sandwich"],["Apple Juice","Coffee"]]
     var foodImages = [["lentilsoup","vegsoup","mushroomsoup"],["mutton","sandwich"],["applejuice","coffee"]]
-    let cost = [["Rs. 120","Rs. 120","Rs. 120"],["Rs. 120","Rs. 120"],["Rs. 50","Rs. 20"]]
+    let cost = [[120,120,120],[120,120],[50,20]]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,7 +108,16 @@ class FoodandBeveragesViewController: UIViewController {
         dinnerButton.setTitleColor(unselectedText, for: .normal)
         tableview.reloadData()
     }
-    @IBAction func requestWater_Clciked(_ sender: Any) {
+    @IBAction func requestWater_Clciked(_ sender: Any)
+    {
+        let userDefaults = UserDefaults.standard
+        
+//        userDefaults.setValue(ItemsArray, forKey: "cartItems")
+        let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "CartViewController") as! CartViewController
+        vc.ItemsArray = ItemsArray
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true, completion: nil)
     }
 }
 extension FoodandBeveragesViewController: UITableViewDelegate,UITableViewDataSource
@@ -146,7 +157,7 @@ extension FoodandBeveragesViewController: UITableViewDelegate,UITableViewDataSou
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "FoodandBeveragesTableViewCell") as! FoodandBeveragesTableViewCell
         cell.TitleLabel.text = foodItems[indexPath.section][indexPath.row]
-        cell.priceLabel.text = cost[indexPath.section][indexPath.row]
+        cell.priceLabel.text = String(cost[indexPath.section][indexPath.row])
         cell.itemImage.image = UIImage(named: foodImages[indexPath.section][indexPath.row])
         cell.itemImage.layer.cornerRadius = 5
         cell.container.layer.cornerRadius = 8

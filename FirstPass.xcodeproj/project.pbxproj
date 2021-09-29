@@ -43,6 +43,9 @@
 		A7093973267C5E3A0061EDFA /* AppointmentdetailsNewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7093971267C5E3A0061EDFA /* AppointmentdetailsNewTableViewCell.swift */; };
 		A7093974267C5E3A0061EDFA /* AppointmentdetailsNewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7093972267C5E3A0061EDFA /* AppointmentdetailsNewTableViewCell.xib */; };
 		A7093979267C78AC0061EDFA /* AppointdetailsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7093978267C78AC0061EDFA /* AppointdetailsCollectionViewCell.swift */; };
+		A710CB952702FE1B000106FF /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710CB942702FE1B000106FF /* CartViewController.swift */; };
+		A710CB9B27030197000106FF /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A710CB9927030197000106FF /* CartTableViewCell.swift */; };
+		A710CB9C27030197000106FF /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A710CB9A27030197000106FF /* CartTableViewCell.xib */; };
 		A717D6A5267B165A005E7A3A /* ReportsFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A717D6A4267B165A005E7A3A /* ReportsFilterViewController.swift */; };
 		A717D6AA267B19F7005E7A3A /* FiltersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A717D6A9267B19F7005E7A3A /* FiltersCollectionViewCell.swift */; };
 		A718F75126FB3EA400CCFF1A /* BMICalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A718F75026FB3EA400CCFF1A /* BMICalculatorViewController.swift */; };
@@ -300,6 +303,9 @@
 		A7093971267C5E3A0061EDFA /* AppointmentdetailsNewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentdetailsNewTableViewCell.swift; sourceTree = "<group>"; };
 		A7093972267C5E3A0061EDFA /* AppointmentdetailsNewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppointmentdetailsNewTableViewCell.xib; sourceTree = "<group>"; };
 		A7093978267C78AC0061EDFA /* AppointdetailsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointdetailsCollectionViewCell.swift; sourceTree = "<group>"; };
+		A710CB942702FE1B000106FF /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		A710CB9927030197000106FF /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		A710CB9A27030197000106FF /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		A717D6A4267B165A005E7A3A /* ReportsFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsFilterViewController.swift; sourceTree = "<group>"; };
 		A717D6A9267B19F7005E7A3A /* FiltersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersCollectionViewCell.swift; sourceTree = "<group>"; };
 		A718F75026FB3EA400CCFF1A /* BMICalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMICalculatorViewController.swift; sourceTree = "<group>"; };
@@ -735,6 +741,9 @@
 				A722B39426FF05CA003667DC /* FoodandBeveragesTableViewCell.swift */,
 				A722B39526FF05CA003667DC /* FoodandBeveragesTableViewCell.xib */,
 				A722B39B26FF06ED003667DC /* FoodandBeveragesViewController.swift */,
+				A710CB942702FE1B000106FF /* CartViewController.swift */,
+				A710CB9927030197000106FF /* CartTableViewCell.swift */,
+				A710CB9A27030197000106FF /* CartTableViewCell.xib */,
 			);
 			path = "Phase 2 Modified";
 			sourceTree = "<group>";
@@ -1240,6 +1249,7 @@
 			files = (
 				C003575325188B3C00F76902 /* ReportsTableViewCell.xib in Resources */,
 				C091688C2518B0FA0025D5CE /* FilterTableViewCell.xib in Resources */,
+				A710CB9C27030197000106FF /* CartTableViewCell.xib in Resources */,
 				C0B2081A2519F1FF00F048F2 /* group2.png in Resources */,
 				1B5AC27C266DE014002E7C12 /* Tabbar.xib in Resources */,
 				1B5AC29D266E5444002E7C12 /* SF-Pro-Display-Semibold.otf in Resources */,
@@ -1433,6 +1443,7 @@
 				22D9377326FDD43A00CA95D6 /* InPatientServicesCVC.swift in Sources */,
 				C0FC4788251608430093DC5E /* BookAppointmentViewController.swift in Sources */,
 				C0560F2525715E5A0083CE50 /* InsuranceViewModel.swift in Sources */,
+				A710CB9B27030197000106FF /* CartTableViewCell.swift in Sources */,
 				C01E247E255937B70096A5DB /* FeedbackModel.swift in Sources */,
 				C0422E2E2577A93900910E4F /* OTPPopUpViewController.swift in Sources */,
 				C0DA40D825374B96003E1F77 /* IndoorMapViewController.swift in Sources */,
@@ -1468,6 +1479,7 @@
 				C0672AAD251507170060FB08 /* AppointmentDetailsTableViewCell.swift in Sources */,
 				A76401A1266F729C0050E41A /* AccountViewController.swift in Sources */,
 				C0560F2325715E420083CE50 /* InsuranceModel.swift in Sources */,
+				A710CB952702FE1B000106FF /* CartViewController.swift in Sources */,
 				C01F2ED02537007000632278 /* TabViewController.swift in Sources */,
 				A721E33A267217190098E6A8 /* SetPasswordViewController.swift in Sources */,
 				C068AAFB2571FB8E00253D81 /* InsuranceTableViewCell.swift in Sources */,
