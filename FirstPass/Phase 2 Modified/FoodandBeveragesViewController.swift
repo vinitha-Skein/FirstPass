@@ -70,6 +70,14 @@ class FoodandBeveragesViewController: UIViewController {
 //        ItemsArray.append(CartItemsData(ItemName: "Coffee", Price: "Rs, 30", Quantity: 1))
         // Do any additional setup after loading the view.
     }
+    @IBAction func cart_Clicked(_ sender: Any)
+    {
+        let storyboard = UIStoryboard(name: "Modified", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "CartViewController") as! CartViewController
+        vc.ItemsArray = ItemsArray
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true, completion: nil)
+    }
     
     @IBAction func dinner_Clicked(_ sender: Any)
     {
@@ -110,14 +118,8 @@ class FoodandBeveragesViewController: UIViewController {
     }
     @IBAction func requestWater_Clciked(_ sender: Any)
     {
-        let userDefaults = UserDefaults.standard
         
-//        userDefaults.setValue(ItemsArray, forKey: "cartItems")
-        let storyboard = UIStoryboard(name: "Modified", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "CartViewController") as! CartViewController
-        vc.ItemsArray = ItemsArray
-        vc.modalPresentationStyle = .overCurrentContext
-        self.present(vc, animated: true, completion: nil)
+     
     }
 }
 extension FoodandBeveragesViewController: UITableViewDelegate,UITableViewDataSource
