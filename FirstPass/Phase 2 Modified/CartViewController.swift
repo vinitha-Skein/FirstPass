@@ -74,6 +74,13 @@ extension CartViewController: UITableViewDelegate,UITableViewDataSource
                 self.totalPrice -= self.ItemsArray[indexPath.row].Price!
                 self.totalPriceLabel.text = String(self.totalPrice)
             }
+            else
+            {
+                self.totalPrice -= self.ItemsArray[indexPath.row].Price!
+                self.totalPriceLabel.text = String(self.totalPrice)
+                self.ItemsArray.remove(at: indexPath.row)
+                self.tableview.reloadData()
+            }
             
         }
         

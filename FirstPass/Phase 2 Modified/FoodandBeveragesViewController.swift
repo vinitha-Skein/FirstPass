@@ -191,7 +191,7 @@ extension FoodandBeveragesViewController: UITableViewDelegate,UITableViewDataSou
         }
         cell.DecreaseClicked = {
             var quantity = Int(cell.quantityLabel.text!)
-            if quantity! > 0
+            if quantity! > 1
             {
             cell.quantityLabel.text = String(quantity!-1)
                 self.cartQuantity -= 1
